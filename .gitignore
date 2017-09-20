@@ -1,0 +1,15 @@
+.DS_Store
+*.sketch
+node_modules
+.sass-cache
+**/.DS_Store
+fichiers client
+
+dev/*
+!dev/wp-content/
+dev/wp-content/*
+!dev/wp-content/themes/
+dev/wp-content/themes/*
+!dev/wp-content/themes/saint-leonart/
+dev/wp-content/themes/saint-leonart/.sass-cache
+dev/wp-content/themes/saint-leonart/node_modules
