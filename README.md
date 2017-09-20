@@ -1,15 +1,15 @@
-#Saint Léon'art
+# Saint Léon'art
 
-##1. Définition
+## 1. Définition
 **Client:** asbl Lencreuse.    
 **Projet:** festival Saint Léon'art, un festival qui se déroule dans le quartier Saint Léonard à Liège qui consiste à mettre en avant des artistes, idéalement du quartier, mais aussi d'ailleurs. Il y a également des concerts, des installations, et un parcours pour découvrir les œuvres.     
 **Besoin:** Ils ont besoin d'un site internet pour promouvoir l'événement de 2018.
 
-##2. Stratégie
+## 2. Stratégie
 **But du site:** Promovoir l'événement de 2018 mais aussi les événements annexes pendant l'année. Intéresser les gens au projet, ramener plus de visiteurs, faire connaître le quartier, lui enlever la mauvaise image qu'il peut avoir auprès de certaines personnes.    
 **Deadline:** Janvier
 
-##3. S'inspirer
+## 3. S'inspirer
 
 **Inspirations design:**
 Cette liste reprend une série de sites dans lesquels certaines choses m'ont plu. Je recherche ici une inspiration graphique.
