@@ -5,6 +5,7 @@ node_modules
 **/.DS_Store
 fichiers client
 *.ai
+*.bmpr
 
 dev/*
 !dev/wp-content/
