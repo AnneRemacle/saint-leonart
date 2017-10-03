@@ -6,6 +6,7 @@ node_modules
 fichiers client
 *.ai
 *.bmpr
+ressources
 
 dev/*
 !dev/wp-content/
