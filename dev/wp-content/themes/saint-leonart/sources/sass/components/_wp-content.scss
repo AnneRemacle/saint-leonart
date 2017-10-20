@@ -1,0 +1,16 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/wp-content.scss - styles for wp content
+ *
+ * coded by Anne
+ * started at 20/20/2017
+ */
+
+.section {
+    &__text {
+        p {
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/section.scss - styles for sections
+ *
+ * coded by Anne
+ * started at 20/20/2017
+ */
+
+.section {
+    width: 87.5%;
+    margin: 2.81em auto;
+    &__title {
+        font-family: $titles;
+        text-align: center;
+        margin-bottom: .5em;
+        font-size: $title;
+    }
+    &__text {
+        line-height: 1.5;
+    }
+}

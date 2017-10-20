@@ -342,3 +342,38 @@ html {
   font-size: 1.618em;
   margin: .6em 0;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/section.scss - styles for sections
+ *
+ * coded by Anne
+ * started at 20/20/2017
+ */
+.section {
+  width: 87.5%;
+  margin: 2.81em auto;
+}
+
+.section__title {
+  font-family: "oswald", "arial", "sans-serif";
+  text-align: center;
+  margin-bottom: .5em;
+  font-size: 2.058em;
+}
+
+.section__text {
+  line-height: 1.5;
+}
+
+/* Saint Léon'Art
+ *
+ * /sass/components/wp-content.scss - styles for wp content
+ *
+ * coded by Anne
+ * started at 20/20/2017
+ */
+.section__text p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
