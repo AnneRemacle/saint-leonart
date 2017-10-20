@@ -1,0 +1,19 @@
+ /* Saint Léon'Art
+   *
+   * /sass/generic/box-sizing.scss - box sizing definition
+   *
+   * coded by Anne
+   * started at 18/10/2017
+   */
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}

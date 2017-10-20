@@ -1,0 +1,78 @@
+ /* Saint Léon'Art
+  *
+  * /sass/tools/_utils.scss - Small utilities
+  *
+  * coded by Anne
+  * started at 18/10/2017
+  */
+
+ .hidden {
+     display: none;
+ }
+
+ .sro {
+     position: absolute;
+     top: -99999px;
+     left: -99999px;
+ }
+
+ .clearfix:before,
+ .clearfix:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+
+ .clearfix:after {
+     clear: both;
+ }
+
+ .button {
+    background: $lightColor;
+    color: #fff;
+    padding: 0.5em 1.2em;
+    border-radius: 50px;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+    text-decoration: none;
+
+    &:hover {
+        background: $darkColor;
+
+    }
+ }
+
+.colored {
+    color: $lightColor;
+}
+
+.scroll {
+    &__button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 2em;
+        right: 5%;
+        background: $lightColor;
+        transition: background-color .3s ease;
+        z-index: 5;
+        display: none;
+    }
+    &__button:hover {
+        background: $darkColor;
+    }
+    &__top {
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+        color: white;
+        line-height: 50px;
+        text-align: center;
+        font-size: 1.3em;
+    }
+}
+
+.button-visible {
+    display: block;
+}

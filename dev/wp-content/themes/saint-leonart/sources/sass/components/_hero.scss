@@ -1,0 +1,56 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/hero.scss - styles for hero in header
+ *
+ * coded by Anne
+ * started at 20/10/2017
+ */
+
+.hero {
+    position: relative;
+    &__figure {
+        width: 100%;
+        max-height: 16.56em;
+        overflow: hidden;
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        opacity: 0.7;
+    }
+    &__text {
+        width: 87.5%;
+        position: absolute;
+        top: 0;
+        left: 6.25%;
+    }
+    &__slogan {
+        font-family: $titles;
+        font-size: $title;
+        color: white;
+        text-shadow: 1px 1px 1px rgba(black, 0.3);
+        text-align: center;
+        line-height: 1.5;
+        margin: 1em 0;
+    }
+    &__infos {
+        font-family: $titles;
+        text-shadow: 1px 1px 1px rgba(black, .3);
+        text-align: center;
+
+        &--date {
+            font-size: $title;
+            color: $lightColor;
+        }
+        &--place {
+            color: white;
+            font-size: $sub2;
+            margin: .6em 0;
+        }
+    }
+    &-small {
+        &__image {
+
+        }
+    }
+}

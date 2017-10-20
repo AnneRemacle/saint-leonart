@@ -1,0 +1,26 @@
+ /* Saint Léon'Art
+  *
+  * /sass/settings/fonts.scss - fonts definition
+  *
+  * coded by Anne
+  * started at 18/10/2017
+  */
+
+  @font-face {
+      font-family: 'Asap';
+      src: url('../assets/fonts/AsapCondensed-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+      font-family: 'Oswald';
+      src: url('../assets/fonts/Oswald-Regular.ttf') format('truetype');
+  }
+
+$labor: "asap", "arial", "sans-serif";
+$titles: "oswald", 'arial', 'sans-serif';
+
+$sub3: 1.272em;
+$sub2: 1.618em;
+$title: 2.058em;
+$titlexl: 2.618em;
+$titlexxl: 4.236em;

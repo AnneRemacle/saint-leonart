@@ -1,0 +1,67 @@
+/* Saint Léon'Art
+   *
+   * /sass/components/header.scss - styles for header
+   *
+   * coded by Anne
+   * started at 18/10/2017
+   */
+
+.header {
+    position: relative;
+    &__button {
+        position: absolute;
+        color: white;
+        background: rgba($middleColor, .65);
+        display: block;
+        text-decoration: none;
+        padding: .5em 1em;
+        top: 1em;
+        right: 6.25%;
+    }
+    &__close {
+        visibility: hidden;
+    }
+    &__brand {
+        padding-top: 3.5em;
+        display: block;
+        margin-bottom: 1em;
+    }
+    &__logo {
+        display: inline-block;
+        width: 14%;
+        height: 2.8em;
+        vertical-align: middle;
+        margin-left: 6.25%;
+        img {
+            width: 100%;
+            font-family: $title;
+            color: white;
+
+        }
+    }
+    &__title {
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        font-size: 2.56em;
+        font-family: $titles;
+        margin-left: 3.125%;
+    }
+    &__menu {
+        margin: 1.5em 0;
+        display: none;
+        height: 100vh;
+
+        &--link {
+            width: 59.37%;
+            margin: 0 auto .6em;
+            text-decoration: none;
+            color: white;
+            font-size: $sub3;
+            display: block;
+            text-align: center;
+            background: rgba($middleColor, .2);
+            padding: .7em 0;
+        }
+    }
+}

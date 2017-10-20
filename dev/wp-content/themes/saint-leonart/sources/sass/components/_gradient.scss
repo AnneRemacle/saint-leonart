@@ -1,0 +1,15 @@
+/* Saint Léon'Art
+   *
+   * /sass/components/gradient.scss - styles for gradient background
+   *
+   * coded by Anne
+   * started at 18/10/2017
+   */
+
+.gradient {
+    background: $darkColor;
+    background: -webkit-linear-gradient(left bottom, $darkColor, $middleColor);
+    background: -o-linear-gradient(top right, $darkColor, $middleColor);
+    background: -moz-linear-gradient(top right, $darkColor, $middleColor);
+    background: linear-gradient(to top right, $darkColor, $middleColor); 
+}
