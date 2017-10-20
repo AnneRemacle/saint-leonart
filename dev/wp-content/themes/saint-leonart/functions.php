@@ -62,9 +62,22 @@ register_post_type( 'artistes', [
                     'add_new' => __( 'Ajouter un artiste', 'leonart')
         ],
         'description' => __( 'La liste des artistes participant au festival', 'leonart'),
+        'taxonomies' => array( 'category' ),
         'public' => true,
         'menu_position' => 5,
         'menu_icon' => 'dashicons-admin-users',
         'supports' => [ 'title', 'editor', 'thumbnail' ],
         'has_archive' => true
     ] );
+
+// Taxonomies
+register_taxonomy( 'art-type', 'categories', [
+            'label' => 'Catégories',
+            'labels' => [
+                'singular_name' => 'Catégorie'
+            ],
+            'public' => true ,
+            'hierarchical' => true
+        ] );
+
+register_taxonomy_for_object_type( 'art-type', 'artistes' );
