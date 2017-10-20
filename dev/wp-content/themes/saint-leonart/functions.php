@@ -44,7 +44,7 @@ function b_get_menu_items( $location ) {
 
 // Page d'options
 if( function_exists('acf_add_options_page') ) {
-	
+
 	acf_add_options_page(array(
 		'page_title'    => 'Options',
 		'menu_title'    => 'Options',
@@ -53,3 +53,18 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'      => true
 	));
 }
+
+// Post Types
+register_post_type( 'artistes', [
+        'label' => __('Artistes', 'leonart'),
+        'labels' => [
+                    'singular_name' => __( 'Artistes', 'leonart' ),
+                    'add_new' => __( 'Ajouter un artiste', 'leonart')
+        ],
+        'description' => __( 'La liste des artistes participant au festival', 'leonart'),
+        'public' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-admin-users',
+        'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'has_archive' => true
+    ] );
