@@ -1,0 +1,23 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/cta.scss - styles for ctas
+ *
+ * coded by Anne
+ * started at 20/10/2017
+ */
+
+ .cta {
+    background: $middleColor;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: $titles;
+    font-size: $sub3;
+    padding: 1em 0;
+    transition: background .3s ease;
+
+    &:hover {
+        background: darken($middleColor, 10%);
+    }
+}
