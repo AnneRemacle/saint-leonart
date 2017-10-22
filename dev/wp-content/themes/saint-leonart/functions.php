@@ -70,14 +70,41 @@ register_post_type( 'artistes', [
         'has_archive' => true
     ] );
 
+register_post_type( 'events', [
+        'label' => __('Évenements', 'leonart'),
+        'labels' => [
+                    'singular_name' => __( 'Événements', 'leonart' ),
+                    'add_new' => __( 'Ajouter un événement', 'leonart')
+        ],
+        'description' => __( 'La liste des événements en rapport avec le festival', 'leonart'),
+        'taxonomies' => array( 'category' ),
+        'public' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-calendar-alt',
+        'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'has_archive' => true
+    ] );
+
 // Taxonomies
 register_taxonomy( 'art-type', 'categories', [
-            'label' => 'Catégories',
+            'label' => 'Style',
             'labels' => [
-                'singular_name' => 'Catégorie'
+                'singular_name' => 'Style',
+                'add_new' => __( 'Ajouter un style', 'leonart')
             ],
             'public' => true ,
             'hierarchical' => true
         ] );
 
 register_taxonomy_for_object_type( 'art-type', 'artistes' );
+
+register_taxonomy( 'event', 'categories', [
+            'label' => 'Catégories',
+            'labels' => [
+                'singular_name' => 'Catégorie',
+            ],
+            'public' => true ,
+            'hierarchical' => true
+        ] );
+
+register_taxonomy_for_object_type( 'event', 'events' );
