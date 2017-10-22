@@ -39,6 +39,33 @@ get_header();?>
     <a href="" class="cta">Voir tous les artistes</a>
 </section>
 
+<section class="section-light next">
+    <h2 class="section__title">Prochaiement</h2>
+    <?php $posts = new WP_Query( [ 'post_type' => 'events', 'posts_per_page' => 3, 'order' => 'DESC' ] ); ?>
+	<?php if ( $posts -> have_posts() ):
+		while ( $posts -> have_posts() ):
+			$posts -> the_post(); ?>
+            <section class="event">
+                <a href="<?php the_permalink(); ?>" class="event__link">
+                    <figure class="event__figure">
+                        <?php the_post_thumbnail(); ?>
+                    </figure>
+                    <div class="event__date">
+                        <span class="event__date--day"><?php the_field( 'jour' ); ?></span>
+                        <span class="event__date--month"><?php the_field( 'mois' ); ?></span>
+                    </div>
+                    <h3 class="event__title">
+                        <?php the_title(); ?>
+                    </h3>
+                </a>
+            </section>
+        <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
+
+    <a href="" class="cta">Voir le programme</a>
+
+</section>
+
 <section class="section-image newsletter">
     <?php $image = get_field( 'homepage_image', 'options' ); ?>
     <figure class="section-image__figure">

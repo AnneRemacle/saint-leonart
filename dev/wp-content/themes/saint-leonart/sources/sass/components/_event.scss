@@ -1,0 +1,51 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/event.scss - styles for event
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+
+ .event {
+     position: relative;
+     width: 100%;
+     margin-bottom: 1.25em;
+     margin-top: 2em;
+     a {
+         text-decoration: none;
+         color: $textColor;
+     }
+     &__figure {
+        width: 100%;
+        margin-bottom: .4em;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+     }
+     &__title {
+        font-family: $titles;
+        font-size: $sub3;
+        line-height: 1.5;
+     }
+     &__date {
+         width: 55px;
+         height: 55px;
+         background: $lightColor;
+         border-radius: 100%;
+         color: $darkColor;
+         text-align: center;
+         font-family: $titles;
+         position: absolute;
+         right: -10px;
+         top: -22.5px;
+         &--day {
+            padding-top: .4em;
+            display: block;
+            font-size: $sub3;
+         }
+         &--month {
+
+         }
+     }
+ }

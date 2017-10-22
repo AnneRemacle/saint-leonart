@@ -391,6 +391,11 @@ html {
   left: 6.25%;
 }
 
+.section-light {
+  background: #F9F9F9;
+  padding: 2.5em 6.25%;
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/wp-content.scss - styles for wp content
@@ -545,4 +550,58 @@ html {
 
 .cta:hover {
   background: #b02e20;
+}
+
+/* Saint Léon'Art
+ *
+ * /sass/components/event.scss - styles for event
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+.event {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.25em;
+  margin-top: 2em;
+}
+
+.event a {
+  text-decoration: none;
+  color: #222;
+}
+
+.event__figure {
+  width: 100%;
+  margin-bottom: .4em;
+}
+
+.event__figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.event__title {
+  font-family: "oswald", "arial", "sans-serif";
+  font-size: 1.272em;
+  line-height: 1.5;
+}
+
+.event__date {
+  width: 55px;
+  height: 55px;
+  background: #FED178;
+  border-radius: 100%;
+  color: #861C48;
+  text-align: center;
+  font-family: "oswald", "arial", "sans-serif";
+  position: absolute;
+  right: -10px;
+  top: -22.5px;
+}
+
+.event__date--day {
+  padding-top: .4em;
+  display: block;
+  font-size: 1.272em;
 }
