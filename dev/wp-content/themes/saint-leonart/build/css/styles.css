@@ -348,7 +348,7 @@ html {
  * /sass/components/section.scss - styles for sections
  *
  * coded by Anne
- * started at 20/20/2017
+ * started at 20/10/2017
  */
 .section {
   width: 87.5%;
@@ -376,4 +376,125 @@ html {
 .section__text p {
   line-height: 1.5;
   margin-bottom: 1em;
+}
+
+/* Saint Léon'Art
+ *
+ * /sass/components/card.scss - styles for cards
+ *
+ * coded by Anne
+ * started at 21/10/2017
+ */
+.card {
+  width: 100%;
+  margin-bottom: 2.5em;
+}
+
+.card__figure {
+  width: 100%;
+  height: 17.5em;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.card__figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card__title {
+  position: relative;
+  margin-bottom: .5em;
+}
+
+.card__title--shape {
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: -8px;
+}
+
+.card__title span {
+  font-family: "oswald", "arial", "sans-serif";
+  font-size: 2.058em;
+  z-index: 2;
+}
+
+.card__category {
+  text-transform: capitalize;
+}
+
+/* Saint Léon'Art
+ *
+ * /sass/components/categories.scss - styles for the shape of the title
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+.photographie {
+  fill: #FF6700;
+}
+
+.arts-de-rue {
+  fill: #A9FBD7;
+}
+
+.arts-visuels {
+  fill: #465881;
+}
+
+.collages {
+  fill: #C04ABC;
+}
+
+.design-mode {
+  fill: #419D78;
+}
+
+.dessin {
+  fill: #30C5FF;
+}
+
+.ecorecup {
+  fill: #F79256;
+}
+
+.graphisme {
+  fill: #834299;
+}
+
+.gravure {
+  fill: #EA2B1F;
+}
+
+.illustration {
+  fill: #D2CF16;
+}
+
+.installation {
+  fill: #65094B;
+}
+
+.musique {
+  fill: #DD4D68;
+}
+
+.peinture {
+  fill: #B8C0EF;
+}
+
+.scenographie {
+  fill: #4DC155;
+}
+
+.sculpture {
+  fill: #FFB4D7;
+}
+
+.serigraphie {
+  fill: #4934DB;
+}
+
+.theatre {
+  fill: #C4ABAE;
 }
