@@ -18,4 +18,25 @@
     &__text {
         line-height: 1.5;
     }
+    &-image {
+        position: relative;
+        &__figure {
+            background: $darkColor;
+            width: 100%;
+            max-height: 14em;
+            overflow: hidden;
+        }
+        &__image {
+            width: 110%;
+            height: auto;
+            opacity: 0.5;
+        }
+        &__content {
+            color: white;
+            width: 87.5%;
+            position: absolute;
+            top: 1.5em;
+            left: 6.25%;
+        }
+    }
 }

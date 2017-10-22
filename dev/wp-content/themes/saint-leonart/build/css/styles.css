@@ -366,6 +366,31 @@ html {
   line-height: 1.5;
 }
 
+.section-image {
+  position: relative;
+}
+
+.section-image__figure {
+  background: #861C48;
+  width: 100%;
+  max-height: 14em;
+  overflow: hidden;
+}
+
+.section-image__image {
+  width: 110%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.section-image__content {
+  color: white;
+  width: 87.5%;
+  position: absolute;
+  top: 1.5em;
+  left: 6.25%;
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/wp-content.scss - styles for wp content
@@ -398,8 +423,8 @@ html {
 }
 
 .card__figure img {
-  max-width: 100%;
-  height: auto;
+  max-height: 120%;
+  max-width: 120%;
 }
 
 .card__title {
@@ -497,4 +522,27 @@ html {
 
 .theatre {
   fill: #C4ABAE;
+}
+
+/* Saint Léon'Art
+ *
+ * /sass/components/cta.scss - styles for ctas
+ *
+ * coded by Anne
+ * started at 20/10/2017
+ */
+.cta {
+  background: #D83C2B;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "oswald", "arial", "sans-serif";
+  font-size: 1.272em;
+  padding: 1em 0;
+  transition: background .3s ease;
+}
+
+.cta:hover {
+  background: #b02e20;
 }

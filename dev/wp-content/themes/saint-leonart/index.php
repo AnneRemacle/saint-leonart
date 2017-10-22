@@ -25,7 +25,7 @@ get_header();?>
                         <?php the_post_thumbnail(); ?>
                     </figure>
                     <h3 class="card__title">
-                        <svg width="45px" height="50px" class="card__title--shape <?php echo $terms[0]->name; ?>">
+                        <svg width="45px" height="50px" class="card__title--shape <?php echo $terms[0]->slug; ?>">
                             <path d="M0 0 L45 26 L45 50 L0 24 Z" />
                         </svg>
                         <span><?php the_title(); ?></span>
@@ -35,4 +35,18 @@ get_header();?>
 
         <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
+
+    <a href="" class="cta">Voir tous les artistes</a>
+</section>
+
+<section class="section-image newsletter">
+    <?php $image = get_field( 'homepage_image', 'options' ); ?>
+    <figure class="section-image__figure">
+        <img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'] ?>" class="section-image__image">
+    </figure>
+    <div class="section-image__content">
+        <h2 class="section__title"><?php the_field( 'homepage_titre', 'options' ); ?></h2>
+        <div class="section__text"><?php the_field( 'homepage_texte', 'options' ); ?></div>
+        <!-- TODO: add newsletter form -->
+    </div>
 </section>
