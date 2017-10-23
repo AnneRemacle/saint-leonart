@@ -101,5 +101,22 @@ get_header();?>
     <?php wp_reset_query(); ?>
 
     <a href="" class="cta">Voir toutes les news</a>
-
 </section>
+
+<section class="section-light socials">
+    <h2 class="section__title">Suivez-nous&nbsp;!</h2>
+    <ul class="socials__list">
+        <li class="socials__list--facebook">
+            <a href="<?php the_field( 'facebook', 'options');?> ">Facebook</a>
+        </li>
+        <li class="socials__list--twitter">
+            <a href="<?php the_field( 'twitter', 'options');?> ">Twitter</a>
+        </li>
+        <li class="socials__list--instagram">
+            <a href="<?php the_field( 'instagram', 'options');?> ">Instagram</a>
+        </li>
+    </ul>
+</section>
+
+<?php
+    get_footer();

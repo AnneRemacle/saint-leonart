@@ -1,0 +1,48 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/socials.scss - styles for social icons
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+
+ .socials {
+     &__list {
+         width: 70%;
+         margin: 0 auto;
+         li {
+             display: inline-block;
+             width: 30%;
+         }
+         &--facebook {
+             a {
+                text-indent: -99999px;
+                background: url('../assets/images/facebook.svg');
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+             }
+         }
+         &--twitter {
+             a {
+                text-indent: -99999px;
+                background: url('../assets/images/twitter.svg');
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+             }
+         }
+         &--instagram {
+             a {
+                text-indent: -99999px;
+                background: url('../assets/images/instagram.svg');
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+             }
+         }
+     }
+ }

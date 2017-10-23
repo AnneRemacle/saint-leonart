@@ -661,3 +661,47 @@ html {
 .news__content p {
   line-height: 1.5;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/socials.scss - styles for social icons
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+.socials__list {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.socials__list li {
+  display: inline-block;
+  width: 30%;
+}
+
+.socials__list--facebook a {
+  text-indent: -99999px;
+  background: url("../assets/images/facebook.svg");
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.socials__list--twitter a {
+  text-indent: -99999px;
+  background: url("../assets/images/twitter.svg");
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.socials__list--instagram a {
+  text-indent: -99999px;
+  background: url("../assets/images/instagram.svg");
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
