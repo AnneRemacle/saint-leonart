@@ -677,6 +677,7 @@ html {
 .socials__list li {
   display: inline-block;
   width: 30%;
+  text-align: center;
 }
 
 .socials__list--facebook a {
@@ -700,6 +701,71 @@ html {
 .socials__list--instagram a {
   text-indent: -99999px;
   background: url("../assets/images/instagram.svg");
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+/* Saint Léon'Art
+ *
+ * /sass/components/footer.scss - styles for footer
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+.footer {
+  color: white;
+  padding: 1.5em 6.25%;
+}
+
+.footer__section {
+  margin-bottom: 2.5em;
+}
+
+.footer__section--title {
+  font-family: "oswald", "arial", "sans-serif";
+  font-size: 1.618em;
+  text-align: center;
+  margin-bottom: .6em;
+}
+
+.footer__section--text {
+  text-align: center;
+}
+
+.footer-socials__list {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.footer-socials__list li {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+
+.footer-socials__list--facebook a {
+  text-indent: -99999px;
+  background: url("../assets/images/facebook-white.svg");
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.footer-socials__list--twitter a {
+  text-indent: -99999px;
+  background: url("../assets/images/twitter-white.svg");
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.footer-socials__list--instagram a {
+  text-indent: -99999px;
+  background: url("../assets/images/instagram-white.svg");
   display: inline-block;
   width: 40px;
   height: 40px;

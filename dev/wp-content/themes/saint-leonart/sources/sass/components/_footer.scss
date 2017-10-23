@@ -1,0 +1,67 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/footer.scss - styles for footer
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+
+ .footer {
+     color: white;
+     padding: 1.5em 6.25%;
+
+     &__section {
+         margin-bottom: 2.5em;
+
+         &--title {
+             font-family: $titles;
+             font-size: $sub2;
+             text-align: center;
+             margin-bottom: .6em;
+         }
+         &--text {
+             text-align: center;
+         }
+     }
+     &-socials {
+         &__list {
+             width: 70%;
+             margin: 0 auto;
+             li {
+                 display: inline-block;
+                 width: 30%;
+                 text-align: center;
+             }
+             &--facebook {
+                 a {
+                    text-indent: -99999px;
+                    background: url('../assets/images/facebook-white.svg');
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                 }
+             }
+             &--twitter {
+                 a {
+                    text-indent: -99999px;
+                    background: url('../assets/images/twitter-white.svg');
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                 }
+             }
+             &--instagram {
+                 a {
+                    text-indent: -99999px;
+                    background: url('../assets/images/instagram-white.svg');
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                 }
+             }
+         }
+     }
+ }
