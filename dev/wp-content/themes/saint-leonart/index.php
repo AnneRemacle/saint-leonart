@@ -100,4 +100,6 @@ get_header();?>
         <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
 
+    <a href="" class="cta">Voir toutes les news</a>
+
 </section>
