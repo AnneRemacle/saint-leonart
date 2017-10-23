@@ -1,0 +1,51 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/actus.scss - styles for actus
+ *
+ * coded by Anne
+ * started at 22/10/2017
+ */
+
+ .news {
+     position: relative;
+     width: 100%;
+     margin-bottom: 1.5em;
+     a {
+         text-decoration: none;
+         color: $textColor;
+     }
+     &__title {
+        font-family: $titles;
+        font-size: $sub3;
+        line-height: 1.5;
+        display: inline-block;
+        width: 77%;
+        vertical-align: middle;
+        margin-left: 1%;
+     }
+     &__date {
+         width: 55px;
+         height: 55px;
+         background: $darkColor;
+         border-radius: 100%;
+         color: white;
+         text-align: center;
+         font-family: $titles;
+         display: inline-block;
+         vertical-align: middle;
+
+         &--day {
+            padding-top: .3em;
+            display: block;
+            font-size: $sub3;
+            max-width: 35px;
+            margin: 0 auto;
+         }
+     }
+     &__content {
+         margin-top: .7em;
+         p {
+             line-height: 1.5;
+         }
+     }
+ }

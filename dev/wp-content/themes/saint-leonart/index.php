@@ -77,3 +77,27 @@ get_header();?>
         <!-- TODO: add newsletter form -->
     </div>
 </section>
+
+<section class="section actus">
+    <h2 class="section__title">Dernières news</h2>
+    <?php $posts = new WP_Query( [ 'post_type' => 'news', 'posts_per_page' => 3, 'order' => 'DESC' ] ); ?>
+	<?php if ( $posts -> have_posts() ):
+		while ( $posts -> have_posts() ):
+			$posts -> the_post(); ?>
+            <section class="news">
+                <a href="<?php the_permalink(); ?>" class="news__link">
+                    <div class="news__date">
+                        <span class="news__date--day"><?php the_date( 'd M' ); ?></span>
+                    </div>
+                    <h3 class="news__title">
+                        <?php the_title(); ?>
+                    </h3>
+                    <div class="news__content">
+                        <?php the_content(); ?>
+                    </div>
+                </a>
+            </section>
+        <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
+
+</section>
