@@ -85,6 +85,21 @@ register_post_type( 'events', [
         'has_archive' => true
     ] );
 
+register_post_type( 'news', [
+        'label' => __('News', 'leonart'),
+        'labels' => [
+                    'singular_name' => __( 'News', 'leonart' ),
+                    'add_new' => __( 'Ajouter une news', 'leonart')
+        ],
+        'description' => __( 'La liste des news publiées', 'leonart'),
+        'taxonomies' => array( 'category' ),
+        'public' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-admin-post',
+        'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'has_archive' => true
+    ] );
+
 // Taxonomies
 register_taxonomy( 'art-type', 'categories', [
             'label' => 'Style',
@@ -108,3 +123,14 @@ register_taxonomy( 'event', 'categories', [
         ] );
 
 register_taxonomy_for_object_type( 'event', 'events' );
+
+register_taxonomy( 'news', 'categories', [
+            'label' => 'Catégories',
+            'labels' => [
+                'singular_name' => 'Catégorie',
+            ],
+            'public' => true ,
+            'hierarchical' => true
+        ] );
+
+register_taxonomy_for_object_type( 'event', 'news' );
