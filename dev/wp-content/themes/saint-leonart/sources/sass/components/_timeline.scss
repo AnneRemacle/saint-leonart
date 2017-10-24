@@ -1,0 +1,79 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/timeline.scss - styles for timeline section with numbers
+ *
+ * coded by Anne
+ * started at 24/10/2017
+ */
+
+ .timeline {
+     position: relative;
+     &__dates {
+        font-size: $sub3;
+        width: 20%;
+        text-align: right;
+        display: inline-block;
+        z-index: 2;
+        margin-top: 1em;
+
+        &--edition {
+            margin-bottom: 1.5em;
+            position: relative;
+
+            &:after {
+                content:"";
+                width: 20.352px;
+                height: 20.352px;
+                display: inline-block;
+                border: 2px solid $darkColor;
+                background: $darkColor;
+                border-radius: 100%;
+                margin-left: 15%;
+                position: absolute;
+                transition: background .3s ease;
+            }
+        }
+        &--edition:hover, &--edition.active {
+            &:after {
+                background: $lightColor;
+            }
+        }
+     }
+     &__line {
+        width: 5px;
+        min-height: 30em;
+        background: $darkColor;
+        position: absolute;
+        top: 0;
+        left: 25.7%;
+        z-index: -1;
+     }
+     &__infos {
+        width: 68%;
+        position: absolute;
+        right: 0;
+        top: 0;
+     }
+     &__single {
+         background: white;
+         text-align: center;
+         margin-bottom: 1.5em;
+         z-index: -1;
+         &--image {
+            display: block;
+            width: 50px;
+            height: auto;
+            margin: 0em auto 1em;
+         }
+         &--number {
+            display: block;
+            font-family: $titles;
+            font-size: $title;
+            margin-bottom: .3em;
+         }
+         &--text {
+            display: block;
+            line-height: 1.5;
+         }
+     }
+ }

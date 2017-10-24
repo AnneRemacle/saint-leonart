@@ -892,3 +892,88 @@ html {
 .files__single:nth-child(odd) {
   margin-right: 8%;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/timeline.scss - styles for timeline section with numbers
+ *
+ * coded by Anne
+ * started at 24/10/2017
+ */
+.timeline {
+  position: relative;
+}
+
+.timeline__dates {
+  font-size: 1.272em;
+  width: 20%;
+  text-align: right;
+  display: inline-block;
+  z-index: 2;
+  margin-top: 1em;
+}
+
+.timeline__dates--edition {
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+.timeline__dates--edition:after {
+  content: "";
+  width: 20.352px;
+  height: 20.352px;
+  display: inline-block;
+  border: 2px solid #861C48;
+  background: #861C48;
+  border-radius: 100%;
+  margin-left: 15%;
+  position: absolute;
+  transition: background .3s ease;
+}
+
+.timeline__dates--edition:hover:after, .timeline__dates--edition.active:after {
+  background: #FED178;
+}
+
+.timeline__line {
+  width: 5px;
+  min-height: 30em;
+  background: #861C48;
+  position: absolute;
+  top: 0;
+  left: 25.7%;
+  z-index: -1;
+}
+
+.timeline__infos {
+  width: 68%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.timeline__single {
+  background: white;
+  text-align: center;
+  margin-bottom: 1.5em;
+  z-index: -1;
+}
+
+.timeline__single--image {
+  display: block;
+  width: 50px;
+  height: auto;
+  margin: 0em auto 1em;
+}
+
+.timeline__single--number {
+  display: block;
+  font-family: "oswald", "arial", "sans-serif";
+  font-size: 2.058em;
+  margin-bottom: .3em;
+}
+
+.timeline__single--text {
+  display: block;
+  line-height: 1.5;
+}

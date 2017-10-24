@@ -65,3 +65,43 @@ get_header();?>
         <?php endif; ?>
     </ul>
 </section>
+
+<section class="section chiffres">
+    <h2 class="section__title">Quelques chiffres</h2>
+    <div class="section__text"><?php the_field( 'intro_chiffres' ); ?></div>
+    <div class="timeline" id="accordion">
+        <div class="timeline__dates">
+            <?php $i = 0;?>
+            <?php if( have_rows('chiffres') ):
+                while ( have_rows('chiffres') ) : the_row();?>
+                    <div data-edition="<?php the_sub_field( 'edition' )?>" class="timeline__dates--edition <?php echo $i ?: "active";?>"><?php the_sub_field( 'edition' ); ?></div>
+                    <?php $i++;?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+        <div class="timeline__line"></div>
+        <?php $i = 0;?>
+        <?php if( have_rows('chiffres') ):
+            while ( have_rows('chiffres') ) : the_row();?>
+                <div data-edition="<?php the_sub_field( 'edition' )?>" class="timeline__infos ">
+                    <div class="timeline__single">
+                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/palette.svg';?>" alt="" class="timeline__single--image" />
+                        <span class="timeline__single--number"><?php the_sub_field( 'artistes' ); ?></span>
+                        <span class="timeline__single--text">artistes lors de cette édition</span>
+                    </div>
+                    <div class="timeline__single">
+                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/artist.svg';?>" alt="" class="timeline__single--image" />
+                        <span class="timeline__single--number"><?php the_sub_field( 'visiteurs' ); ?></span>
+                        <span class="timeline__single--text">visiteurs ont parcouru le quartier</span>
+                    </div>
+                    <div class="timeline__single">
+                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/painting.svg';?>" alt="" class="timeline__single--image" />
+                        <span class="timeline__single--number"><?php the_sub_field( 'oeuvres' ); ?></span>
+                        <span class="timeline__single--text">œuvres ont été exposées</span>
+                    </div>
+                </div>
+                <?php $i++;?>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+</section>
