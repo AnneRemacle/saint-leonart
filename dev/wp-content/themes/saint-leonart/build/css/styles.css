@@ -861,3 +861,34 @@ html {
   text-align: center;
   text-transform: capitalize;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/files.scss - styles for files section
+ *
+ * coded by Anne
+ * started at 24/10/2017
+ */
+.files__single {
+  cursor: pointer;
+  display: inline-block;
+  width: 45%;
+}
+
+.files__single--link {
+  text-decoration: none;
+  color: #222;
+}
+
+.files__single--logo {
+  width: 100%;
+  height: auto;
+}
+
+.files__single--name {
+  text-align: center;
+}
+
+.files__single:nth-child(odd) {
+  margin-right: 8%;
+}

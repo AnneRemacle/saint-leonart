@@ -45,3 +45,23 @@ get_header();?>
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
+
+<section class="section-light presse">
+    <h2 class="section__title">Espace Presse</h2>
+    <div class="section__text"><?php the_field( 'intro_fichiers' ); ?></div>
+    <ul class="files">
+        <?php if( have_rows('fichiers') ):
+            while ( have_rows('fichiers') ) : the_row();?>
+                <li class="files__single">
+                    <?php $file = get_sub_field( 'fichier' ); ?>
+                    <a href="<?php echo $file['url'] ?>" class="files__single--link" target="_blank">
+                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/pdf-logo.png';?>" alt="Télécharger le fichier <?php the_sub_field( 'nom_du_fichier' ); ?>" class="files__single--logo" />
+                        <span class="files__single--name">
+                            <?php the_sub_field( 'nom_du_fichier' ); ?>
+                        </span>
+                    </a>
+                </li>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </ul>
+</section>
