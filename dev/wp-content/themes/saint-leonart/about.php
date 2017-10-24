@@ -105,3 +105,6 @@ get_header();?>
         <?php endif; ?>
     </div>
 </section>
+
+<?php
+get_footer();
