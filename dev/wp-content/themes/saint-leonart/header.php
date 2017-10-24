@@ -53,7 +53,10 @@
             </div>
         <?php else: ?>
             <div class="hero-small">
-                <img src="" alt="" class="hero-small__image" />
+                <figure class="hero-small__figure">
+                    <?php $image = get_field('photo_header', 'options'); ?>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="hero-small__image" />
+                </figure>
             </div>
             <div class="breadcrumb">
                 <?php
@@ -64,5 +67,7 @@
                 ?>
             </div>
         <?php endif; ?>
+
+        
 
     </header>

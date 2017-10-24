@@ -343,6 +343,20 @@ html {
   margin: .6em 0;
 }
 
+.hero-small {
+  margin-bottom: 1.5em;
+}
+
+.hero-small__figure {
+  max-height: 6.25em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-small__image {
+  width: 100%;
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/section.scss - styles for sections
@@ -770,4 +784,44 @@ html {
   width: 40px;
   height: 40px;
   background-size: contain;
+}
+
+/* Saint Léon'Art
+ *
+ * /sass/components/breadcrumb.scss - styles for breadcrumb in header
+ *
+ * coded by Anne
+ * started at 24/10/2017
+ */
+.breadcrumb {
+  width: 87.5%;
+  margin: 1em auto 0;
+  padding: 0em 0 2em;
+  color: white;
+}
+
+.breadcrumb__link {
+  text-decoration: none;
+  color: white;
+}
+
+.breadcrumb__link.home {
+  margin-right: 2%;
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  position: relative;
+}
+
+.breadcrumb__link.home img {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.breadcrumb__active {
+  color: #FED178;
 }

@@ -1,0 +1,38 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/breadcrumb.scss - styles for breadcrumb in header
+ *
+ * coded by Anne
+ * started at 24/10/2017
+ */
+
+ .breadcrumb {
+     width: 87.5%;
+     margin: 1em auto 0;
+     padding: 0em 0 2em;
+     color: white;
+     &__link {
+        text-decoration: none;
+        color: white;
+     }
+     &__link:hover {
+     }
+     &__link.home {
+         margin-right: 2%;
+         display: inline-block;
+         width: 27px;
+         height: 27px;
+         position: relative;
+         img {
+             display: inline-block;
+             width: 27px;
+             height: 27px;
+             position: absolute;
+             top: 4px;
+             left: 0;
+         }
+     }
+     &__active {
+        color: $lightColor;
+     }
+ }
