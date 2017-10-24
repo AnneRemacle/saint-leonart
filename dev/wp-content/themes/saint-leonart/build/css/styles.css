@@ -825,3 +825,39 @@ html {
 .breadcrumb__active {
   color: #FED178;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/members.scss - styles for members on about page
+ *
+ * coded by Anne
+ * started at 23/10/2017
+ */
+.member {
+  margin: 2em 0;
+}
+
+.member__figure {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto .5em;
+}
+
+.member__image {
+  width: 100%;
+  height: auto;
+}
+
+.member__name {
+  font-family: "oswald", "arial", "sans-serif";
+  font-size: 1.618em;
+  text-align: center;
+  margin-bottom: .4em;
+}
+
+.member__job {
+  text-align: center;
+  text-transform: capitalize;
+}
