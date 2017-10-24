@@ -33,7 +33,11 @@ get_header();?>
             <section class="member">
                 <figure class="member__figure">
                     <?php $image = get_sub_field( 'photo' ); ?>
-                    <img class="member__image" src="<?php echo $image['url']; ?>" alt="Portrait de <?php the_sub_field('nom'); ?>" />
+                    <?php if( $image[ 'url' ] != "" ): ?>
+                        <img class="member__image" src="<?php echo $image['url']; ?>" alt="Portrait de <?php the_sub_field('nom'); ?>" />
+                    <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/placeholder.png';?>" alt="" class="member__image" />
+                    <?php endif; ?>
                 </figure>
                 <h3 class="member__name"><?php the_sub_field( 'nom' ); ?> </h3>
                 <p class="member__job"><?php the_sub_field( 'fonction' ); ?> </p>
