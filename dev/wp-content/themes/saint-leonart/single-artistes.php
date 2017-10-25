@@ -43,3 +43,25 @@ get_header();?>
         <?php endif; ?>
     </ul>
 </section>
+
+<section class="section-light where">
+    <h2 class="section__title">Où voir ses œuvres?</h2>
+    <div class="section__text">
+        <?php the_field( 'lieu' ); ?>
+    </div>
+    <a href="" class="cta">En savoir plus sur ce lieu</a>
+</section>
+
+<section class="section work">
+    <h2 class="section__title">Son travail</h2>
+    <?php if( have_rows('oeuvres') ):
+        while ( have_rows('oeuvres') ) : the_row();?>
+        <figure class="artiste__work">
+            <?php $image = get_sub_field( 'oeuvre' ); ?>
+            <img src="<?php echo $image['url'] ?>" alt="Oeuvre de <?php the_title(); ?>" class="artiste__oeuvre">
+        </figure>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</section>
+
+<?php get_footer();
