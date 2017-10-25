@@ -1,0 +1,84 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/contact.scss - styles for contact form
+ *
+ * coded by Anne
+ * started at 25/10/2017
+ */
+
+ .wpcf7-form {
+     width: 100%;
+     font-family: $labor;
+
+     &:after {
+         content:" les champs marqués d'un * sont obligatoires";
+         font-size: .8em;
+         color: $darkColor;
+     }
+
+     > p {
+         margin-bottom: 1.7em;
+         position: relative;
+
+         > .required::after {
+            content:"*";
+            color: $darkColor;
+            position: absolute;
+            top: 0px;
+            left: 30%
+         }
+     }
+ }
+.wpcf7-submit {
+    background: $middleColor;
+    width: 50%;
+    border: none;
+    color: white;
+    padding: .8em 1.5em;
+    font-size: 1em;
+}
+
+.screen-reader-response {
+    color: red;
+    font-size: .9em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    ul {
+        display: none;
+    }
+}
+
+.wpcf7-not-valid-tip {
+    color: red;
+    font-size: .9em;
+}
+
+.wpcf7-response-output {
+    display: none;
+}
+
+
+.form {
+    &__label {
+
+    }
+    &__input, &__area {
+        border-radius: 15px;
+        border: 1px solid #9B9B9B;
+        margin-top: .6em;
+        padding: 1em;
+        font-size: 1em;
+        width: 100%;
+        margin-bottom: .3em;
+    }
+    &__input:focus, &__area:focus {
+        outline: none;
+        border: 1px solid $darkColor;
+    }
+    &__input {
+        height: 1.875em;
+    }
+    &__area {
+        resize: none;
+    }
+}
