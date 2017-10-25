@@ -101,6 +101,21 @@ register_post_type( 'news', [
         'has_archive' => true
     ] );
 
+register_post_type( 'lieu', [
+        'label' => __('Lieux', 'leonart'),
+        'labels' => [
+                    'singular_name' => __( 'Lieu', 'leonart' ),
+                    'add_new' => __( 'Ajouter un lieu', 'leonart')
+        ],
+        'description' => __( 'La liste des lieux du festival', 'leonart'),
+        'taxonomies' => array( 'category' ),
+        'public' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-location-alt',
+        'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'has_archive' => true
+    ] );
+
 // Taxonomies
 register_taxonomy( 'art-type', 'categories', [
             'label' => 'Style',
@@ -135,3 +150,12 @@ register_taxonomy( 'news', 'categories', [
         ] );
 
 register_taxonomy_for_object_type( 'event', 'news' );
+
+// ACF Google Maps
+
+function my_acf_init() {
+
+    acf_update_setting('google_api_key', ' AIzaSyBDeuwdU6TD7s_exoHvquyikKKVTFQiGC0 ');
+}
+
+add_action('acf/init', 'my_acf_init');
