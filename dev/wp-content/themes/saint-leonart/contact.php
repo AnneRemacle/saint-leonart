@@ -31,4 +31,8 @@ get_header();?>
 <section class="section-light form">
     <h2 class="sro">Formulaire de contact</h2>
     <?php the_field( 'formulaire' ); ?>
+
+    <a href="" class="cta">Revoir le programme</a>
 </section>
+
+<?php get_footer();

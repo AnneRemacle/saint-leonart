@@ -6,10 +6,13 @@
  * started at 25/10/2017
  */
 
+ .wpcf7 {
+     margin-bottom: 3em;
+ }
+
  .wpcf7-form {
      width: 100%;
      font-family: $labor;
-
      &:after {
          content:" les champs marqués d'un * sont obligatoires";
          font-size: .8em;

@@ -1104,6 +1104,10 @@ html {
  * coded by Anne
  * started at 25/10/2017
  */
+.wpcf7 {
+  margin-bottom: 3em;
+}
+
 .wpcf7-form {
   width: 100%;
   font-family: "Asap", "arial", "sans-serif";
