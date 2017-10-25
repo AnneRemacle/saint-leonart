@@ -992,3 +992,84 @@ html {
   display: block;
   line-height: 1.5;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/artiste.scss - styles for single artist page
+ *
+ * coded by Anne
+ * started at 25/10/2017
+ */
+.artiste__name {
+  position: relative;
+  font-family: "oswald", "arial", "sans-serif";
+  font-size: 2.058em;
+  margin-bottom: .6em;
+}
+
+.artiste__name--shape {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  z-index: -1;
+}
+
+.artiste__domaine {
+  margin-bottom: 1em;
+}
+
+.artiste__portrait {
+  width: 100%;
+  height: 17.5em;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.artiste__image {
+  width: 100%;
+  height: auto;
+}
+
+.artiste__coordonnees--item {
+  cursor: pointer;
+  margin-bottom: 1.2em;
+  transition: text-decoration .3s ease;
+}
+
+.artiste__coordonnees--item a {
+  text-decoration: none;
+  color: #222;
+}
+
+.artiste__coordonnees--item::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4%;
+}
+
+.artiste__coordonnees--item:hover {
+  text-decoration: underline;
+}
+
+.artiste__coordonnees--item.email::before {
+  background: url("../assets/images/bubbles.svg") center no-repeat;
+  background-size: contain;
+}
+
+.artiste__coordonnees--item.facebook::before {
+  background: url("../assets/images/facebook.svg");
+  background-size: contain;
+}
+
+.artiste__coordonnees--item.telephone::before {
+  background: url("../assets/images/telephone.svg");
+  background-size: contain;
+}
+
+.artiste__coordonnees--item.site::before {
+  background: url("../assets/images/screen.svg");
+  background-size: contain;
+}
