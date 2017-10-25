@@ -1,0 +1,51 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/coordonnees.scss - styles to display informations
+ *
+ * coded by Anne
+ * started at 25/10/2017
+ */
+
+.coordonnees {
+     &__item {
+         cursor: pointer;
+         margin-bottom: 1.2em;
+         transition: text-decoration .3s ease;
+
+         a {
+             text-decoration: none;
+             color: $textColor;
+         }
+         &::before {
+             content: "";
+             width: 24px;
+             height: 24px;
+             display: inline-block;
+             vertical-align: middle;
+             margin-right: 4%;
+         }
+     }
+     &__item:hover {
+         text-decoration: underline;
+     }
+     &__item.email::before {
+         background: url('../assets/images/bubbles.svg') center no-repeat;
+         background-size: contain;
+     }
+     &__item.nom::before {
+         background: url('../assets/images/bubbles.svg') center no-repeat;
+         background-size: contain;
+     }
+     &__item.facebook::before {
+         background: url('../assets/images/facebook.svg');
+         background-size: contain;
+     }
+     &__item.telephone::before {
+         background: url('../assets/images/telephone.svg');
+         background-size: contain;
+     }
+     &__item.site::before {
+         background: url('../assets/images/screen.svg');
+         background-size: contain;
+     }
+ }

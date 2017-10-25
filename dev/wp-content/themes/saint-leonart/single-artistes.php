@@ -20,24 +20,24 @@ get_header();?>
         <?php the_field( 'presentation' ); ?>
     </div>
 
-    <ul class="artiste__coordonnees">
+    <ul class="coordonnees">
         <?php if( get_field( 'email' ) != null): ?>
-            <li class="artiste__coordonnees--item email">
+            <li class="coordonnees__item email">
                 <a href="mailto:<?php the_field( 'email' ); ?>"><?php the_field( 'email' ); ?></a>
             </li>
         <?php endif; ?>
         <?php if( get_field( 'telephone' ) != null): ?>
-            <li class="artiste__coordonnees--item telephone">
+            <li class="coordonnees__item telephone">
                 <a href="tel:<?php the_field( 'telephone' ); ?>"><?php the_field( 'telephone' ); ?></a>
             </li>
         <?php endif; ?>
         <?php if( get_field( 'site' ) != null): ?>
-            <li class="artiste__coordonnees--item site">
+            <li class="coordonnees__item site">
                 <a href="<?php the_field( 'site' ); ?>"><?php the_field( 'site' ); ?></a>
             </li>
         <?php endif; ?>
         <?php if( get_field( 'facebook' ) != null): ?>
-            <li class="artiste__coordonnees--item facebook">
+            <li class="coordonnees__item facebook">
                 <a href="<?php the_field( 'facebook' ); ?>"><?php the_title(); ?></a>
             </li>
         <?php endif; ?>
