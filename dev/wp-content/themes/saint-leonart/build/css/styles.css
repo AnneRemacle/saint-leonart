@@ -807,6 +807,12 @@ html {
 .breadcrumb__link {
   text-decoration: none;
   color: white;
+  text-transform: capitalize;
+  transition: color .3s ease;
+}
+
+.breadcrumb__link:hover {
+  color: #fee2ab;
 }
 
 .breadcrumb__link.home {
@@ -828,6 +834,11 @@ html {
 
 .breadcrumb__active {
   color: #FED178;
+}
+
+.breadcrumb > span {
+  display: inline-block;
+  margin-bottom: 1.2em;
 }
 
 /* Saint Léon'Art

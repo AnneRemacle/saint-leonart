@@ -14,8 +14,11 @@
      &__link {
         text-decoration: none;
         color: white;
+        text-transform: capitalize;
+        transition: color .3s ease;
      }
      &__link:hover {
+         color: lighten($lightColor, 10%);
      }
      &__link.home {
          margin-right: 2%;
@@ -36,3 +39,8 @@
         color: $lightColor;
      }
  }
+
+.breadcrumb > span {
+    display: inline-block;
+    margin-bottom: 1.2em;
+}
