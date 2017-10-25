@@ -67,6 +67,7 @@ register_post_type( 'artistes', [
         'menu_position' => 5,
         'menu_icon' => 'dashicons-admin-users',
         'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'publicly_queryable'  => true,
         'has_archive' => true
     ] );
 
