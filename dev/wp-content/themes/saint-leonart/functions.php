@@ -113,6 +113,7 @@ register_post_type( 'lieu', [
         'menu_position' => 5,
         'menu_icon' => 'dashicons-location-alt',
         'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'publicly_queryable'  => true,
         'has_archive' => true
     ] );
 
