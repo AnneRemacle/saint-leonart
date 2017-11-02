@@ -10,12 +10,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5" />
+
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDeuwdU6TD7s_exoHvquyikKKVTFQiGC0"></script>
       <script src="<?php echo get_template_directory_uri() . '/build/js/script.js'; ?>"></script>
+      <script src="<?php echo get_template_directory_uri() . '/build/js/map.js'; ?>"></script>
     <title><?php the_title(); ?> | <?php bloginfo( 'name' ); ?></title>
 </head>
 <body>
@@ -68,6 +71,6 @@
             </div>
         <?php endif; ?>
 
-        
+
 
     </header>
