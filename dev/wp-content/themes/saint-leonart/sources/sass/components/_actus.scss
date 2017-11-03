@@ -9,7 +9,7 @@
  .news {
      position: relative;
      width: 100%;
-     margin-bottom: 1.5em;
+     margin-bottom: 2em;
      a {
          text-decoration: none;
          color: $textColor;
@@ -44,8 +44,36 @@
      }
      &__content {
          margin-top: .7em;
+         line-height: 1.5;
+         margin-bottom: .4em;
          p {
              line-height: 1.5;
          }
+     }
+     &__figure {
+         width: 100%;
+         margin-bottom: .3em;
+         img {
+             width: 100%;
+             height: auto;
+         }
+     }
+     &__more {
+         color: $middleColor;
+
+         &:after {
+             content:"";
+             background: url('../assets/images/arrow-right.svg');
+             width: 15px;
+             height: 15px;
+             background-size: contain;
+             display: inline-block;
+             vertical-align: middle;
+             transition: transform .3s ease;
+             margin-left: 3px;
+         }
+     }
+     &__more:hover:after {
+         transform: translateX(10px);
      }
  }
