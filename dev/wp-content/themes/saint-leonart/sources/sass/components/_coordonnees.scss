@@ -48,4 +48,8 @@
          background: url('../assets/images/screen.svg');
          background-size: contain;
      }
+     &__item.adresse::before {
+         background: url('../assets/images/envelope.svg');
+         background-size: contain;
+     }
  }

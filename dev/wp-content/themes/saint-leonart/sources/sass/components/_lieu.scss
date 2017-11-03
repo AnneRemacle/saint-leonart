@@ -1,0 +1,22 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/lieu.scss - styles for page which shows a place
+ *
+ * coded by Anne
+ * started at 25/10/2017
+ */
+
+ .lieu {
+     &__name {
+         position: relative;
+         font-family: $titles;
+         font-size: $title;
+         margin-bottom: .6em;
+         &--shape {
+             position: absolute;
+             top: -20px;
+             left: -10px;
+             z-index: -1;
+         }
+     }
+ }
