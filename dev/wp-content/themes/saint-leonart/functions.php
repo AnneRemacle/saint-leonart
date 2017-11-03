@@ -15,7 +15,7 @@ function get_the_custom_excerpt( $length = 150 ) {
     return substr( $excerpt, 0, $length );
 }
 
-function the_custom_excerpt( $length = 250 ) {
+function the_custom_excerpt( $length = 150 ) {
     echo get_the_custom_excerpt( $length );
 }
 
@@ -140,15 +140,6 @@ register_taxonomy( 'event', 'categories', [
         ] );
 
 register_taxonomy_for_object_type( 'event', 'events' );
-
-register_taxonomy( 'news', 'categories', [
-            'label' => 'Catégories',
-            'labels' => [
-                'singular_name' => 'Catégorie',
-            ],
-            'public' => true ,
-            'hierarchical' => true
-        ] );
 
 register_taxonomy_for_object_type( 'event', 'news' );
 
