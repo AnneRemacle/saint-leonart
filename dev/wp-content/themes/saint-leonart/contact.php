@@ -29,7 +29,7 @@ get_header();?>
 </section>
 
 <section class="section-light form">
-    <h2 class="sro">Formulaire de contact</h2>
+    <h2 class="section__title">Écrivez-nous!</h2>
     <?php the_field( 'formulaire' ); ?>
 
     <a href="" class="cta">Revoir le programme</a>
