@@ -433,6 +433,28 @@ html {
   margin-bottom: 1em;
 }
 
+.section__text h2, .section__text h3 {
+  font-family: "Oswald", "arial", "sans-serif";
+}
+
+.section__text > h2 {
+  font-size: 2.058em;
+  text-align: center;
+}
+
+.section__text > h3 {
+  font-size: 1.618em;
+  text-align: center;
+  margin-bottom: .5em;
+  margin-top: 1em;
+}
+
+.section__text > h4 {
+  font-family: "Oswald", "arial", "sans-serif";
+  font-size: 1.272em;
+  margin-bottom: .3em;
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/card.scss - styles for cards
@@ -475,8 +497,30 @@ html {
   z-index: 2;
 }
 
+.card__subtitle {
+  position: relative;
+  margin-bottom: .5em;
+  font-family: "Oswald", "arial", "sans-serif";
+  font-size: 1.618em;
+}
+
+.card__subtitle--shape {
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: -8px;
+}
+
+.card__subtitle span {
+  z-index: 2;
+}
+
 .card__category {
   text-transform: capitalize;
+}
+
+.card > p {
+  line-height: 1.5;
 }
 
 /* Saint Léon'Art

@@ -34,7 +34,26 @@
             z-index: 2;
          }
      }
+     &__subtitle {
+         position: relative;
+         margin-bottom: .5em;
+         font-family: $titles;
+         font-size: $sub2;
+
+         &--shape {
+            position: absolute;
+            z-index: -1;
+            top: -10px;
+            left:-8px;
+         }
+         span {
+            z-index: 2;
+         }
+     }
      &__category {
         text-transform: capitalize;
+     }
+     > p {
+         line-height: 1.5;
      }
  }
