@@ -1390,3 +1390,46 @@ html {
   height: 17.5em;
   margin: 2em 0;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/buttons.scss - styles program buttons
+ *
+ * coded by Anne
+ * started at 21/10/2017
+ */
+.buttons__single {
+  background: #861C48;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Oswald", "arial", "sans-serif";
+  font-size: 1.272em;
+  padding: 1em 0;
+  transition: background .3s ease;
+  margin-bottom: 1em;
+}
+
+.buttons__single:hover, .buttons__single__single.active {
+  background: #D83C2B;
+}
+
+.buttons__filter {
+  display: block;
+  width: 80%;
+  margin: .7em auto;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(134, 28, 72, 0.2);
+  color: #A6A6A6;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.buttons__filter:hover {
+  background: #861C48;
+}

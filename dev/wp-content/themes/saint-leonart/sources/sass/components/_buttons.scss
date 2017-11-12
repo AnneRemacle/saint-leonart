@@ -1,0 +1,46 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/buttons.scss - styles program buttons
+ *
+ * coded by Anne
+ * started at 21/10/2017
+ */
+
+ .buttons{
+     &__single {
+         background: $darkColor;
+         display: block;
+         color: white;
+         text-decoration: none;
+         text-align: center;
+         font-family: $titles;
+         font-size: $sub3;
+         padding: 1em 0;
+         transition: background .3s ease;
+         margin-bottom: 1em;
+
+         &:hover, &__single.active {
+             background: $middleColor;
+         }
+     }
+     &__filter {
+         display: block;
+         width: 80%;
+         margin: .7em auto;
+         text-decoration: none;
+         text-align: center;
+         background: rgba($darkColor, 0.2);
+         color: #A6A6A6;
+         padding: 1em;
+         margin-bottom: 1em;
+         border-radius: 10px;
+         cursor: pointer;
+         overflow: hidden;
+     }
+     &__filter:hover {
+         background: $darkColor;
+     }
+
+
+
+}
