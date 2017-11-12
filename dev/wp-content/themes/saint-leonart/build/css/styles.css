@@ -1411,7 +1411,7 @@ html {
   margin-bottom: 1em;
 }
 
-.buttons__single:hover, .buttons__single__single.active {
+.buttons__single:hover, .buttons__single.active {
   background: #D83C2B;
 }
 
@@ -1432,4 +1432,8 @@ html {
 
 .buttons__filter:hover {
   background: #861C48;
+}
+
+.buttons__content {
+  margin-bottom: 1.5em;
 }

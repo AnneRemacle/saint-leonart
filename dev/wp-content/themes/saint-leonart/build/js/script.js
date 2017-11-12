@@ -13,6 +13,20 @@ $(document).ready(function() {
           }
     } )
 
+    $(".buttons__single").on( "click", function(e) {
+        e.preventDefault();
+        $( e.target ).toggleClass( 'active' );
+        $( e.target ).next().slideToggle( "slow" );    
+    } )
+
+    $(".buttons__single").on( "click", function(e) {
+        e.preventDefault();
+        if( $( e.target ).hasClass( 'active' ) ) {
+            $( e.target ).removeClass( 'active' );
+        }
+
+    } )
+
     $(".timeline__dates--edition").on( "click", function(e) {
         e.preventDefault();
         $(".timeline__dates--edition").removeClass("active");

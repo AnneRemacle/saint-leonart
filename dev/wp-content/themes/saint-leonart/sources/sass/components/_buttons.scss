@@ -19,7 +19,7 @@
          transition: background .3s ease;
          margin-bottom: 1em;
 
-         &:hover, &__single.active {
+         &:hover, &.active {
              background: $middleColor;
          }
      }
@@ -40,7 +40,9 @@
      &__filter:hover {
          background: $darkColor;
      }
-
+    &__content {
+        margin-bottom: 1.5em;
+    }
 
 
 }
