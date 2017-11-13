@@ -20,12 +20,12 @@ get_header();?>
 
         <div class="buttons__single">Expositions</div>
         <div class="buttons__content hidden">
-            <?php $posts = new WP_Query( [ 'post_type' => 'lieu', 'orderby' => 'post_title' ] ); ?>
+            <?php $posts = new WP_Query( [ 'post_type' => 'lieu', 'orderby' => 'title', 'order' => 'ASC' ] ); ?>
             <?php if ( $posts -> have_posts() ):
                 while ( $posts -> have_posts() ):
                     $posts -> the_post();
                     $terms = get_the_terms( $post->ID, "art-type" ); ?>
-                    <div class="card">
+                    <a href="<?php the_permalink(); ?>" class="card">
                         <div class="card__subtitle">
                             <svg width="45px" height="50px" class="card__title--shape lieu">
                                 <path d="M0 0 L45 26 L45 50 L0 24 Z" />
@@ -35,7 +35,7 @@ get_header();?>
                         <div class="section__text">
                             <?php the_custom_excerpt(); ?>…
                         </div>
-                    </div>
+                    </a>
                 <?php endwhile; endif; ?>
             <?php wp_reset_query(); ?>
         </div>
@@ -48,12 +48,12 @@ get_header();?>
 
         <div class="buttons__single">Les artistes</div>
         <div class="buttons__content hidden">
-            <?php $posts = new WP_Query( [ 'post_type' => 'artistes', 'orderby' => 'post_title' ] ); ?>
+            <?php $posts = new WP_Query( [ 'post_type' => 'artistes', 'orderby' => 'title', 'order' => 'ASC' ] ); ?>
             <?php if ( $posts -> have_posts() ):
                 while ( $posts -> have_posts() ):
                     $posts -> the_post();
                     $terms = get_the_terms( $post->ID, "art-type" ); ?>
-                    <div class="card">
+                    <a href="<?php the_permalink(); ?>" class="card">
                         <figure class="card__figure">
                             <?php the_post_thumbnail(); ?>
                         </figure>
@@ -64,7 +64,7 @@ get_header();?>
                             <span><?php the_title(); ?></span>
                         </h3>
                         <p class="card__category"><?php echo $terms[0]->name; ?></p>
-                    </div>
+                    </a>
                 <?php endwhile; endif; ?>
             <?php wp_reset_query(); ?>
         </div>

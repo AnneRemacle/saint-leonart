@@ -465,6 +465,9 @@ html {
 .card {
   width: 100%;
   margin-bottom: 2.5em;
+  text-decoration: none;
+  display: block;
+  color: #222;
 }
 
 .card__figure {
