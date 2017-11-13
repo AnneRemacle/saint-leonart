@@ -12,7 +12,7 @@ get_header();?>
         <h3 class="section__subtitle">Trier par catégorie</h3>
         <ul class="categories">
             <?php foreach( get_terms(array('taxonomy' => 'event','hide_empty' => false)) as $term ): ?>
-                <li class="categories__term <?php echo $term->slug?> btn btn-1 btn-1e">
+                <li class="categories__term btn btn-1 btn-1e <?php echo $term->slug?>">
                     <?php echo $term->name; ?>
                 </li>
             <?php endforeach; ?>
@@ -25,7 +25,7 @@ get_header();?>
                     $posts -> the_post();
                     $terms = get_the_terms( $post->ID, "event" );?>
 
-                    <section class="news">
+                    <section class="news <?php echo $terms[0]->slug ?>">
                         <a href="<?php the_permalink(); ?>" class="news__link">
                             <figure class="news__figure">
                                 <?php the_post_thumbnail(); ?>

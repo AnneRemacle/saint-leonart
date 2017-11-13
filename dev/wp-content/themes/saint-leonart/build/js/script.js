@@ -16,7 +16,7 @@ $(document).ready(function() {
     $(".buttons__single").on( "click", function(e) {
         e.preventDefault();
         $( e.target ).toggleClass( 'active' );
-        $( e.target ).next().slideToggle( "slow" );    
+        $( e.target ).next().slideToggle( "slow" );
     } )
 
     $(".buttons__single").on( "click", function(e) {
@@ -36,5 +36,17 @@ $(document).ready(function() {
         $(".timeline__infos").fadeOut("slow");
         $(".timeline__infos[data-edition="+buttonEdition+"]").fadeIn("slow");
     } )
+
+    $(".buttons__filter").on("click", function(e){
+        var classFilter = $(e.target).attr('class').split(' ').pop();
+        $(".program-item").hide();
+        $(".program-item."+classFilter).show();
+    })
+
+    $(".categories__term").on("click", function(e){
+        var classFilter = $(e.target).attr('class').split(' ').pop();
+        $(".news").hide();
+        $(".news."+classFilter).show();
+    })
 
 });

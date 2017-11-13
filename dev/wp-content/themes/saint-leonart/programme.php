@@ -21,7 +21,8 @@ get_header();?>
             <?php $args = array(
                 'meta_key'     => 'heure_debut',
                 'post_type'    => 'programme',
-                'order' => 'ASC'
+                'order' => 'ASC',
+                'orderby' => 'heure_debut'
             );
             ?>
 
@@ -32,7 +33,7 @@ get_header();?>
                     $terms = get_the_terms( $post->ID, "programme" ); ?>
                     <?php $project_date = get_post_meta ( $post->ID , 'heure_debut' , true ) ; ?>
 
-                    <div class="program-item">
+                    <div class="program-item hidden <?php echo $terms[0]->slug ?>">
                         <p class="program-item__title"><?php the_title(); ?></p>
 
                         <?php $posts = get_field('lieu'); ?>
@@ -72,7 +73,43 @@ get_header();?>
         </div>
 
         <div class="buttons__single">Concerts/spectacles</div>
-        <div class="buttons__content hidden">coucou</div>
+        <div class="buttons__content hidden">
+            <?php $args = array(
+                'post_type'    => 'programme',
+                'order' => 'ASC',
+                'orderby' => 'heure_debut',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'programme',
+                        'field' => 'slug',
+                        'terms' => 'concertspectacle',
+                    ),
+                )
+            );
+            ?>
+
+            <?php $items = new WP_Query( $args ); ?>
+            <?php if ( $items -> have_posts() ):
+                while ( $items -> have_posts() ):
+                    $items -> the_post();
+                    $terms = get_the_terms( $post->ID, "programme" ); ?>
+
+                    <div class="program-item">
+                        <p class="program-item__title"><?php the_title(); ?></p>
+
+                        <?php $posts = get_field('lieu'); ?>
+                        <p class="program-item__place"><?php echo $posts->post_title ?></p>
+
+                        <div class="program-item__hours">
+                            <span><?php the_field( 'heure_debut' ); ?></span>
+                            -
+                            <span><?php the_field( 'heure_fin' ); ?></span>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
 
         <div class="buttons__single">Œuvres en espace urbain</div>
         <div class="buttons__content hidden">coucou</div>
