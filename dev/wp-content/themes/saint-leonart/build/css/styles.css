@@ -387,6 +387,17 @@ html {
   line-height: 1.5;
 }
 
+.section__figure {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5em;
+}
+
+.section__figure img {
+  width: 100%;
+  height: auto;
+}
+
 .section-image {
   position: relative;
 }

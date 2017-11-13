@@ -24,6 +24,16 @@
     &__text {
         line-height: 1.5;
     }
+    &__figure {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5em;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
     &-image {
         position: relative;
         &__figure {
