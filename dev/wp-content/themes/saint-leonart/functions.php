@@ -64,7 +64,7 @@ register_post_type( 'artistes', [
         'description' => __( 'La liste des artistes participant au festival', 'leonart'),
         'taxonomies' => array( 'category' ),
         'public' => true,
-        'menu_position' => 5,
+        'menu_position' => 2,
         'menu_icon' => 'dashicons-admin-users',
         'supports' => [ 'title', 'editor', 'thumbnail' ],
         'publicly_queryable'  => true,
@@ -81,7 +81,7 @@ register_post_type( 'events', [
         'taxonomies' => array( 'category' ),
         'public' => true,
         'menu_position' => 5,
-        'menu_icon' => 'dashicons-calendar-alt',
+        'menu_icon' => 'dashicons-album',
         'supports' => [ 'title', 'editor', 'thumbnail' ],
         'has_archive' => true
     ] );
@@ -110,12 +110,28 @@ register_post_type( 'lieu', [
         'description' => __( 'La liste des lieux du festival', 'leonart'),
         'taxonomies' => array( 'category' ),
         'public' => true,
-        'menu_position' => 5,
+        'menu_position' => 3,
         'menu_icon' => 'dashicons-location-alt',
         'supports' => [ 'title', 'editor', 'thumbnail' ],
         'publicly_queryable'  => true,
         'has_archive' => true
     ] );
+
+    register_post_type( 'programme', [
+            'label' => __('Programme', 'leonart'),
+            'labels' => [
+                        'singular_name' => __( 'Programme', 'leonart' ),
+                        'add_new' => __( 'Ajouter un élément au programme', 'leonart')
+            ],
+            'description' => __( 'La liste des événements au programme du festival', 'leonart'),
+            'taxonomies' => array( 'category' ),
+            'public' => true,
+            'menu_position' => 2,
+            'menu_icon' => 'dashicons-calendar-alt',
+            'supports' => [ 'title', 'editor', 'thumbnail' ],
+            'publicly_queryable'  => true,
+            'has_archive' => true
+        ] );
 
 // Taxonomies
 register_taxonomy( 'art-type', 'categories', [
@@ -143,6 +159,16 @@ register_taxonomy_for_object_type( 'event', 'events' );
 
 register_taxonomy_for_object_type( 'event', 'news' );
 
+register_taxonomy( 'programme', 'categories', [
+            'label' => 'Catégories',
+            'labels' => [
+                'singular_name' => 'Catégorie',
+            ],
+            'public' => true ,
+            'hierarchical' => true
+        ] );
+
+register_taxonomy_for_object_type( 'programme', 'programme' );
 // ACF Google Maps
 
 function my_acf_init() {

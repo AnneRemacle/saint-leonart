@@ -13,7 +13,38 @@ get_header();?>
         <div class="buttons__content hidden">
             <?php if( have_rows('jours') ):
                 while ( have_rows('jours') ) : the_row(); ?>
-                <div class="buttons__filter btn btn-1 btn-1e"><?php the_sub_field( 'jour' ); ?></div>
+                <?php $title = get_sub_field( 'jour' ) ?>
+                <div class="buttons__filter btn btn-1 btn-1e <?php echo sanitize_title( $title ); ?>"><?php the_sub_field( 'jour' ); ?></div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php $args = array(
+                'meta_key'     => 'heure_debut',
+                'post_type'    => 'programme',
+                'order' => 'ASC'
+            );
+            ?>
+
+            <?php $items = new WP_Query( $args ); ?>
+            <?php if ( $items -> have_posts() ):
+                while ( $items -> have_posts() ):
+                    $items -> the_post();
+                    $terms = get_the_terms( $post->ID, "programme" ); ?>
+                    <?php $project_date = get_post_meta ( $post->ID , 'heure_debut' , true ) ; ?>
+
+                    <div class="program-item">
+                        <p class="program-item__title"><?php the_title(); ?></p>
+
+                        <?php $posts = get_field('lieu'); ?>
+                        <p class="program-item__place"><?php echo $posts->post_title ?></p>
+
+                        <div class="program-item__hours">
+                            <span><?php the_field( 'heure_debut' ); ?></span>
+                            -
+                            <span><?php the_field( 'heure_fin' ); ?></span>
+                        </div>
+                    </div>
+
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
