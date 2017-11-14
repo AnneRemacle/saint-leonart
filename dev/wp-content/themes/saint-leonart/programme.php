@@ -48,6 +48,7 @@ get_header();?>
 
                 <?php endwhile; ?>
             <?php endif; ?>
+            <?php wp_reset_query(); ?>
         </div>
 
         <div class="buttons__single">Expositions</div>
@@ -109,12 +110,13 @@ get_header();?>
 
                 <?php endwhile; ?>
             <?php endif; ?>
+            <?php wp_reset_query(); ?>
         </div>
 
         <div class="buttons__single">Œuvres en espace urbain</div>
         <div class="buttons__content hidden">coucou</div>
 
-        <div class="buttons__single">Les artistes</div>
+        <div class="buttons__single" id="#artistes">Les artistes</div>
         <div class="buttons__content hidden">
             <?php $posts = new WP_Query( [ 'post_type' => 'artistes', 'orderby' => 'title', 'order' => 'ASC' ] ); ?>
             <?php if ( $posts -> have_posts() ):

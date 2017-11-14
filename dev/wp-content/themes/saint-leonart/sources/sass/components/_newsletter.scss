@@ -1,0 +1,77 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/newsletter.scss - styles for newsletter form
+ *
+ * coded by Anne
+ * started at 21/10/2017
+ */
+
+#mc_embed_signup {
+    clear:left;
+    font-family: $labor;
+
+    form {
+        padding: 0 !important;
+    }
+    .indicates-required {
+        float: right;
+    }
+
+    .mc-field-group {
+        width: 100%;
+
+    }
+
+    input.email {
+        border-radius: 10px;
+        border: 1px solid $lightColor;
+    }
+
+    .button {
+        display: block !important;
+        width: 50% !important;
+        margin: 0 auto !important;
+        border-radius: 0px !important;
+        background-color: $middleColor !important;
+    }
+}
+
+#mce-success-response {
+    width: 100%;
+
+}
+
+#mc_embed_signup div#mce-responses {
+    float: left;
+     top: -1.4em;
+     padding: 0em .5em 0em .5em;
+     overflow: hidden;
+     width: 100% !important;
+     margin: 0 !important;
+     clear: both;
+ }
+
+#mc_embed_signup #mce-error-response {
+    display: none;
+    width: 100%;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: white !important;
+    padding: .5em 0 !important;
+}
+
+#mc_embed_signup div.response {
+    padding: 0 !important;
+    font-weight: normal;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    font-size: .9em;
+    margin: 0 !important;
+    padding: .5em 0 ;
+
+    a {
+        color:white;
+    }
+}
