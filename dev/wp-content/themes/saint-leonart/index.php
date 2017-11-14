@@ -40,7 +40,7 @@ get_header();?>
 </section>
 
 <section class="section-light next">
-    <h2 class="section__title">Prochaiement</h2>
+    <h2 class="section__title">Prochainement</h2>
     <?php $posts = new WP_Query( [ 'post_type' => 'events', 'posts_per_page' => 3, 'order' => 'DESC' ] ); ?>
 	<?php if ( $posts -> have_posts() ):
 		while ( $posts -> have_posts() ):
