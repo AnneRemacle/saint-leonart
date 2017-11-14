@@ -49,7 +49,7 @@ get_header();?>
     <div class="section__text">
         <?php the_field( 'lieu' ); ?>
     </div>
-    <a href="" class="cta">En savoir plus sur ce lieu</a>
+    <a href="/accueil/programme/#expositions" class="cta">En savoir plus sur ce lieu</a>
 </section>
 
 <section class="section work">

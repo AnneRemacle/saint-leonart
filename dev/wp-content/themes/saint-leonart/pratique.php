@@ -39,7 +39,7 @@ get_header();?>
     <?php endif; ?>
     <?php wp_reset_query(); ?>
 
-    <a href="" class="cta">Voir le programme</a>
+    <a href="/accueil/programme" class="cta">Voir le programme</a>
 </section>
 
 <section class="section-image newsletter">

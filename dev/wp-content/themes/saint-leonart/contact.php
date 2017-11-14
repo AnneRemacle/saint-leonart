@@ -32,7 +32,7 @@ get_header();?>
     <h2 class="section__title">Écrivez-nous!</h2>
     <?php the_field( 'formulaire' ); ?>
 
-    <a href="" class="cta">Revoir le programme</a>
+    <a href="/accueil/programme" class="cta">Revoir le programme</a>
 </section>
 
 <?php get_footer();

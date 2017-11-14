@@ -405,12 +405,12 @@ html {
 .section-image__figure {
   background: #861C48;
   width: 100%;
-  max-height: 20em;
+  max-height: 21em;
   overflow: hidden;
 }
 
 .section-image__image {
-  width: 140%;
+  width: 150%;
   height: auto;
   opacity: 0.5;
 }

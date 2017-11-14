@@ -20,7 +20,7 @@ get_header();?>
                 $terms = get_the_terms( $post->ID, "art-type" );
                 ?>
 
-                <section class="card">
+                <a href="<?php the_permalink();?>" class="card">
                     <figure class="card__figure">
                         <?php the_post_thumbnail(); ?>
                     </figure>
@@ -31,12 +31,12 @@ get_header();?>
                         <span><?php the_title(); ?></span>
                     </h3>
                     <p class="card__category"><?php echo $terms[0]->name; ?></p>
-                </section>
+                </a>
 
         <?php endwhile; endif; ?>
     <?php wp_reset_query(); ?>
 
-    <a href="/programme/#artistes" class="cta">Voir tous les artistes</a>
+    <a href="/accueil/programme/#artistes" class="cta">Voir tous les artistes</a>
 </section>
 
 <section class="section-light next">
