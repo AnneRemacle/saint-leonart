@@ -117,21 +117,37 @@ register_post_type( 'lieu', [
         'has_archive' => true
     ] );
 
-    register_post_type( 'programme', [
-            'label' => __('Programme', 'leonart'),
-            'labels' => [
-                        'singular_name' => __( 'Programme', 'leonart' ),
-                        'add_new' => __( 'Ajouter un élément au programme', 'leonart')
-            ],
-            'description' => __( 'La liste des événements au programme du festival', 'leonart'),
-            'taxonomies' => array( 'category' ),
-            'public' => true,
-            'menu_position' => 2,
-            'menu_icon' => 'dashicons-calendar-alt',
-            'supports' => [ 'title', 'editor', 'thumbnail' ],
-            'publicly_queryable'  => true,
-            'has_archive' => true
-        ] );
+register_post_type( 'programme', [
+        'label' => __('Programme', 'leonart'),
+        'labels' => [
+                    'singular_name' => __( 'Programme', 'leonart' ),
+                    'add_new' => __( 'Ajouter un élément au programme', 'leonart')
+        ],
+        'description' => __( 'La liste des événements au programme du festival', 'leonart'),
+        'taxonomies' => array( 'category' ),
+        'public' => true,
+        'menu_position' => 2,
+        'menu_icon' => 'dashicons-calendar-alt',
+        'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'publicly_queryable'  => true,
+        'has_archive' => true
+    ] );
+
+register_post_type( 'partenaire', [
+        'label' => __('Partenaires', 'leonart'),
+        'labels' => [
+                    'singular_name' => __( 'Partenaire', 'leonart' ),
+                    'add_new' => __( 'Ajouter un sponsor', 'leonart')
+        ],
+        'description' => __( 'La liste des sponsors du festival', 'leonart'),
+        'taxonomies' => array( 'category' ),
+        'public' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-admin-users',
+        'supports' => [ 'title', 'editor', 'thumbnail' ],
+        'publicly_queryable'  => true,
+        'has_archive' => true
+    ] );
 
 // Taxonomies
 register_taxonomy( 'art-type', 'categories', [
