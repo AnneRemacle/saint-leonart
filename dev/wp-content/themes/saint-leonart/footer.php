@@ -37,7 +37,23 @@
         </div>
         <div class="footer__section">
             <p class="footer__section--title">Nos partenaires</p>
-            <!-- TODO: add partners logo -->
+            <ul class="partners-small">
+                <?php $posts = new WP_Query( [ 'post_type' => 'partenaire' ] ); ?>
+                    <?php if ( $posts -> have_posts() ):
+                        while ( $posts -> have_posts() ):
+                            $posts -> the_post(); ?>
+                            <li class="partners-small__single">
+                                <a href="<?php the_field( 'url_site' )?>" class="partners-small__single--link" title="aller sur le site de<?php the_title(); ?>">
+                                    <figure class="partners-small__single--logo">
+                                        <?php $image = get_field( 'logo_blanc' ); ?>
+                                        <img src="<?php echo $image['url']?>" alt="aller sur le site de <?php the_title(); ?>">
+                                    </figure>
+                                </a>
+                            </li>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </ul>
         </div>
     </footer>
 

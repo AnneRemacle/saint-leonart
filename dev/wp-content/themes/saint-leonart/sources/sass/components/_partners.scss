@@ -39,5 +39,26 @@
              }
          }
      }
+     &-small {
+         &__single {
+             margin: 0 1.9% 1.2em;
+             display: inline-block;
+             width: 20%;
+             &--link {
+                 text-decoration: none;
+                 color: $textColor;
+                 text-align: center;
+             }
+             &--logo {
+                 width: 80%;
+                 height: auto;
+                 margin: 0 auto;
+                 img {
+                     width: 100%;
+                     height: auto;
+                 }
+             }
+         }
+     }
 
  }

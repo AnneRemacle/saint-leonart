@@ -921,14 +921,14 @@ html {
 }
 
 .footer__section {
-  margin-bottom: 2.5em;
+  margin-bottom: 3em;
 }
 
 .footer__section--title {
   font-family: "Oswald", "arial", "sans-serif";
   font-size: 1.618em;
   text-align: center;
-  margin-bottom: .6em;
+  margin-bottom: .7em;
 }
 
 .footer__section--text {
@@ -1603,4 +1603,27 @@ html {
   vertical-align: middle;
   transition: transform .3s ease;
   margin-left: 3px;
+}
+
+.partners-small__single {
+  margin: 0 1.9% 1.2em;
+  display: inline-block;
+  width: 20%;
+}
+
+.partners-small__single--link {
+  text-decoration: none;
+  color: #222;
+  text-align: center;
+}
+
+.partners-small__single--logo {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.partners-small__single--logo img {
+  width: 100%;
+  height: auto;
 }
