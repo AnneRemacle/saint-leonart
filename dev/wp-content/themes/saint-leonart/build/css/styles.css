@@ -1560,3 +1560,47 @@ html {
 #mc_embed_signup div.response a {
   color: white;
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/partners.scss - styles for sponsor page
+ *
+ * coded by Anne
+ * started at 25/10/2017
+ */
+.partners__single {
+  margin-bottom: 2.5em;
+}
+
+.partners__single--link {
+  text-decoration: none;
+  color: #222;
+  text-align: center;
+}
+
+.partners__single--logo {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.partners__single--logo img {
+  width: 100%;
+  height: auto;
+}
+
+.partners__single--name {
+  color: #D83C2B;
+}
+
+.partners__single--name:after {
+  content: "";
+  background: url("../assets/images/arrow-right.svg");
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform .3s ease;
+  margin-left: 3px;
+}
