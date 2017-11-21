@@ -24,7 +24,7 @@ get_header();?>
     <?php if ( $posts -> have_posts() ):
         while ( $posts -> have_posts() ):
             $posts -> the_post(); ?>
-            <div class="card">
+            <a href="<?php the_permalink(); ?>"  class="card">
                 <div class="card__subtitle">
                     <svg width="45px" height="50px" class="card__title--shape lieu">
                         <path d="M0 0 L45 26 L45 50 L0 24 Z" />
@@ -34,7 +34,7 @@ get_header();?>
                 <div class="section__text">
                     <?php the_custom_excerpt(); ?>…
                 </div>
-            </div>
+            </a>
         <?php endwhile; ?>
     <?php endif; ?>
     <?php wp_reset_query(); ?>
