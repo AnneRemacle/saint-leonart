@@ -14,7 +14,8 @@ function render_map( $el ) {
         mapTypeControl: false,
         scaleControl: false,
         draggable: false,
-        mapTypeId   : google.maps.MapTypeId.ROADMAP
+        mapTypeId   : google.maps.MapTypeId.ROADMAP,
+        styles: [{"featureType":"administrative","elementType":"geometry","stylers":[{"hue":"#ff0000"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#fcf3e0"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ff796b"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry.fill","stylers":[{"color":"#ff796b"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#fed160"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#fed178"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#861c48"}]}]
     };
 
     // create map
@@ -40,10 +41,18 @@ function add_marker( $marker, map ) {
     // var
     var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
 
+    var icon = {
+        url: "../wp-content/themes/saint-leonart/build/assets/images/marker.svg", // url
+        scaledSize: new google.maps.Size(30, 45), // scaled size
+        origin: new google.maps.Point(0,0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    };
+
     // create marker
     var marker = new google.maps.Marker({
-        position    : latlng,
-        map         : map
+        position : latlng,
+        map: map,
+        icon: icon
     });
 
     // add to array
@@ -104,10 +113,6 @@ $(document).ready(function(){
 
     });
 
-    $( '.header__disclaimer--close' ).click( function(){
-        $( '.header__disclaimer' ).css( 'visibility', 'hidden' );
-        $( '.header__disclaimer--close' ).css( 'visibility', 'hidden' );
-    } );
 
 });
 
