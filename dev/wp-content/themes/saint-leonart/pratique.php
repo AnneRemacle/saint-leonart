@@ -16,6 +16,7 @@ get_header();?>
                 <?php $location = get_field('adresse'); ?>
             		<?php the_field('adresse'); ?>
             		<a href="" class="marker" id="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+                        <?php the_title(); ?>
             		</a>
             <?php endwhile; ?>
         <?php endif; ?>
