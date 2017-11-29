@@ -18,30 +18,36 @@ get_header();?>
             <?php endforeach; ?>
         </ul>
 
+        <section>
+            <?php foreach( get_terms(array('taxonomy' => 'event','hide_empty' => false)) as $term ): ?>
+                <h3 class="section__subtitle category__title <?php echo $term->slug?>">
+                    Articles pour&nbsp;: <?php echo $term->name; ?>
+                </h3>
+            <?php endforeach; ?>
 
-        <?php $posts = new WP_Query( [ 'post_type' => 'news', 'order' => 'DESC' ] ); ?>
-            <?php if ( $posts -> have_posts() ):
-                while ( $posts -> have_posts() ):
-                    $posts -> the_post();
-                    $terms = get_the_terms( $post->ID, "event" );?>
+            <?php $posts = new WP_Query( [ 'post_type' => 'news', 'order' => 'DESC' ] ); ?>
+                <?php if ( $posts -> have_posts() ):
+                    while ( $posts -> have_posts() ):
+                        $posts -> the_post();
+                        $terms = get_the_terms( $post->ID, "event" );?>
 
-                    <section class="news <?php echo $terms[0]->slug ?>">
-                        <a href="<?php the_permalink(); ?>" class="news__link">
-                            <figure class="news__figure">
-                                <?php the_post_thumbnail(); ?>
-                            </figure>
-                            <h3 class="news__title">
-                                <?php the_title(); ?>
-                            </h3>
-                            <div class="news__content">
-                                <?php the_custom_excerpt(); ?>…
-                            </div>
-                            <span class="news__more">Lire la suite <span class="sro">de l'article <?php the_title(); ?></span></span>
-                        </a>
-                    </section>
-                <?php endwhile; ?>
-            <?php endif; ?>
-
+                        <article class="news <?php echo $terms[0]->slug ?>">
+                            <a href="<?php the_permalink(); ?>" class="news__link">
+                                <figure class="news__figure">
+                                    <?php the_post_thumbnail(); ?>
+                                </figure>
+                                <h3 class="news__title">
+                                    <?php the_title(); ?>
+                                </h3>
+                                <div class="news__content">
+                                    <?php the_custom_excerpt(); ?>…
+                                </div>
+                                <span class="news__more">Lire la suite <span class="sro">de l'article <?php the_title(); ?></span></span>
+                            </a>
+                        </article>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+        </section>
     </section>
 </section>
 
