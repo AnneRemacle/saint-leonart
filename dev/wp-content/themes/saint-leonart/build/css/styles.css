@@ -1330,13 +1330,6 @@ html {
 }
 
 .screen-reader-response {
-  color: red;
-  font-size: .9em;
-  margin-bottom: 1em;
-  line-height: 1.5;
-}
-
-.screen-reader-response ul {
   display: none;
 }
 
@@ -1346,6 +1339,24 @@ html {
 }
 
 .wpcf7-response-output {
+  color: red;
+  font-size: .9em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.wpcf7-response-output ul {
+  display: none;
+}
+
+.wpcf7-mail-sent-ok {
+  color: green;
+  font-size: .9em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.wpcf7-mail-sent-ok ul {
   display: none;
 }
 

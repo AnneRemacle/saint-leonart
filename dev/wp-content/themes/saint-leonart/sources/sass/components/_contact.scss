@@ -42,6 +42,15 @@
 }
 
 .screen-reader-response {
+    display: none;
+}
+
+.wpcf7-not-valid-tip {
+    color: red;
+    font-size: .9em;
+}
+
+.wpcf7-response-output {
     color: red;
     font-size: .9em;
     margin-bottom: 1em;
@@ -51,13 +60,14 @@
     }
 }
 
-.wpcf7-not-valid-tip {
-    color: red;
+.wpcf7-mail-sent-ok {
+    color: green;
     font-size: .9em;
-}
-
-.wpcf7-response-output {
-    display: none;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    ul {
+        display: none;
+    }
 }
 
 
