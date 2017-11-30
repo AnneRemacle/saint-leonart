@@ -13,11 +13,11 @@ get_header();?>
 		<?php if ( $posts -> have_posts() ):
 			while ( $posts -> have_posts() ):
 				$posts -> the_post(); ?>
-                <?php $location = get_field('adresse'); ?>
+                <?php $location = get_field('adresse');?>
             		<?php the_field('adresse'); ?>
-            		<a href="" class="marker" id="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+            		<span class="marker" id="marker" data-url="<?php the_title();?>" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
                         <?php the_title(); ?>
-            		</a>
+            		</span>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
@@ -25,7 +25,7 @@ get_header();?>
     <?php if ( $posts -> have_posts() ):
         while ( $posts -> have_posts() ):
             $posts -> the_post(); ?>
-            <a href="<?php the_permalink(); ?>"  class="card">
+            <a href="<?php the_permalink(); ?>"  class="card" id="<?php echo $post->post_name; ?>">
                 <div class="card__subtitle">
                     <svg width="45px" height="50px" class="card__title--shape lieu">
                         <path d="M0 0 L45 26 L45 50 L0 24 Z" />

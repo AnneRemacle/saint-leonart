@@ -40,6 +40,12 @@ function add_marker( $marker, map ) {
 
     // var
     var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
+    var fullName = $marker.attr( 'data-url' );
+    var slug = fullName
+            .toLowerCase()
+            .replace(/ /g,'-')
+            .replace(/[^\w-]+/g,'');
+    console.log(slug);
 
     var icon = {
         url: "../wp-content/themes/saint-leonart/build/assets/images/marker.svg", // url
@@ -52,7 +58,8 @@ function add_marker( $marker, map ) {
     var marker = new google.maps.Marker({
         position : latlng,
         map: map,
-        icon: icon
+        icon: icon,
+        url: '/en-pratique/#'+slug
     });
 
     // add to array
@@ -70,11 +77,13 @@ function add_marker( $marker, map ) {
         google.maps.event.addListener(marker, 'click', function() {
 
             infowindow.open( map, marker );
+            window.location.href = marker.url;
 
         });
     }
 
 }
+
 
 function center_map( map ) {
 
