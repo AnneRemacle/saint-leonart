@@ -193,3 +193,11 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
+
+//remove admin links
+add_action( 'admin_menu', 'remove_links_tab_menu_pages' );
+
+function remove_links_tab_menu_pages() {
+    remove_menu_page('edit.php');
+    remove_menu_page('edit-comments.php');
+}
