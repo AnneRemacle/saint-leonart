@@ -51,12 +51,15 @@ get_header();?>
                         <?php the_post_thumbnail(); ?>
                     </figure>
                     <div class="event__date">
-                        <span class="event__date--day"><?php the_field( 'jour' ); ?></span>
-                        <span class="event__date--month"><?php the_field( 'mois' ); ?></span>
+                        <?php $date= get_field( 'date_debut' ) ?>
+                        <span class="event__date--day"><?php echo substr($date, 0, 2); ?></span>
+                        <span class="event__date--month"><?php echo substr($date, 3, 8)?></span>
                     </div>
                     <h3 class="event__title">
                         <?php the_title(); ?>
                     </h3>
+
+                    <p></p>
                 </a>
             </section>
         <?php endwhile; endif; ?>
