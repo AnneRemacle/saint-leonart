@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5" />
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri() . '/build/assets/favicons/apple-touch-icon.png' ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri() . '/build/assets/favicons/favicon-32x32.png' ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri() . '/build/assets/favicons/favicon-16x16.png' ?>">
+    <link rel="manifest" href="<?php echo get_template_directory_uri() . '/build/assets/favicons/manifest.json' ?>">
+    <link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/build/assets/favicons/safari-pinned-tab.svg" color="#5bbad5' ?>">
+    <meta name="theme-color" content="#ffffff">
+
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
