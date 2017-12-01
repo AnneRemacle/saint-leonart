@@ -90,8 +90,8 @@ get_header();?>
             while ( have_rows('parkings') ) : the_row(); ?>
                 <?php $location = get_sub_field('adresse_parking'); ?>
             		<?php the_sub_field('adresse_parking'); ?>
-            		<a href="" class="marker" id="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
-            		</a>
+            		<span class="marker" id="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+            		</span>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>

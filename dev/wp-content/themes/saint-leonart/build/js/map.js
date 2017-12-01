@@ -41,7 +41,7 @@ function add_marker( $marker, map ) {
     // var
     var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
     var fullName = $marker.attr( 'data-url' );
-    var slug = fullName
+    var slug = fullName && fullName
             .toLowerCase()
             .replace(/ /g,'-')
             .replace(/[^\w-]+/g,'');
@@ -81,7 +81,6 @@ function add_marker( $marker, map ) {
 
         });
     }
-
 }
 
 
