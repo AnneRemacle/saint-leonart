@@ -14,12 +14,15 @@
         </div>
         <div class="footer__section">
             <p class="footer__section--title">Informations</p>
-            <?php foreach (b_get_menu_items('footer') as $navItem): ?>
-                <a href="<?php echo $navItem -> url ?> " class="header__menu--link">
-                    <?php echo $navItem -> label ?>
-                </a>
-            <?php endforeach; ?>
-            <?php wp_reset_query(); ?>
+            <div class="footer__menu">
+                <?php foreach (b_get_menu_items('footer') as $navItem): ?>
+                    <a href="<?php echo $navItem -> url ?> " class="footer__menu--link">
+                        <?php echo $navItem -> label ?>
+                    </a>
+                <?php endforeach; ?>
+                <?php wp_reset_query(); ?>
+            </div>
+
         </div>
         <div class="footer__section">
             <p class="footer__section--title">Suivez-nous</p>

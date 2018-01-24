@@ -89,10 +89,10 @@
         &:nth-child(even) {
             margin-right: 5%;
         }
-
-        &:nth-child(4) {
-            margin-left: 27.5%;
-        }
+        //
+        // &:nth-child(4) {
+        //     margin-left: 27.5%;
+        // }
 
         &__figure {
             height: 14.5em;
@@ -111,17 +111,28 @@
             margin-left: 6%;
         }
 
-        &:nth-child(4) {
-            margin-left: 30%;
-        }
+        // &:nth-child(4) {
+        //     margin-left: 30%;
+        // }
 
         &__figure {
             height: 14.5em;
         }
     }
+
+    #places {
+        > .card {
+            width: 45%;
+
+            &:nth-child(even) {
+                margin-right: 5%;
+                margin-left: 0;
+            }
+        }
+    }
 }
 
-@media screen and (min-width: 868px) {
+@media screen and (min-width: 981px) {
     .card {
         width: 30%;
 
@@ -131,7 +142,7 @@
         }
 
         &:nth-child(odd) {
-            margin: 0 4%;
+            margin: 0 4% 2.5em;
         }
 
         &:nth-child(4) {
@@ -142,13 +153,66 @@
             height: 12em;
         }
     }
+    #places {
+        > .card {
+            width: 42%;
+
+            &:nth-child(even) {
+                margin-right: 5%;
+                margin-left: 0;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:1124px) {
     .card {
         width: 27%;
         &:nth-child(odd) {
-            margin: 0 7%;
+            margin: 0 7% 2.5em;
+        }
+    }
+
+    #places {
+        width: 90%;
+        margin: 0 auto;
+        > .card {
+            width: 27%;
+
+            &:nth-child(even) {
+                margin-right: 5%;
+                margin-left: 0;
+            }
+        }
+        .card.parking {
+            display: inline-block;
+            width: 30%;
+            margin-left: 0;
+            margin-right: 0;
+
+            &:nth-child(3n+2) {
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #places {
+        width: 80%;
+        margin: 0 auto;
+
+        .card.parking {
+            display: inline-block;
+            width: 30%;
+            margin-left: 0;
+            margin-right: 0;
+
+            &:nth-child(3n+2) {
+                margin-left: 3%;
+                margin-right: 3%;
+            }
         }
     }
 }
@@ -162,6 +226,35 @@
             height: 14em;
         }
     }
+
+    #places {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1840px) {
+    #places {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #places {
+        margin: 0 auto;
+
+        .card.parking {
+            display: inline-block;
+            width: 45%;
+            margin-left: 0;
+            margin-right: 0;
+
+            &:nth-child(even) {
+                margin-left: 5%;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:2560px) {
@@ -169,5 +262,10 @@
         &__figure {
             height: 15em;
         }
+    }
+
+    #places {
+        width: 39%;
+        margin: 0 auto;
     }
 }

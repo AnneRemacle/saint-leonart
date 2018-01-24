@@ -10,3 +10,49 @@
     height: 17.5em;
     margin: 2em 0;
 }
+
+
+@media screen and (min-width: 1024px) {
+    .map {
+        width: 90%;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width: 1124px) {
+    .map.parking {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .map {
+        width: 80%;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    .map {
+        width: 70%;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width: 1840px) {
+    .map {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .map {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .map {
+        max-width: 40%;
+    }
+}

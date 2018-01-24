@@ -18,7 +18,8 @@ get_header();?>
             <?php endforeach; ?>
         </ul>
 
-        <section>
+        <section class="actus">
+            <p class="sro">Actualités</p>
             <?php foreach( get_terms(array('taxonomy' => 'event','hide_empty' => false)) as $term ): ?>
                 <h3 class="section__subtitle category__title <?php echo $term->slug?>">
                     Articles pour&nbsp;: <?php echo $term->name; ?>

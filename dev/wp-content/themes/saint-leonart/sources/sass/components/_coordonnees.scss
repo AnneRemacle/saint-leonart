@@ -53,3 +53,52 @@
          background-size: contain;
      }
  }
+
+ @media screen and (min-width: 868px) {
+     .coordonnees {
+        width: 65%;
+        margin: 0 auto;
+     }
+ }
+
+ @media screen and (min-width: 981px) {
+     .coordonnees {
+        width: 60%;
+        margin: 0 auto;
+     }
+ }
+
+ @media screen and (min-width: 1024px) {
+     .coordonnees {
+        width: 55%;
+        margin: 0 auto;
+     }
+ }
+
+ @media screen and (min-width: 1224px) {
+     .coordonnees {
+        width: 45%;
+        margin: 0 auto;
+     }
+ }
+
+ @media screen and (min-width: 1440px) {
+     .coordonnees {
+        width: 40%;
+        margin: 0 auto;
+     }
+ }
+
+ @media screen and (min-width: 1640px) {
+     .coordonnees {
+        width: 35%;
+        margin: 0 auto;
+     }
+ }
+
+ @media screen and (min-width: 2000px) {
+     .coordonnees {
+        max-width: 30%;
+        margin: 0 auto;
+     }
+ }

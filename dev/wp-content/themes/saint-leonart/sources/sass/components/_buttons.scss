@@ -46,3 +46,80 @@
 
 
 }
+
+@media screen and (min-width:625px) {
+    .buttons {
+        &__single {
+            width: 80%;
+            margin: 0 auto 1em;
+        }
+        &__filter {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .buttons {
+        &__single {
+            width: 70%;
+        }
+        &__filter {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (min-width:981px) {
+    .buttons {
+        &__single {
+            width: 60%;
+        }
+        &__filter {
+            width: 50%;
+        }
+    }
+}
+@media screen and (min-width:1024px) {
+    .buttons {
+        &__single {
+            width: 50%;
+        }
+        &__filter {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .buttons {
+        &__single {
+            width: 40%;
+        }
+        &__filter {
+            width: 30%;
+        }
+    }
+}
+
+@media screen and (min-width:1840px) {
+    .buttons {
+        &__single {
+            width: 30%;
+        }
+        &__filter {
+            width: 20%;
+        }
+    }
+}
+
+@media screen and (min-width:2560px) {
+    .buttons {
+        &__single {
+            max-width: 25%;
+        }
+        &__filter {
+            max-width: 15%;
+        }
+    }
+}

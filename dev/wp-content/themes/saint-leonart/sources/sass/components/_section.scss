@@ -68,18 +68,75 @@
 @media screen and (min-width:425px) {
     .section {
         width: 80%;
+
+        &-light {
+            padding: 2.5em 10%;
+        }
     }
 }
 
 @media screen and (min-width:525px) {
     .section {
         width: 75%;
+
+        &-light {
+            padding: 2.5em 12.5%;
+        }
+
+        &-image {
+            &__content {
+                width: 80%;
+                left: 10%;
+                top: 2.5em;
+            }
+        }
+    }
+
+    .section-light.form {
+        .wpcf7-form {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .section.artiste {
+        width: 70%;
+    }
+    .section.work {
+        width: 55%;
     }
 }
 
 @media screen and (min-width:768px) {
     .section {
         width: 70%;
+
+        &-light {
+            padding: 2.5em 14%;
+        }
+        &-image {
+            &__content {
+                width: 70%;
+                left: 15%;
+            }
+        }
+    }
+    .section.actus {
+        width: 60%;
+    }
+
+    .section-light.form {
+        .wpcf7-form {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    .section.artiste {
+        width: 60%;
+    }
+    .section.work {
+        width: 40%;
     }
 }
 
@@ -87,10 +144,67 @@
     .section.intro {
         width: 65%;
     }
+
+    .section__intro {
+        width: 65%;
+        margin: 2em auto;
+    }
+
+    .section__text {
+        padding: 0 17.5%;
+    }
+
+    .section-light.form {
+        .wpcf7-form {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
 }
 
 @media screen and (min-width:981px) {
     .section.intro {
+        width: 60%;
+        >.section__text {
+            padding: 0;
+        }
+    }
+
+    .section.team {
+        width: 60%;
+        >.section__text {
+            padding: 0 10%;
+        }
+    }
+
+    .section.chiffres {
+        width: 60%;
+        >.section__text {
+            padding: 0 10%;
+        }
+    }
+
+    .section.actus {
+        width: 75%;
+    }
+
+    .section__intro {
+        width: 60%;
+        margin: 2em auto;
+    }
+
+    .section__text {
+        padding: 0 20%;
+    }
+
+    .section-light.form {
+        .wpcf7-form {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    .section.work {
         width: 60%;
     }
 }
@@ -98,73 +212,303 @@
 @media screen and (min-width:1024px) {
     .section.intro {
         width: 55%;
+        >.section__text {
+            padding: 0;
+        }
+    }
+    .section__intro {
+        width: 55%;
+        margin: 2em auto;
+    }
+
+    .section__text {
+        padding: 0 22.5%;
+    }
+    .section {
+        &-image {
+            &__content {
+                width: 60%;
+                left: 20%;
+            }
+        }
+    }
+    .section.work {
+        width: 50%;
+    }
+
+    .section.team {
+        width: 60%;
+        >.section__text {
+            padding: 0 15%;
+        }
     }
 }
 
 @media screen and (min-width:1224px) {
     .section.intro {
         width: 45%;
+        >.section__text {
+            padding: 0;
+        }
+    }
+
+    .section.chiffres {
+        width: 60%;
+        >.section__text {
+            padding: 0 20%;
+        }
+    }
+
+    .section__intro {
+        width: 45%;
+        margin: 2em auto;
+    }
+
+    .section__text {
+        padding: 0 27.5%;
     }
 
     .section.artistes {
         width: 65%;
+    }
+
+    .section-light {
+        padding: 2.5em 16.5%;
+    }
+    .section {
+        &-image {
+            &__content {
+                width: 50%;
+                left: 25%;
+            }
+        }
+    }
+
+    .section-light.form {
+        .wpcf7-form {
+            width: 45%;
+            margin: 0 auto;
+        }
     }
 }
 
 @media screen and (min-width:1440px) {
     .section.intro {
         width: 40%;
+
+        >.section__text {
+            padding: 0;
+        }
+    }
+
+    .section__intro {
+        width: 40%;
+        margin: 2em auto;
+    }
+    .section__text {
+        padding: 0 25%;
     }
 
     .section.artistes {
         width: 55%;
+    }
+
+    .section-light {
+        padding: 2.5em 22%;
+    }
+
+    .section {
+        &-image {
+            &__content {
+                width: 40%;
+                left: 30%;
+                top: 3em;
+            }
+        }
+    }
+
+    .section.actus {
+        width: 60%;
+    }
+
+    .section.work {
+        width: 40%;
+    }
+
+    .section.team {
+        width: 60%;
+        >.section__text {
+            padding: 0 20%;
+        }
     }
 }
 
 @media screen and (min-width:1640px) {
     .section.intro {
         width: 35%;
+        >.section__text {
+            padding: 0;
+        }
+    }
+
+    .section__text {
+        padding: 0 27.5%;
+    }
+
+    .section__intro {
+        width: 35%;
+        margin: 2em auto;
+    }
+
+    .section-light {
+        padding: 2.5em 23.5%;
     }
 }
 
 @media screen and (min-width:1840px) {
     .section.intro {
         width: 32%;
+        >.section__text {
+            padding: 0;
+        }
+    }
+    .section__intro {
+        width: 32%;
+        margin: 2em auto;
+    }
+
+    .section__text {
+        padding: 0 27%;
     }
 
     .section.artistes {
         width: 50%;
+    }
+
+    .section-light {
+        padding: 2.5em 25.5%;
+    }
+    .section {
+        &-image {
+            &__content {
+                width: 30%;
+                left: 35%;
+                top: 3em;
+            }
+        }
+    }
+
+    .section.actus {
+        width: 50%;
+    }
+    .section.work {
+        width: 35%;
+    }
+
+    .section.chiffres {
+        width: 60%;
+        >.section__text {
+            padding: 0 30%;
+        }
+    }
+
+    .section.team {
+        width: 50%;
+        >.section__text {
+            padding: 0 20%;
+        }
     }
 }
 
 @media screen and (min-width:2000px) {
     .section.intro {
         width: 30%;
+        >.section__text {
+            padding: 0;
+        }
+    }
+
+    .section__intro {
+        width: 30%;
+        margin: 2em auto;
+    }
+
+    .section__text {
+        padding: 0 26%;
     }
 
     .section.artistes {
         width: 45%;
+    }
+
+    .section-light {
+        padding: 2.5em 28%;
+    }
+    .section {
+        &-image {
+            &__content {
+                max-width: 25%;
+                left: 37.5%;
+                top: 3em;
+            }
+        }
+    }
+    .section.actus {
+        width: 45%;
+    }
+    .section.work {
+        width: 30%;
     }
 }
 
 @media screen and (min-width:2200px) {
     .section.intro {
         max-width: 32em;
+        >.section__text {
+            padding: 0;
+        }
 
-        .section__text {
+        .section__intro {
             .p1 {
                 font-size: 1.1em;
             }
         }
     }
 
+    .section__intro {
+        max-width: 32em;
+        margin: 2em auto;
+    }
+
     .section.artistes {
         width: 40%;
+    }
+
+    .section-light {
+        padding: 2.5em 30.5%;
+    }
+
+    .section.chiffres {
+        width: 60%;
+        >.section__text {
+            padding: 0 35%;
+        }
     }
 }
 
 @media screen and (min-width: 2560px) {
     .section.artistes {
         max-width: 35%
+    }
+
+    .section-light {
+        padding: 2.5em 33%;
+    }
+
+    .section.actus {
+        max-width: 40%;
+    }
+    .section.work {
+        max-width: 23%;
     }
 }

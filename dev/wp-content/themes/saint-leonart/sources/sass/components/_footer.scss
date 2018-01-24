@@ -23,6 +23,19 @@
              text-align: center;
          }
      }
+     &__menu {
+         &--link {
+             width: 59.37%;
+             margin: 0 auto .6em;
+             text-decoration: none;
+             color: white;
+             font-size: $sub3;
+             display: block;
+             text-align: center;
+             background: rgba($middleColor, .2);
+             padding: .7em 0;
+         }
+     }
      &-socials {
          &__list {
              width: 70%;
@@ -62,6 +75,104 @@
                     background-size: contain;
                  }
              }
+         }
+     }
+ }
+
+ @media screen and (min-width: 625px) {
+     .footer {
+         &__menu {
+            width: 70%;
+            margin: 0 auto;
+         }
+     }
+ }
+
+ @media screen and (min-width:768px) {
+     .footer {
+         &-socials {
+             &__list {
+                 width: 60%;
+             }
+         }
+     }
+ }
+
+ @media screen and (min-width: 868px) {
+     .footer {
+         &__menu {
+            width: 60%;
+            margin: 0 auto;
+         }
+     }
+ }
+
+ @media screen and (min-width: 981px) {
+     .footer {
+         &__menu {
+            width: 70%;
+
+            &--link {
+                display: inline-block;
+                width: 30%;
+
+                &:nth-child(2) {
+                    margin-left: 3%;
+                    margin-right: 3%;
+                }
+            }
+         }
+     }
+ }
+
+ @media screen and (min-width:1024px) {
+     .footer {
+         &-socials {
+             &__list {
+                 width: 50%;
+             }
+         }
+     }
+ }
+
+ @media screen and (min-width: 1224px) {
+     .footer {
+         &__menu {
+            width: 60%;
+         }
+     }
+ }
+
+ @media screen and (min-width:1440px) {
+     .footer {
+         &-socials {
+             &__list {
+                 width: 40%;
+             }
+         }
+         &__menu {
+            width: 50%;
+         }
+     }
+ }
+
+ @media screen and (min-width:1840px) {
+     .footer {
+         &__menu {
+            width: 40%;
+         }
+     }
+ }
+
+ @media screen and (min-width:2000px) {
+     .footer {
+         &-socials {
+             &__list {
+                 max-width: 30%;
+             }
+         }
+         &__menu {
+            max-width: 30%;
          }
      }
  }

@@ -16,8 +16,64 @@
     font-size: $sub3;
     padding: 1em 0;
     transition: background .3s ease;
+    width: 100%;
 
-    &:hover {
+    &:hover, &:focus {
         background: darken($middleColor, 10%);
+    }
+}
+
+@media screen and (min-width:625px) {
+    .cta {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .cta {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width:868px) {
+    .cta {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:981px) {
+    .cta {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .cta {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width:1224px) {
+    .cta {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:1640px) {
+    .cta {
+        width: 35%;
+    }
+}
+
+@media screen and (min-width:2000px) {
+    .cta {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:2560px) {
+    .cta {
+        max-width: 27%;
     }
 }

@@ -77,3 +77,74 @@
          }
      }
  }
+
+ @media screen and (min-width: 625px) {
+     .timeline {
+         &__dates {
+             &--edition {
+                 &:after {
+                     margin-left: 20%;
+                 }
+             }
+         }
+     }
+ }
+
+  @media screen and (min-width: 768px) {
+      .timeline {
+          width: 90%;
+          margin: 0 auto;
+
+          &__dates {
+              &--edition {
+                  &:after {
+                      margin-left: 21%;
+                  }
+              }
+          }
+      }
+  }
+
+  @media screen and (min-width: 981px) {
+      .timeline {
+          width: 80%;
+          margin: 0 auto;
+
+          &__dates {
+              &--edition {
+                  &:after {
+                      margin-left: 21%;
+                  }
+              }
+          }
+      }
+  }
+
+  @media screen and (min-width:1224px) {
+      .timeline {
+          width: 70%;
+      }
+  }
+
+  @media screen and (min-width:1440px) {
+      .timeline {
+          width: 60%;
+      }
+  }
+
+  @media screen and (min-width:1640px) {
+      .timeline {
+          width: 50%;
+      }
+  }
+  @media screen and (min-width:2000px) {
+      .timeline {
+          width: 42%;
+      }
+  }
+
+  @media screen and (min-width:2560px) {
+      .timeline {
+          max-width: 32%;
+      }
+  }

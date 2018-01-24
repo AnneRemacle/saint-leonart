@@ -42,3 +42,177 @@
         height: auto;
     }
 }
+
+@media screen and (min-width: 868px) {
+    .artiste {
+        &__name {
+            width: 70%;
+            margin: 0 auto .6em;
+        }
+        &__domaine {
+            width: 70%;
+            margin: 0 auto .6em;
+        }
+        &__portrait {
+            width: 70%;
+            margin: 0 auto 1em;
+        }
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .artiste {
+        &__work {
+            display: inline-block;
+            width: 32%;
+            height: 11em;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .artiste {
+        &__name {
+            width: 60%;
+            margin: 0 auto .6em;
+        }
+        &__domaine {
+            width: 60%;
+            margin: 0 auto .6em;
+        }
+        &__portrait {
+            width: 60%;
+            margin: 0 auto 1em;
+        }
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    .artiste {
+        &__name {
+            width: 40%;
+            margin: 0 auto .6em;
+        }
+        &__domaine {
+            width: 40%;
+            margin: 0 auto .6em;
+        }
+        &__portrait {
+            width: 40%;
+            display: inline-block;
+            margin: 0 auto 1em;
+            vertical-align: middle;
+            margin-right: 5%;
+            margin-left: 2.5%;
+        }
+        >.section__text {
+            display: inline-block;
+            padding: 0;
+            width: 50%;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .artiste {
+        &__name {
+            width: 40%;
+            margin: 0 auto .6em;
+        }
+        &__domaine {
+            width: 40%;
+            margin: 0 auto .6em;
+        }
+        &__portrait {
+            width: 30%;
+            display: inline-block;
+            margin: 0 auto 1em;
+            vertical-align: middle;
+            margin-right: 5%;
+            margin-left: 7.5%;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    .artiste {
+        &__name {
+            width: 30%;
+            margin: 0 auto .6em;
+        }
+        &__domaine {
+            width: 30%;
+            margin: 0 auto .6em;
+        }
+        &__portrait {
+            width: 25%;
+            display: inline-block;
+            margin: 0 auto 1em;
+            vertical-align: middle;
+            margin-right: 5%;
+            margin-left: 15.5%;
+        }
+        >.section__text {
+            display: inline-block;
+            padding: 0;
+            width: 40%;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .artiste {
+        &__name {
+            width: 30%;
+            margin: 0 auto .6em;
+        }
+        &__domaine {
+            width: 30%;
+            margin: 0 auto .6em;
+        }
+        &__portrait {
+            width: 20%;
+            display: inline-block;
+            margin: 0 auto 1em;
+            vertical-align: middle;
+            margin-right: 5%;
+            margin-left: 20%;
+        }
+        >.section__text {
+            display: inline-block;
+            padding: 0;
+            width: 35%;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .artiste {
+        &__name {
+            width: 30%;
+            margin: 0 auto .6em;
+        }
+        &__domaine {
+            width: 30%;
+            margin: 0 auto .6em;
+        }
+        &__portrait {
+            max-width: 15%;
+            display: inline-block;
+            margin: 0 auto 1em;
+            vertical-align: middle;
+            margin-right: 5%;
+            margin-left: 25%;
+        }
+        >.section__text {
+            display: inline-block;
+            padding: 0;
+            max-width: 30%;
+            vertical-align: middle;
+        }
+    }
+}

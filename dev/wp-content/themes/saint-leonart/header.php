@@ -24,9 +24,10 @@
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"></script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDeuwdU6TD7s_exoHvquyikKKVTFQiGC0"></script>
       <script src="<?php echo get_template_directory_uri() . '/build/js/script.js'; ?>"></script>
       <script src="<?php echo get_template_directory_uri() . '/build/js/map.js'; ?>"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDeuwdU6TD7s_exoHvquyikKKVTFQiGC0"></script>
+
     <title><?php the_title(); ?> | <?php bloginfo( 'name' ); ?></title>
 </head>
 <body>

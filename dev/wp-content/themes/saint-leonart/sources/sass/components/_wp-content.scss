@@ -6,8 +6,11 @@
  * started at 20/20/2017
  */
 
+p, div {
+    word-wrap: break-word;
+}
 .section {
-    &__text {
+    &__intro {
         p {
             line-height: 1.5;
             margin-bottom: 1em;
@@ -29,6 +32,13 @@
             font-family: $titles;
             font-size: $sub3;
             margin-bottom: .3em;
+        }
+    }
+
+    &__text {
+        p {
+            line-height: 1.5;
+            margin-bottom: 1em;
         }
     }
 }

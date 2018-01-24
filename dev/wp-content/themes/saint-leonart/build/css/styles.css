@@ -368,7 +368,6 @@ html {
     margin: .5em .7em;
     width: 26%;
     background: transparent;
-    background: rgba(216, 60, 43, 0.65);
     font-size: 1.1em;
     padding: .9em 0;
   }
@@ -411,7 +410,7 @@ html {
     max-width: 9%;
   }
   .header__title {
-    font-size: 4.6em;
+    font-size: 3.7em;
   }
   .header__button {
     display: none;
@@ -763,11 +762,32 @@ html {
   .section {
     width: 80%;
   }
+  .section-light {
+    padding: 2.5em 10%;
+  }
 }
 
 @media screen and (min-width: 525px) {
   .section {
     width: 75%;
+  }
+  .section-light {
+    padding: 2.5em 12.5%;
+  }
+  .section-image__content {
+    width: 80%;
+    left: 10%;
+    top: 2.5em;
+  }
+  .section-light.form .wpcf7-form {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section.artiste {
+    width: 70%;
+  }
+  .section.work {
+    width: 55%;
   }
 }
 
@@ -775,16 +795,79 @@ html {
   .section {
     width: 70%;
   }
+  .section-light {
+    padding: 2.5em 14%;
+  }
+  .section-image__content {
+    width: 70%;
+    left: 15%;
+  }
+  .section.actus {
+    width: 60%;
+  }
+  .section-light.form .wpcf7-form {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .section.artiste {
+    width: 60%;
+  }
+  .section.work {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 868px) {
   .section.intro {
     width: 65%;
   }
+  .section__intro {
+    width: 65%;
+    margin: 2em auto;
+  }
+  .section__text {
+    padding: 0 17.5%;
+  }
+  .section-light.form .wpcf7-form {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 981px) {
   .section.intro {
+    width: 60%;
+  }
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section.team {
+    width: 60%;
+  }
+  .section.team > .section__text {
+    padding: 0 10%;
+  }
+  .section.chiffres {
+    width: 60%;
+  }
+  .section.chiffres > .section__text {
+    padding: 0 10%;
+  }
+  .section.actus {
+    width: 75%;
+  }
+  .section__intro {
+    width: 60%;
+    margin: 2em auto;
+  }
+  .section__text {
+    padding: 0 20%;
+  }
+  .section-light.form .wpcf7-form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .section.work {
     width: 60%;
   }
 }
@@ -793,14 +876,64 @@ html {
   .section.intro {
     width: 55%;
   }
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section__intro {
+    width: 55%;
+    margin: 2em auto;
+  }
+  .section__text {
+    padding: 0 22.5%;
+  }
+  .section-image__content {
+    width: 60%;
+    left: 20%;
+  }
+  .section.work {
+    width: 50%;
+  }
+  .section.team {
+    width: 60%;
+  }
+  .section.team > .section__text {
+    padding: 0 15%;
+  }
 }
 
 @media screen and (min-width: 1224px) {
   .section.intro {
     width: 45%;
   }
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section.chiffres {
+    width: 60%;
+  }
+  .section.chiffres > .section__text {
+    padding: 0 20%;
+  }
+  .section__intro {
+    width: 45%;
+    margin: 2em auto;
+  }
+  .section__text {
+    padding: 0 27.5%;
+  }
   .section.artistes {
     width: 65%;
+  }
+  .section-light {
+    padding: 2.5em 16.5%;
+  }
+  .section-image__content {
+    width: 50%;
+    left: 25%;
+  }
+  .section-light.form .wpcf7-form {
+    width: 45%;
+    margin: 0 auto;
   }
 }
 
@@ -808,8 +941,38 @@ html {
   .section.intro {
     width: 40%;
   }
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section__intro {
+    width: 40%;
+    margin: 2em auto;
+  }
+  .section__text {
+    padding: 0 25%;
+  }
   .section.artistes {
     width: 55%;
+  }
+  .section-light {
+    padding: 2.5em 22%;
+  }
+  .section-image__content {
+    width: 40%;
+    left: 30%;
+    top: 3em;
+  }
+  .section.actus {
+    width: 60%;
+  }
+  .section.work {
+    width: 40%;
+  }
+  .section.team {
+    width: 60%;
+  }
+  .section.team > .section__text {
+    padding: 0 20%;
   }
 }
 
@@ -817,14 +980,63 @@ html {
   .section.intro {
     width: 35%;
   }
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section__text {
+    padding: 0 27.5%;
+  }
+  .section__intro {
+    width: 35%;
+    margin: 2em auto;
+  }
+  .section-light {
+    padding: 2.5em 23.5%;
+  }
 }
 
 @media screen and (min-width: 1840px) {
   .section.intro {
     width: 32%;
   }
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section__intro {
+    width: 32%;
+    margin: 2em auto;
+  }
+  .section__text {
+    padding: 0 27%;
+  }
   .section.artistes {
     width: 50%;
+  }
+  .section-light {
+    padding: 2.5em 25.5%;
+  }
+  .section-image__content {
+    width: 30%;
+    left: 35%;
+    top: 3em;
+  }
+  .section.actus {
+    width: 50%;
+  }
+  .section.work {
+    width: 35%;
+  }
+  .section.chiffres {
+    width: 60%;
+  }
+  .section.chiffres > .section__text {
+    padding: 0 30%;
+  }
+  .section.team {
+    width: 50%;
+  }
+  .section.team > .section__text {
+    padding: 0 20%;
   }
 }
 
@@ -832,8 +1044,32 @@ html {
   .section.intro {
     width: 30%;
   }
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section__intro {
+    width: 30%;
+    margin: 2em auto;
+  }
+  .section__text {
+    padding: 0 26%;
+  }
   .section.artistes {
     width: 45%;
+  }
+  .section-light {
+    padding: 2.5em 28%;
+  }
+  .section-image__content {
+    max-width: 25%;
+    left: 37.5%;
+    top: 3em;
+  }
+  .section.actus {
+    width: 45%;
+  }
+  .section.work {
+    width: 30%;
   }
 }
 
@@ -841,17 +1077,42 @@ html {
   .section.intro {
     max-width: 32em;
   }
-  .section.intro .section__text .p1 {
+  .section.intro > .section__text {
+    padding: 0;
+  }
+  .section.intro .section__intro .p1 {
     font-size: 1.1em;
+  }
+  .section__intro {
+    max-width: 32em;
+    margin: 2em auto;
   }
   .section.artistes {
     width: 40%;
+  }
+  .section-light {
+    padding: 2.5em 30.5%;
+  }
+  .section.chiffres {
+    width: 60%;
+  }
+  .section.chiffres > .section__text {
+    padding: 0 35%;
   }
 }
 
 @media screen and (min-width: 2560px) {
   .section.artistes {
     max-width: 35%;
+  }
+  .section-light {
+    padding: 2.5em 33%;
+  }
+  .section.actus {
+    max-width: 40%;
+  }
+  .section.work {
+    max-width: 23%;
   }
 }
 
@@ -862,31 +1123,40 @@ html {
  * coded by Anne
  * started at 20/20/2017
  */
-.section__text p {
+p, div {
+  word-wrap: break-word;
+}
+
+.section__intro p {
   line-height: 1.5;
   margin-bottom: 1em;
 }
 
-.section__text h2, .section__text h3 {
+.section__intro h2, .section__intro h3 {
   font-family: "Oswald", "arial", "sans-serif";
 }
 
-.section__text > h2 {
+.section__intro > h2 {
   font-size: 2.058em;
   text-align: center;
 }
 
-.section__text > h3 {
+.section__intro > h3 {
   font-size: 1.618em;
   text-align: center;
   margin-bottom: .5em;
   margin-top: 1em;
 }
 
-.section__text > h4 {
+.section__intro > h4 {
   font-family: "Oswald", "arial", "sans-serif";
   font-size: 1.272em;
   margin-bottom: .3em;
+}
+
+.section__text p {
+  line-height: 1.5;
+  margin-bottom: 1em;
 }
 
 /* Saint Léon'Art
@@ -988,9 +1258,6 @@ html {
   .card:nth-child(even) {
     margin-right: 5%;
   }
-  .card:nth-child(4) {
-    margin-left: 27.5%;
-  }
   .card__figure {
     height: 14.5em;
   }
@@ -1006,15 +1273,19 @@ html {
     margin-right: 8%;
     margin-left: 6%;
   }
-  .card:nth-child(4) {
-    margin-left: 30%;
-  }
   .card__figure {
     height: 14.5em;
   }
+  #places > .card {
+    width: 45%;
+  }
+  #places > .card:nth-child(even) {
+    margin-right: 5%;
+    margin-left: 0;
+  }
 }
 
-@media screen and (min-width: 868px) {
+@media screen and (min-width: 981px) {
   .card {
     width: 30%;
   }
@@ -1023,13 +1294,20 @@ html {
     margin-left: 0%;
   }
   .card:nth-child(odd) {
-    margin: 0 4%;
+    margin: 0 4% 2.5em;
   }
   .card:nth-child(4) {
     margin-left: 0%;
   }
   .card__figure {
     height: 12em;
+  }
+  #places > .card {
+    width: 42%;
+  }
+  #places > .card:nth-child(even) {
+    margin-right: 5%;
+    margin-left: 0;
   }
 }
 
@@ -1038,7 +1316,45 @@ html {
     width: 27%;
   }
   .card:nth-child(odd) {
-    margin: 0 7%;
+    margin: 0 7% 2.5em;
+  }
+  #places {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #places > .card {
+    width: 27%;
+  }
+  #places > .card:nth-child(even) {
+    margin-right: 5%;
+    margin-left: 0;
+  }
+  #places .card.parking {
+    display: inline-block;
+    width: 30%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #places .card.parking:nth-child(3n+2) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #places {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #places .card.parking {
+    display: inline-block;
+    width: 30%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #places .card.parking:nth-child(3n+2) {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
@@ -1049,11 +1365,41 @@ html {
   .card__figure {
     height: 14em;
   }
+  #places {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  #places {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  #places {
+    margin: 0 auto;
+  }
+  #places .card.parking {
+    display: inline-block;
+    width: 45%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #places .card.parking:nth-child(even) {
+    margin-left: 5%;
+  }
 }
 
 @media screen and (min-width: 2560px) {
   .card__figure {
     height: 15em;
+  }
+  #places {
+    width: 39%;
+    margin: 0 auto;
   }
 }
 
@@ -1218,6 +1564,37 @@ html {
   opacity: 1;
 }
 
+@media screen and (min-width: 1024px) {
+  .categories {
+    width: 70%;
+    margin: 2em auto;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .categories {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .categories {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .categories {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .categories {
+    max-width: 30%;
+  }
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/cta.scss - styles for ctas
@@ -1238,8 +1615,63 @@ html {
   width: 100%;
 }
 
-.cta:hover {
+.cta:hover, .cta:focus {
   background: #b02e20;
+}
+
+@media screen and (min-width: 625px) {
+  .cta {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cta {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  .cta {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .cta {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cta {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .cta {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .cta {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .cta {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .cta {
+    max-width: 27%;
+  }
 }
 
 /* Saint Léon'Art
@@ -1300,6 +1732,60 @@ html {
   .event {
     width: 90%;
     margin: 2em auto 1.25em;
+  }
+}
+
+@media screen and (min-width: 525px) {
+  .event {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 625px) {
+  .event {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .event {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  .event {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
+  .event:nth-child(even) {
+    margin-right: 8%;
+  }
+  .event:nth-child(4) {
+    margin-left: 27.5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .event {
+    width: 30%;
+  }
+  .event:nth-child(even) {
+    margin-right: 0%;
+  }
+  .event:nth-child(odd) {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+  .event:nth-child(4) {
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .event__title {
+    font-size: 1.618em;
   }
 }
 
@@ -1463,6 +1949,18 @@ html {
   text-align: center;
 }
 
+.footer__menu--link {
+  width: 59.37%;
+  margin: 0 auto .6em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.272em;
+  display: block;
+  text-align: center;
+  background: rgba(216, 60, 43, 0.2);
+  padding: .7em 0;
+}
+
 .footer-socials__list {
   width: 70%;
   margin: 0 auto;
@@ -1499,6 +1997,76 @@ html {
   width: 40px;
   height: 40px;
   background-size: contain;
+}
+
+@media screen and (min-width: 625px) {
+  .footer__menu {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-socials__list {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  .footer__menu {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .footer__menu {
+    width: 70%;
+  }
+  .footer__menu--link {
+    display: inline-block;
+    width: 30%;
+  }
+  .footer__menu--link:nth-child(2) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-socials__list {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .footer__menu {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer-socials__list {
+    width: 40%;
+  }
+  .footer__menu {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .footer__menu {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .footer-socials__list {
+    max-width: 30%;
+  }
+  .footer__menu {
+    max-width: 30%;
+  }
 }
 
 /* Saint Léon'Art
@@ -1588,6 +2156,15 @@ html {
   text-transform: capitalize;
 }
 
+@media screen and (min-width: 981px) {
+  .member {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2em 2%;
+    width: 28%;
+  }
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/files.scss - styles for files section
@@ -1599,6 +2176,7 @@ html {
   cursor: pointer;
   display: inline-block;
   width: 45%;
+  margin-bottom: 1.5em;
 }
 
 .files__single--link {
@@ -1612,11 +2190,70 @@ html {
 }
 
 .files__single--name {
+  display: block;
   text-align: center;
 }
 
 .files__single:nth-child(odd) {
   margin-right: 8%;
+}
+
+@media screen and (min-width: 625px) {
+  .files__single {
+    width: 30%;
+  }
+  .files__single:nth-child(odd) {
+    margin-right: 0%;
+  }
+  .files__single:nth-child(3n+2) {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .files {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .files {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .files {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .files__single--logo {
+    width: 80%;
+    margin: auto;
+  }
+  .files__single--name {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .files__single {
+    width: 20%;
+    vertical-align: top;
+  }
+  .files__single--logo {
+    width: 80%;
+    margin: auto;
+  }
+  .files__single:nth-child(2n+2) {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
 }
 
 /* Saint Léon'Art
@@ -1704,6 +2341,62 @@ html {
   line-height: 1.5;
 }
 
+@media screen and (min-width: 625px) {
+  .timeline__dates--edition:after {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .timeline__dates--edition:after {
+    margin-left: 21%;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .timeline {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .timeline__dates--edition:after {
+    margin-left: 21%;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .timeline {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .timeline {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .timeline {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .timeline {
+    width: 42%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .timeline {
+    max-width: 32%;
+  }
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/artiste.scss - styles for single artist page
@@ -1750,6 +2443,163 @@ html {
 .artiste__oeuvre {
   max-width: 150%;
   height: auto;
+}
+
+@media screen and (min-width: 868px) {
+  .artiste__name {
+    width: 70%;
+    margin: 0 auto .6em;
+  }
+  .artiste__domaine {
+    width: 70%;
+    margin: 0 auto .6em;
+  }
+  .artiste__portrait {
+    width: 70%;
+    margin: 0 auto 1em;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .artiste__work {
+    display: inline-block;
+    width: 32%;
+    height: 11em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .artiste__name {
+    width: 60%;
+    margin: 0 auto .6em;
+  }
+  .artiste__domaine {
+    width: 60%;
+    margin: 0 auto .6em;
+  }
+  .artiste__portrait {
+    width: 60%;
+    margin: 0 auto 1em;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .artiste__name {
+    width: 40%;
+    margin: 0 auto .6em;
+  }
+  .artiste__domaine {
+    width: 40%;
+    margin: 0 auto .6em;
+  }
+  .artiste__portrait {
+    width: 40%;
+    display: inline-block;
+    margin: 0 auto 1em;
+    vertical-align: middle;
+    margin-right: 5%;
+    margin-left: 2.5%;
+  }
+  .artiste > .section__text {
+    display: inline-block;
+    padding: 0;
+    width: 50%;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .artiste__name {
+    width: 40%;
+    margin: 0 auto .6em;
+  }
+  .artiste__domaine {
+    width: 40%;
+    margin: 0 auto .6em;
+  }
+  .artiste__portrait {
+    width: 30%;
+    display: inline-block;
+    margin: 0 auto 1em;
+    vertical-align: middle;
+    margin-right: 5%;
+    margin-left: 7.5%;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .artiste__name {
+    width: 30%;
+    margin: 0 auto .6em;
+  }
+  .artiste__domaine {
+    width: 30%;
+    margin: 0 auto .6em;
+  }
+  .artiste__portrait {
+    width: 25%;
+    display: inline-block;
+    margin: 0 auto 1em;
+    vertical-align: middle;
+    margin-right: 5%;
+    margin-left: 15.5%;
+  }
+  .artiste > .section__text {
+    display: inline-block;
+    padding: 0;
+    width: 40%;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .artiste__name {
+    width: 30%;
+    margin: 0 auto .6em;
+  }
+  .artiste__domaine {
+    width: 30%;
+    margin: 0 auto .6em;
+  }
+  .artiste__portrait {
+    width: 20%;
+    display: inline-block;
+    margin: 0 auto 1em;
+    vertical-align: middle;
+    margin-right: 5%;
+    margin-left: 20%;
+  }
+  .artiste > .section__text {
+    display: inline-block;
+    padding: 0;
+    width: 35%;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .artiste__name {
+    width: 30%;
+    margin: 0 auto .6em;
+  }
+  .artiste__domaine {
+    width: 30%;
+    margin: 0 auto .6em;
+  }
+  .artiste__portrait {
+    max-width: 15%;
+    display: inline-block;
+    margin: 0 auto 1em;
+    vertical-align: middle;
+    margin-right: 5%;
+    margin-left: 25%;
+  }
+  .artiste > .section__text {
+    display: inline-block;
+    padding: 0;
+    max-width: 30%;
+    vertical-align: middle;
+  }
 }
 
 /* Saint Léon'Art
@@ -1811,6 +2661,55 @@ html {
 .coordonnees__item.adresse::before {
   background: url("../assets/images/envelope.svg");
   background-size: contain;
+}
+
+@media screen and (min-width: 868px) {
+  .coordonnees {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .coordonnees {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .coordonnees {
+    width: 55%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .coordonnees {
+    width: 45%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .coordonnees {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .coordonnees {
+    width: 35%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .coordonnees {
+    max-width: 30%;
+    margin: 0 auto;
+  }
 }
 
 /* Saint Léon'Art
@@ -1944,6 +2843,51 @@ html {
   margin: 2em 0;
 }
 
+@media screen and (min-width: 1024px) {
+  .map {
+    width: 90%;
+    margin: 2em auto;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .map.parking {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .map {
+    width: 80%;
+    margin: 2em auto;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .map {
+    width: 70%;
+    margin: 2em auto;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .map {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .map {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .map {
+    max-width: 40%;
+  }
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/buttons.scss - styles program buttons
@@ -1991,6 +2935,70 @@ html {
   margin-bottom: 2.3em;
 }
 
+@media screen and (min-width: 625px) {
+  .buttons__single {
+    width: 80%;
+    margin: 0 auto 1em;
+  }
+  .buttons__filter {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buttons__single {
+    width: 70%;
+  }
+  .buttons__filter {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .buttons__single {
+    width: 60%;
+  }
+  .buttons__filter {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .buttons__single {
+    width: 50%;
+  }
+  .buttons__filter {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .buttons__single {
+    width: 40%;
+  }
+  .buttons__filter {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .buttons__single {
+    width: 30%;
+  }
+  .buttons__filter {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .buttons__single {
+    max-width: 25%;
+  }
+  .buttons__filter {
+    max-width: 15%;
+  }
+}
+
 /* Saint Léon'Art
  *
  * /sass/components/program.scss - styles for program items
@@ -2002,8 +3010,10 @@ html {
   width: 100%;
   height: auto;
   background: rgba(216, 60, 43, 0.2);
-  margin: 1.5em 0;
+  margin: 1.5em auto;
   padding-top: 1.5em;
+  position: relative;
+  min-height: 8.5em;
 }
 
 .program-item__title {
@@ -2022,6 +3032,116 @@ html {
   color: white;
   background: #A32B40;
   padding: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 425px) {
+  .program-item {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 625px) {
+  .program-item {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .program-item {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .program-item {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .program-item {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    min-height: 8.5em;
+  }
+  .program-item:nth-child(odd) {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .program {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .program > .card:nth-child(odd) {
+    margin: 0px 0% 2.5em;
+  }
+  .program > .card {
+    margin: 0 2% 2.5em;
+  }
+  .program > .card__figure {
+    height: 10em;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .program > .card {
+    margin: 0 2% 2.5em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .program-item {
+    display: inline-block;
+    width: 29%;
+    vertical-align: top;
+    min-height: 8.5em;
+  }
+  .program-item:nth-child(even) {
+    margin-right: 3%;
+  }
+  .program-item:nth-child(odd) {
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .program {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .program > .card {
+    margin: 0 2% 2.5em;
+  }
+  .program > .card__figure {
+    height: 12em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .program-item {
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+    min-height: 9.5em;
+  }
+  .program-item:nth-child(even) {
+    margin-right: 3%;
+  }
+  .program-item:nth-child(odd) {
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .program > .card {
+    margin: 0 2% 2.5em;
+  }
 }
 
 /* Saint Léon'Art
@@ -2053,12 +3173,12 @@ html {
   border: 1px solid #FED178;
 }
 
-#mc_embed_signup .button {
-  display: block !important;
-  width: 50% !important;
-  margin: 0 auto !important;
-  border-radius: 0px !important;
-  background-color: #D83C2B !important;
+#mc_embed_signup #mc-embedded-subscribe {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 0px;
+  background-color: #D83C2B;
 }
 
 #mce-success-response {
@@ -2098,6 +3218,19 @@ html {
 
 #mc_embed_signup div.response a {
   color: white;
+}
+
+@media screen and (min-width: 525px) {
+  #mc_embed_signup {
+    font-size: 1em;
+  }
+  #mc_embed_signup input.email {
+    height: 3.5em;
+  }
+  #mc_embed_signup #mc-embedded-subscribe {
+    padding: .7em 1em;
+    height: auto;
+  }
 }
 
 /* Saint Léon'Art
@@ -2165,4 +3298,197 @@ html {
 .partners-small__single--logo img {
   width: 100%;
   height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .partners-small__single {
+    width: 15%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .partners__single {
+    width: 80%;
+    margin: 0 auto 2.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .partners__single {
+    display: inline-block;
+    width: 45%;
+    margin: 0 auto 2.5em;
+    vertical-align: bottom;
+  }
+  .partners__single:nth-child(even) {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  .partners {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .partners__single {
+    display: inline-block;
+    width: 45%;
+    margin: 0 auto 2.5em;
+    vertical-align: bottom;
+  }
+  .partners__single:nth-child(even) {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .partners__single {
+    display: inline-block;
+    width: 30%;
+    margin: 0 auto 2.5em;
+    vertical-align: bottom;
+  }
+  .partners__single:nth-child(even) {
+    margin-left: 0%;
+  }
+  .partners__single:nth-child(3n+2) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .partners-small {
+    width: 80%;
+    margin: 0 auto 2.5em;
+  }
+  .partners-small__single {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .partners {
+    width: 70%;
+  }
+  .partners-small {
+    width: 70%;
+  }
+  .partners-small__single {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .partners {
+    width: 60%;
+  }
+  .partners-small {
+    width: 60%;
+  }
+  .partners-small__single {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .partners {
+    width: 50%;
+  }
+  .partners-small {
+    width: 50%;
+  }
+  .partners-small__single {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .partners {
+    width: 40%;
+  }
+  .partners-small {
+    width: 40%;
+  }
+  .partners-small__single {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .partners {
+    max-width: 35%;
+  }
+  .partners-small {
+    max-width: 35%;
+  }
+  .partners-small__single {
+    width: 10%;
+  }
+}
+
+.news {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .news {
+    width: 80%;
+    margin: 0 auto 2em;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .news {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+  }
+  .news:nth-child(3) {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+  .news__title {
+    width: 71%;
+  }
+  .actus > article.news {
+    margin-right: 2.9%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .actus > article.news {
+    margin-right: 2.9%;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .actus {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .actus {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .actus {
+    width: 75%;
+  }
+  .actus > article.news {
+    margin-right: 2.9%;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .actus {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .actus {
+    width: 50%;
+  }
 }
