@@ -14,7 +14,7 @@
      cursor: pointer;
      &__figure {
          width: 100%;
-         height: 17.5em;
+         height: 15em;
          overflow: hidden;
          margin-bottom: 1em;
          img {
@@ -85,7 +85,10 @@
         width: 45%;
 
         &__figure {
-          height: 13.125em;
+          height: 11em;
+        }
+        &__title {
+            height: 4em;
         }
     }
 }
@@ -98,18 +101,11 @@
     }
 }
 
-@media screen and (min-width: 868px) {
-    .card {
-        &__figure {
-            height: 16.5em;
-        }
-    }
-}
 
 @media screen and (min-width: 981px) {
     .card {
         &__figure {
-            height: 17.87em;
+            height: 15em;
         }
     }
 }
@@ -117,7 +113,7 @@
 @media screen and (min-width:1224px) {
     .card {
         &__figure {
-            height: 22.37em;
+            height: 19em;
         }
     }
 }
