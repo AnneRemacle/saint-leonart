@@ -19,4 +19,35 @@
              z-index: -1;
          }
      }
+     &-intro {
+         display: -webkit-flex;
+         display: -ms-flex;
+         display: flex;
+         flex-direction: column;
+     }
+     &__link {
+         margin-bottom: 1em;
+         img {
+             width: 100%;
+         }
+     }
+ }
+
+ @media screen and (min-width: 981px) {
+     .lieu {
+         &-intro {
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: flex-start;
+
+             >.section__text {
+                 width: 50%;
+             }
+         }
+         &__link {
+             width: 45%;
+             margin: 0;
+         }
+
+     }
  }

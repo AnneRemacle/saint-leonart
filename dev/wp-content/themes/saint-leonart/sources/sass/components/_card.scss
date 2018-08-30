@@ -126,6 +126,10 @@
     .card {
         width: 22%;
 
+        &__title {
+            height: 4em;
+        }
+
         &__figure {
             height: 12.81em;
         }

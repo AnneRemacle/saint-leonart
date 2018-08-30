@@ -928,6 +928,9 @@ html {
   .section.large {
     width: 60%;
   }
+  .section.artistes {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1640px) {
@@ -1187,6 +1190,9 @@ p, div {
 @media screen and (min-width: 1440px) {
   .card {
     width: 22%;
+  }
+  .card__title {
+    height: 4em;
   }
   .card__figure {
     height: 12.81em;
@@ -2378,6 +2384,10 @@ p, div {
   align-items: center;
 }
 
+.artistes-container {
+  justify-content: space-around;
+}
+
 .work-container {
   display: -webkit-flex;
   display: -ms-flex;
@@ -2668,6 +2678,36 @@ p, div {
   top: -20px;
   left: -10px;
   z-index: -1;
+}
+
+.lieu-intro {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.lieu__link {
+  margin-bottom: 1em;
+}
+
+.lieu__link img {
+  width: 100%;
+}
+
+@media screen and (min-width: 981px) {
+  .lieu-intro {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .lieu-intro > .section__text {
+    width: 50%;
+  }
+  .lieu__link {
+    width: 45%;
+    margin: 0;
+  }
 }
 
 /* Saint Léon'Art

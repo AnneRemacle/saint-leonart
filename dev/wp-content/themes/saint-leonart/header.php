@@ -27,7 +27,7 @@
       <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" crossorigin="anonymous"></script>
       <script src="<?php echo get_template_directory_uri() . '/build/js/script.js'; ?>"></script>
       <script src="<?php echo get_template_directory_uri() . '/build/js/map.js'; ?>"></script>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1c-gdJQgeOSIJDmR9RqzSvGLWby8S0ug"
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1c-gdJQgeOSIJDmR9RqzSvGLWby8S0ug"
   type="text/javascript"></script>
       <script src="<?php echo get_template_directory_uri() . '/build/js/particles.js'; ?>"></script>
 

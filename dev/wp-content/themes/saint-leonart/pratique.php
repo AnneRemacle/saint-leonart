@@ -17,7 +17,7 @@ get_header();?>
 
                 <a href="<?php the_permalink(); ?>"  class="card" id="<?php echo $post->post_name; ?>">
                     <div class="card__subtitle">
-                        <svg width="45px" height="50px" class="card__title--shape lieu">
+                        <svg width="45px" height="50px" class="card__subtitle--shape lieu">
                             <path d="M0 0 L45 26 L45 50 L0 24 Z" />
                         </svg>
                         <span><?php the_title(); ?></span>
