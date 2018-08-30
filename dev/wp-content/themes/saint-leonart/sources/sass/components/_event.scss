@@ -18,6 +18,8 @@
      &__figure {
         width: 100%;
         margin-bottom: .4em;
+        max-height: 14em;
+        overflow: hidden;
         img {
             max-width: 100%;
             height: auto;
@@ -43,9 +45,6 @@
             padding-top: .4em;
             display: block;
             font-size: $sub3;
-         }
-         &--month {
-
          }
      }
  }

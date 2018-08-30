@@ -12,11 +12,11 @@
         width: 100%;
         max-height: 16.56em;
         overflow: hidden;
+        background: black;
     }
     &__image {
-        width: 100%;
-        height: auto;
-        opacity: 0.7;
+        width: 130%;
+        opacity: 0.8;
         position: relative;
     }
     &__text {
@@ -62,7 +62,20 @@
     }
 }
 
+@media screen and (min-width: 425px) {
+  .hero {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width:525px) {
+    .hero {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width:625px) {
     .hero {
         &__text {
             top: 1em;
@@ -70,30 +83,14 @@
     }
 }
 
-@media screen and (min-width:625px) {
-    .hero {
-        &__image {
-            opacity: 0.6;
-        }
-    }
-}
-
 @media screen and (min-width:768px) {
     .hero {
-        &__image {
-            top: -2em;
-        }
+        width: 65%;
     }
 }
 
 @media screen and (min-width:868px) {
     .hero {
-        &__image {
-            top: -5em;
-        }
-        &__text {
-
-        }
         &__slogan {
             font-size: $titlexl;
             margin: .5em auto;
@@ -112,7 +109,7 @@
 @media screen and (min-width: 981px) {
     .hero {
         &__figure {
-            max-height: 18em;
+            height: 18em;
         }
         &__infos {
             &--place {
@@ -122,52 +119,37 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .hero {
-        &__image {
-            top: -7em;
-        }
-    }
-}
-
-@media screen and (min-width: 1224px) {
-    .hero {
-        &__image {
-            top: -12em;
-        }
-    }
-}
-
 @media screen and (min-width: 1440px) {
     .hero {
-        &__image {
-            width: 80%;
-            left: 13%;
-            top: -9em;
+        &__figure {
+            height: 20em;
+        }
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    .hero {
+        width: 55%;
+        &__text {
+            top: 2em;
         }
     }
 }
 
 @media screen and (min-width: 1840px) {
     .hero {
-        &__figure {
-            max-height: 20em;
-        }
-        &__image {
-            width: 70%;
-            left: 19%;
+        width: 50%;
+        &__text {
+            top: 2em;
         }
     }
 }
 
 @media screen and (min-width: 2200px) {
     .hero {
+        width: 40%;
         &__figure {
             max-height: 22em;
-        }
-        &__image {
-            width: 70%;
-            left: 19%;
         }
         &__slogan {
             font-size: 3em;
@@ -186,10 +168,6 @@
         &__figure {
             max-height: 22.5em;
         }
-        &__image {
-            max-width: 65%;
-            top: -12em;
-        }
         &__slogan {
             font-size: 3.2em;
             margin: .7em auto;
@@ -198,6 +176,9 @@
             &--place {
                 font-size: 2.6em;
             }
+        }
+        &__text {
+            top: 0;
         }
     }
 }

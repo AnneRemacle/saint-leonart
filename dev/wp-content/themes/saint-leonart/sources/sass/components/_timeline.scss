@@ -8,11 +8,14 @@
 
  .timeline {
      position: relative;
+     display: -webkit-flex;
+     display: -ms-flex;
+     display: flex;
+     flex-direction: row;
      &__dates {
         font-size: $sub3;
         width: 20%;
         text-align: right;
-        display: inline-block;
         z-index: 2;
         margin-top: 1em;
 
@@ -49,6 +52,10 @@
         z-index: -1;
      }
      &__infos {
+         display: -webkit-flex;
+         display: -ms-flex;
+         display: flex;
+         flex-direction: column;
         width: 68%;
         position: absolute;
         right: 0;
@@ -107,44 +114,62 @@
 
   @media screen and (min-width: 981px) {
       .timeline {
-          width: 80%;
-          margin: 0 auto;
+        flex-direction: column;
+        width: 100%;
 
-          &__dates {
-              &--edition {
-                  &:after {
-                      margin-left: 21%;
-                  }
-              }
+        &__dates {
+          width: 30%;
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: 5%;
+
+          &--edition:after {
+            top: 1.2em;
+            left: 5%;
           }
-      }
-  }
+        }
+        &__line {
+          height: 5px;
+          min-height: 0;
+          width: 100%;
+          left: 0;
+          top: 2.6em;
+        }
+        &__infos {
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          left: 0;
+          top: 6em;
+        }
+        &__single {
+          width: 30%;
+        }
 
-  @media screen and (min-width:1224px) {
-      .timeline {
-          width: 70%;
+
       }
   }
 
   @media screen and (min-width:1440px) {
       .timeline {
-          width: 60%;
+          width: 90%;
       }
   }
 
-  @media screen and (min-width:1640px) {
-      .timeline {
-          width: 50%;
-      }
-  }
   @media screen and (min-width:2000px) {
       .timeline {
-          width: 42%;
+          width: 80%;
       }
   }
 
   @media screen and (min-width:2560px) {
       .timeline {
-          max-width: 32%;
+          max-width: 75%;
       }
   }

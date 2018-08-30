@@ -246,12 +246,12 @@ html {
   opacity: 0.3;
 }
 
-.header__logo img {
-  width: 100%;
-}
-
 .header-typo {
   position: relative;
+}
+
+.header__logo img {
+  width: 100%;
 }
 
 .header__title {
@@ -482,10 +482,10 @@ html {
   }
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2400px) {
   .header__bg {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
   }
   .header__brand {
     width: 20%;
@@ -521,13 +521,13 @@ html {
 
 .hero__figure {
   width: 100%;
-  max-height: 16.56em;
+  height: 16.56em;
   overflow: hidden;
   background: black;
 }
 
 .hero__image {
-  width: 130%;
+  height: 100%;
   opacity: 0.8;
   position: relative;
 }
@@ -753,7 +753,7 @@ html {
 
 .section-light {
   background: #F9F9F9;
-  padding: 2.5em 6.25%;
+  padding: 2.81em 0;
 }
 
 .section-illustrated {
@@ -805,7 +805,7 @@ html {
   }
   .section-image__content {
     width: 65%;
-    left: 15%;
+    left: 17.5%;
   }
   .section-light.form .wpcf7-form {
     width: 70%;
@@ -862,6 +862,9 @@ html {
 @media screen and (min-width: 1024px) {
   .section.intro {
     width: 55%;
+  }
+  .section.intro > .section__text {
+    padding: 0;
   }
   .section__intro {
     width: 55%;
@@ -972,6 +975,9 @@ html {
   .section {
     width: 50%;
   }
+  .section.large {
+    width: 50%;
+  }
   .section-image__content {
     width: 30%;
     left: 35%;
@@ -999,9 +1005,12 @@ html {
   .section {
     width: 50%;
   }
+  .section.large {
+    width: 50%;
+  }
   .section-image__content {
-    max-width: 25%;
-    left: 37.5%;
+    max-width: 20%;
+    left: 40%;
     top: 3em;
   }
   .section.work {
@@ -1020,7 +1029,10 @@ html {
     max-width: 32em;
     margin: 2em auto;
   }
-  .section, .section.large {
+  .section {
+    width: 40%;
+  }
+  .section.large {
     width: 40%;
   }
   .section.chiffres {
@@ -1032,7 +1044,7 @@ html {
 }
 
 @media screen and (min-width: 2560px) {
-  .section, .section-large {
+  .section, .section.large {
     max-width: 50%;
   }
   .section.actus {
@@ -1156,7 +1168,7 @@ p, div {
   line-height: 1.5;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 375px) {
   .card {
     width: 90%;
   }
@@ -1647,8 +1659,9 @@ p, div {
   color: white;
   text-align: center;
   font-family: "Oswald", "arial", "sans-serif";
-  display: inline-block;
-  vertical-align: middle;
+  position: absolute;
+  right: -10px;
+  top: -22.5px;
 }
 
 .news__date--day {
@@ -1670,13 +1683,17 @@ p, div {
 }
 
 .news__figure {
-  width: 100%;
+  width: 95%;
   margin-bottom: .3em;
 }
 
 .news__figure img {
   width: 100%;
   height: auto;
+}
+
+.news__image {
+  position: relative;
 }
 
 .news__more {
@@ -1778,6 +1795,10 @@ p, div {
   margin: 0 auto;
 }
 
+.socials__list--facebook {
+  text-align: center;
+}
+
 .socials__list--facebook a {
   text-indent: -99999px;
   background: url("../assets/images/facebook.svg");
@@ -1787,6 +1808,10 @@ p, div {
   background-size: contain;
 }
 
+.socials__list--twitter {
+  text-align: center;
+}
+
 .socials__list--twitter a {
   text-indent: -99999px;
   background: url("../assets/images/twitter.svg");
@@ -1794,6 +1819,10 @@ p, div {
   width: 40px;
   height: 40px;
   background-size: contain;
+}
+
+.socials__list--instagram {
+  text-align: center;
 }
 
 .socials__list--instagram a {
@@ -1954,7 +1983,7 @@ p, div {
     display: inline-block;
     width: 30%;
   }
-  .footer__menu--link:nth-child(2) {
+  .footer__menu--link:nth-child(3) {
     margin-left: 3%;
     margin-right: 3%;
   }
@@ -2132,7 +2161,7 @@ p, div {
 }
 
 .files__single {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
   margin-right: 5%;
 }
 
@@ -2143,11 +2172,10 @@ p, div {
 
 .files__single--name {
   display: block;
-  text-align: center;
   font-family: "Oswald", "arial", "sans-serif";
   font-size: 1.618em;
-  margin-bottom: .5em;
   color: #861C48;
+  margin-bottom: .5em;
 }
 
 .files__single--description {
@@ -2636,7 +2664,7 @@ p, div {
 }
 
 .wpcf7-form:after {
-  content: " les champs marqués d'un * sont obligatoires";
+  content: " Tous les champs du formulaire sont obligatoires";
   font-size: .8em;
   color: #861C48;
 }
@@ -2644,14 +2672,6 @@ p, div {
 .wpcf7-form > p {
   margin-bottom: 1.7em;
   position: relative;
-}
-
-.wpcf7-form > p > .required::after {
-  content: "*";
-  color: #861C48;
-  position: absolute;
-  top: 0px;
-  left: 30%;
 }
 
 .wpcf7-submit {
@@ -2933,13 +2953,6 @@ p, div {
   }
 }
 
-/* Saint Léon'Art
- *
- * /sass/components/program.scss - styles for program items
- *
- * coded by Anne
- * started at 21/10/2017
- */
 .program {
   display: -webkit-flex;
   display: -ms-flex;
@@ -3078,83 +3091,51 @@ p, div {
  * coded by Anne
  * started at 21/10/2017
  */
-#mc_embed_signup {
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 {
   clear: left;
   font-family: "Asap", "arial", "sans-serif";
+  padding: 0;
 }
 
-#mc_embed_signup form {
-  padding: 0 !important;
-}
-
-#mc_embed_signup .indicates-required {
-  float: right;
-}
-
-#mc_embed_signup .mc-field-group {
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields {
   width: 100%;
 }
 
-#mc_embed_signup input.email {
-  border-radius: 10px;
-  border: 1px solid #FED178;
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields label {
+  display: block;
+  margin-bottom: .5em;
 }
 
-#mc_embed_signup #mc-embedded-subscribe {
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields input.email {
+  border-radius: 10px;
+  border: 1px solid #FED178;
+  width: 100%;
+  height: 2.5em;
+  padding: 1em;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields input.submit {
   display: block;
   width: 50%;
   margin: 0 auto;
   border-radius: 0px;
   background-color: #D83C2B;
-}
-
-#mce-success-response {
-  width: 100%;
-}
-
-#mc_embed_signup div#mce-responses {
-  float: left;
-  top: -1.4em;
-  padding: 0em .5em 0em .5em;
-  overflow: hidden;
-  width: 100% !important;
-  margin: 0 !important;
-  clear: both;
-}
-
-#mc_embed_signup #mce-error-response {
-  display: none;
-  width: 100%;
-}
-
-#mc_embed_signup #mce-success-response {
-  color: white !important;
-  padding: .5em 0 !important;
-}
-
-#mc_embed_signup div.response {
-  padding: 0 !important;
-  font-weight: normal;
-  z-index: 1;
-  width: 100%;
-  top: 0;
-  font-size: .9em;
-  margin: 0 !important;
-  padding: .5em 0;
-}
-
-#mc_embed_signup div.response a {
+  border: none;
   color: white;
+  font-size: 1.2em;
+  padding: .7em;
 }
 
 @media screen and (min-width: 525px) {
-  #mc_embed_signup {
+  #mc4wp-form-1 {
     font-size: 1em;
   }
-  #mc_embed_signup input.email {
+  #mc4wp-form-1 input.email {
     height: 3.5em;
   }
-  #mc_embed_signup #mc-embedded-subscribe {
+  #mc4wp-form-1 #mc-embedded-subscribe {
     padding: .7em 1em;
     height: auto;
   }
@@ -3198,18 +3179,6 @@ p, div {
 
 .partners__single--name {
   color: #D83C2B;
-}
-
-.partners__single--name:after {
-  content: "";
-  background: url("../assets/images/arrow-right.svg");
-  width: 15px;
-  height: 15px;
-  background-size: contain;
-  display: inline-block;
-  vertical-align: middle;
-  transition: transform .3s ease;
-  margin-left: 3px;
 }
 
 .partners-small {

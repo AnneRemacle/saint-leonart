@@ -95,3 +95,33 @@
         resize: none;
     }
 }
+
+.contact-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container__infos {
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 981px) {
+  .contact{
+      &-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &__infos {
+            width: 40%;
+        }
+      }
+      &-form {
+        width: 55%;
+        background: #f9F9F9;
+        padding: 1em;
+      }
+  }
+}

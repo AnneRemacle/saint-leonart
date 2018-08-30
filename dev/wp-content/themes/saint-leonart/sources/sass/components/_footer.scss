@@ -9,6 +9,11 @@
  .footer {
      color: white;
      padding: 1.5em 6.25%;
+     display: -webkit-flex;
+     display: -ms-flex;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
 
      &__section {
          margin-bottom: 3em;
@@ -40,7 +45,7 @@
          &__list {
              width: 70%;
              margin: 0 auto;
-             li {
+             div {
                  display: inline-block;
                  width: 30%;
                  text-align: center;
@@ -127,31 +132,36 @@
 
  @media screen and (min-width:1024px) {
      .footer {
-         &-socials {
-             &__list {
-                 width: 50%;
-             }
-         }
-     }
- }
+       flex-direction: row;
+       padding-top: 3em;
+       padding-bottom: 0;
 
- @media screen and (min-width: 1224px) {
-     .footer {
-         &__menu {
-            width: 60%;
-         }
+       &__section {
+         width: 45%;
+       }
+
+       &__menu {
+           width: 100%;
+       }
      }
  }
 
  @media screen and (min-width:1440px) {
      .footer {
-         &-socials {
-             &__list {
-                 width: 40%;
-             }
+         &__section {
+             width: 25%;
          }
          &__menu {
-            width: 50%;
+             display: -webkit-flex;
+             display: -ms-flex;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+
+             &--link {
+                 width: 100%;
+             }
          }
      }
  }
@@ -159,20 +169,15 @@
  @media screen and (min-width:1840px) {
      .footer {
          &__menu {
-            width: 40%;
+            width: 80%;
          }
      }
  }
 
  @media screen and (min-width:2000px) {
      .footer {
-         &-socials {
-             &__list {
-                 max-width: 30%;
-             }
-         }
          &__menu {
-            max-width: 30%;
+            max-width: 80%;
          }
      }
  }

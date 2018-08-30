@@ -1,0 +1,29 @@
+.places {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 625px) {
+  .places {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .places .card {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .places {
+    justify-content: space-between;
+  }
+  .places .card {
+    width: 23%;
+  }
+}

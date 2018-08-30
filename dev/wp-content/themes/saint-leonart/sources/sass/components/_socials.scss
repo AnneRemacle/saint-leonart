@@ -8,13 +8,9 @@
 
  .socials {
      &__list {
-         width: 70%;
+         width: 90%;
          margin: 0 auto;
-         li {
-             display: inline-block;
-             width: 30%;
-             text-align: center;
-         }
+
          &--facebook {
              a {
                 text-indent: -99999px;
@@ -46,4 +42,53 @@
              }
          }
      }
+ }
+
+ .socials-container {
+   display: -webkit-flex;
+   display: -ms-flex;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 2em auto;
+ }
+
+ @media screen and (min-width: 768px) {
+   .socials{
+       &__list {
+         width: 70%;
+     }
+   }
+ }
+
+ @media screen and (min-width: 981px) {
+   .socials{
+       &-container {
+         width: 70%;
+     }
+   }
+ }
+
+ @media screen and (min-width: 1440px) {
+   .socials{
+       &-container {
+         width: 60%;
+     }
+   }
+ }
+
+ @media screen and (min-width: 1840px) {
+   .socials{
+       &-container {
+         width: 50%;
+     }
+   }
+ }
+
+ @media screen and (min-width: 2200px) {
+   .socials{
+       &-container {
+         max-width: 40%;
+     }
+   }
  }

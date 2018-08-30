@@ -43,6 +43,23 @@
     }
 }
 
+.artistes-container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 625px) {
+  .artistes-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
 @media screen and (min-width: 868px) {
     .artiste {
         &__name {

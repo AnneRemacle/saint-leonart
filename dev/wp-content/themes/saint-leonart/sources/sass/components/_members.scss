@@ -31,11 +31,28 @@
     }
 }
 
-@media screen and (min-width: 981px) {
-    .member {
-        display: inline-block;
-        vertical-align: top;
-        margin: 2em 2%;
-        width: 28%;
-    }
+.members-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .members-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .member {
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .member {
+    width: 30%;
+    margin-right: 3%;
+  }
 }

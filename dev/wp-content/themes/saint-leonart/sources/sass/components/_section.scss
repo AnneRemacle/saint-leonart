@@ -23,6 +23,8 @@
     }
     &__text {
         line-height: 1.5;
+        width: 100%;
+        margin: 0em auto 1em;
     }
     &__figure {
         width: 100%;
@@ -61,6 +63,27 @@
     }
 }
 
+.section {
+    &-illustrated {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+
+      &__figure {
+          img {
+              width: 100%;
+          }
+      }
+    }
+}
+
+.section.intro {
+    > .section__text {
+        width: 100%;
+    }
+}
+
 .chiffres {
     min-height: 41em;
 }
@@ -68,20 +91,12 @@
 @media screen and (min-width:425px) {
     .section {
         width: 80%;
-
-        &-light {
-            padding: 2.5em 10%;
-        }
     }
 }
 
 @media screen and (min-width:525px) {
     .section {
         width: 75%;
-
-        &-light {
-            padding: 2.5em 12.5%;
-        }
 
         &-image {
             &__content {
@@ -99,9 +114,6 @@
         }
     }
 
-    .section.artiste {
-        width: 70%;
-    }
     .section.work {
         width: 55%;
     }
@@ -109,20 +121,14 @@
 
 @media screen and (min-width:768px) {
     .section {
-        width: 70%;
+        width: 65%;
 
-        &-light {
-            padding: 2.5em 14%;
-        }
         &-image {
             &__content {
-                width: 70%;
+                width: 65%;
                 left: 15%;
             }
         }
-    }
-    .section.actus {
-        width: 60%;
     }
 
     .section-light.form {
@@ -132,9 +138,6 @@
         }
     }
 
-    .section.artiste {
-        width: 60%;
-    }
     .section.work {
         width: 40%;
     }
@@ -148,10 +151,6 @@
     .section__intro {
         width: 65%;
         margin: 2em auto;
-    }
-
-    .section__text {
-        padding: 0 17.5%;
     }
 
     .section-light.form {
@@ -178,23 +177,12 @@
     }
 
     .section.chiffres {
-        width: 60%;
-        >.section__text {
-            padding: 0 10%;
-        }
-    }
-
-    .section.actus {
-        width: 75%;
+        min-height: 22em;
     }
 
     .section__intro {
         width: 60%;
         margin: 2em auto;
-    }
-
-    .section__text {
-        padding: 0 20%;
     }
 
     .section-light.form {
@@ -212,18 +200,12 @@
 @media screen and (min-width:1024px) {
     .section.intro {
         width: 55%;
-        >.section__text {
-            padding: 0;
-        }
     }
     .section__intro {
         width: 55%;
         margin: 2em auto;
     }
 
-    .section__text {
-        padding: 0 22.5%;
-    }
     .section {
         &-image {
             &__content {
@@ -236,10 +218,22 @@
         width: 50%;
     }
 
-    .section.team {
-        width: 60%;
-        >.section__text {
-            padding: 0 15%;
+    .section.large {
+        width: 80%;
+    }
+
+    .section {
+        &-illustrated {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            &__text {
+                width: 50%;
+                margin: 0;
+            }
+            &__figure {
+                width: 45%;
+            }
         }
     }
 }
@@ -254,7 +248,8 @@
 
     .section.chiffres {
         width: 60%;
-        >.section__text {
+
+        > .section__text {
             padding: 0 20%;
         }
     }
@@ -264,17 +259,6 @@
         margin: 2em auto;
     }
 
-    .section__text {
-        padding: 0 27.5%;
-    }
-
-    .section.artistes {
-        width: 65%;
-    }
-
-    .section-light {
-        padding: 2.5em 16.5%;
-    }
     .section {
         &-image {
             &__content {
@@ -290,31 +274,24 @@
             margin: 0 auto;
         }
     }
+
+    .section.large {
+        width: 65%;
+    }
 }
 
 @media screen and (min-width:1440px) {
     .section.intro {
         width: 40%;
-
-        >.section__text {
-            padding: 0;
-        }
     }
 
     .section__intro {
         width: 40%;
         margin: 2em auto;
     }
-    .section__text {
-        padding: 0 25%;
-    }
 
-    .section.artistes {
-        width: 55%;
-    }
-
-    .section-light {
-        padding: 2.5em 22%;
+    .section {
+        width: 60%;
     }
 
     .section {
@@ -327,32 +304,18 @@
         }
     }
 
-    .section.actus {
-        width: 60%;
-    }
-
     .section.work {
         width: 40%;
     }
 
-    .section.team {
+    .section.large {
         width: 60%;
-        >.section__text {
-            padding: 0 20%;
-        }
     }
 }
 
 @media screen and (min-width:1640px) {
     .section.intro {
         width: 35%;
-        >.section__text {
-            padding: 0;
-        }
-    }
-
-    .section__text {
-        padding: 0 27.5%;
     }
 
     .section__intro {
@@ -360,34 +323,28 @@
         margin: 2em auto;
     }
 
-    .section-light {
-        padding: 2.5em 23.5%;
+    .section {
+        width: 55%;
+    }
+
+    .section.large {
+        width: 55%;
     }
 }
 
 @media screen and (min-width:1840px) {
     .section.intro {
         width: 32%;
-        >.section__text {
-            padding: 0;
-        }
     }
     .section__intro {
         width: 32%;
         margin: 2em auto;
     }
 
-    .section__text {
-        padding: 0 27%;
-    }
-
-    .section.artistes {
+    .section {
         width: 50%;
     }
 
-    .section-light {
-        padding: 2.5em 25.5%;
-    }
     .section {
         &-image {
             &__content {
@@ -398,9 +355,6 @@
         }
     }
 
-    .section.actus {
-        width: 50%;
-    }
     .section.work {
         width: 35%;
     }
@@ -411,21 +365,11 @@
             padding: 0 30%;
         }
     }
-
-    .section.team {
-        width: 50%;
-        >.section__text {
-            padding: 0 20%;
-        }
-    }
 }
 
 @media screen and (min-width:2000px) {
     .section.intro {
         width: 30%;
-        >.section__text {
-            padding: 0;
-        }
     }
 
     .section__intro {
@@ -433,17 +377,10 @@
         margin: 2em auto;
     }
 
-    .section__text {
-        padding: 0 26%;
+    .section {
+        width: 50%;
     }
 
-    .section.artistes {
-        width: 45%;
-    }
-
-    .section-light {
-        padding: 2.5em 28%;
-    }
     .section {
         &-image {
             &__content {
@@ -453,9 +390,7 @@
             }
         }
     }
-    .section.actus {
-        width: 45%;
-    }
+
     .section.work {
         width: 30%;
     }
@@ -464,9 +399,6 @@
 @media screen and (min-width:2200px) {
     .section.intro {
         max-width: 32em;
-        >.section__text {
-            padding: 0;
-        }
 
         .section__intro {
             .p1 {
@@ -480,12 +412,8 @@
         margin: 2em auto;
     }
 
-    .section.artistes {
+    .section, .section.large {
         width: 40%;
-    }
-
-    .section-light {
-        padding: 2.5em 30.5%;
     }
 
     .section.chiffres {
@@ -497,12 +425,8 @@
 }
 
 @media screen and (min-width: 2560px) {
-    .section.artistes {
-        max-width: 35%
-    }
-
-    .section-light {
-        padding: 2.5em 33%;
+    .section, .section-large {
+        max-width: 50%
     }
 
     .section.actus {
