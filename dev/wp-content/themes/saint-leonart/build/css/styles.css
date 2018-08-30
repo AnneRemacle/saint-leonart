@@ -3317,3 +3317,69 @@ p, div {
     width: 23%;
   }
 }
+
+/* Saint Léon'Art
+ *
+ * /sass/components/expositions.scss - styles for expositions
+ *
+ * coded by Anne
+ * started at 21/10/2017
+ */
+.expositions-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.expositions-item {
+  margin-bottom: 2em;
+  text-decoration: none;
+  color: #222;
+}
+
+.expositions-item__address {
+  margin-bottom: 1em;
+  font-weight: lighter;
+}
+
+.expositions-item__list-title {
+  font-size: 1.272em;
+  color: #861C48;
+  font-family: "Oswald", "arial", "sans-serif";
+  margin-bottom: .5em;
+}
+
+.expositions-item__list-item {
+  margin-left: 5%;
+  margin-bottom: .3em;
+  position: relative;
+}
+
+.expositions-item__list-item:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #D83C2B;
+  position: absolute;
+  top: .3em;
+  left: -.8em;
+}
+
+@media screen and (min-width: 768px) {
+  .expositions-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .expositions-item {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .expositions-item {
+    width: 30%;
+  }
+}

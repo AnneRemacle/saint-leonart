@@ -1,0 +1,72 @@
+/* Saint Léon'Art
+ *
+ * /sass/components/expositions.scss - styles for expositions
+ *
+ * coded by Anne
+ * started at 21/10/2017
+ */
+
+ .expositions {
+     &-container {
+        display: -webkit-flex;
+         display: -ms-flex;
+         display: flex;
+         flex-direction: column;
+     }
+     &-item {
+         margin-bottom: 2em;
+         text-decoration: none;
+         color: $textColor;
+
+         &__address {
+             margin-bottom: 1em;
+             font-weight: lighter;
+         }
+         &__list {
+             &-title {
+                 font-size: $sub3;
+                 color: $darkColor;
+                 font-family: $titles;
+                 margin-bottom: .5em;
+             }
+             &-item {
+                 margin-left: 5%;
+                 margin-bottom: .3em;
+                 position: relative;
+
+                 &:before {
+                     content:"";
+                     width: 8px;
+                     height: 8px;
+                     border-radius: 100%;
+                     background: $middleColor;
+                     position: absolute;
+                     top: .3em;
+                     left: -.8em;
+                 }
+             }
+         }
+     }
+ }
+
+ @media screen and (min-width:768px) {
+     .expositions {
+         &-container {
+             flex-direction: row;
+             flex-wrap: wrap;
+             justify-content: space-around;
+         }
+         &-item {
+             width: 45%;
+         }
+     }
+ }
+
+  @media screen and (min-width:981px) {
+      .expositions {
+
+          &-item {
+              width: 30%;
+          }
+      }
+  }
