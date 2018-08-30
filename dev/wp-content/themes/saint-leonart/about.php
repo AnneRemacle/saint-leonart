@@ -4,7 +4,7 @@
  */
 get_header();?>
 
-<section class="section">
+<section class="section large">
     <h2 class="section__title"><?php the_title(); ?></h2>
     <div class="section__text">
         <?php the_content(); ?>
@@ -44,47 +44,51 @@ get_header();?>
     </div>
 </section>
 
-<section class="section team">
+<section class="section  large team">
     <h2 class="section__title">L'équipe</h2>
     <div class="section__text"><?php the_field('intro_equipe'); ?></div>
 
-    <?php
-    if( have_rows('membres') ):
-        while ( have_rows('membres') ) : the_row();?>
-            <section class="member">
-                <figure class="member__figure">
-                    <?php $image = get_sub_field( 'photo' ); ?>
-                    <?php if( $image[ 'url' ] != "" ): ?>
-                        <img class="member__image" src="<?php echo $image['url']; ?>" alt="Portrait de <?php the_sub_field('nom'); ?>" />
-                    <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/placeholder.png';?>" alt="" class="member__image" />
-                    <?php endif; ?>
-                </figure>
-                <h3 class="member__name"><?php the_sub_field( 'nom' ); ?> </h3>
-                <p class="member__job"><?php the_sub_field( 'fonction' ); ?> </p>
-            </section>
-        <?php endwhile; ?>
-    <?php endif; ?>
+    <div class="members-container">
+        <?php
+        if( have_rows('membres') ):
+            while ( have_rows('membres') ) : the_row();?>
+                <div class="member">
+                    <figure class="member__figure">
+                        <?php $image = get_sub_field( 'photo' ); ?>
+                        <?php if( $image[ 'url' ] != "" ): ?>
+                            <img class="member__image" src="<?php echo $image['url']; ?>" alt="Portrait de <?php the_sub_field('nom'); ?>" />
+                        <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri() . '/build/assets/images/placeholder.png';?>" alt="" class="member__image" />
+                        <?php endif; ?>
+                    </figure>
+                    <h3 class="member__name"><?php the_sub_field( 'nom' ); ?> </h3>
+                    <p class="member__job"><?php the_sub_field( 'fonction' ); ?> </p>
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
 </section>
 
 <section class="section-light presse">
-    <h2 class="section__title">Espace Presse</h2>
-    <div class="section__text"><?php the_field( 'intro_fichiers' ); ?></div>
-    <ul class="files">
-        <?php if( have_rows('fichiers') ):
-            while ( have_rows('fichiers') ) : the_row();?>
-                <li class="files__single">
-                    <?php $file = get_sub_field( 'fichier' ); ?>
-                    <a href="<?php echo $file['url'] ?>" class="files__single--link" target="_blank">
-                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/pdf-logo.png';?>" alt="Télécharger le fichier <?php the_sub_field( 'nom_du_fichier' ); ?>" class="files__single--logo" />
-                        <span class="files__single--name">
-                            <?php the_sub_field( 'nom_du_fichier' ); ?>
-                        </span>
-                    </a>
-                </li>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </ul>
+    <div class="section large">
+        <h2 class="section__title">Espace Presse</h2>
+        <div class="section__text"><?php the_field( 'intro_fichiers' ); ?></div>
+        <div class="files">
+            <?php if( have_rows('fichiers') ):
+                while ( have_rows('fichiers') ) : the_row();?>
+                    <div class="files__single">
+                        <h3 class="files__single--name"><?php the_sub_field( 'nom_du_fichier' ); ?></h3>
+                        <div class="files__single--description"><?php the_sub_field('description'); ?></div>
+                        <?php $file = get_sub_field( 'fichier' ); ?>
+                        <a href="<?php echo $file['url'] ?>" class="files__single--link" target="_blank">
+                            Télécharger le fichier
+                        </a>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+
 </section>
 
 <section class="section chiffres">
@@ -99,31 +103,33 @@ get_header();?>
                     <?php $i++;?>
                 <?php endwhile; ?>
             <?php endif; ?>
+            <div class="timeline__line"></div>
         </div>
-        <div class="timeline__line"></div>
-        <?php $i = 0;?>
-        <?php if( have_rows('chiffres') ):
-            while ( have_rows('chiffres') ) : the_row();?>
-                <div data-edition="<?php the_sub_field( 'edition' )?>" class="timeline__infos ">
-                    <div class="timeline__single">
-                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/palette.svg';?>" alt="" class="timeline__single--image" />
-                        <span class="timeline__single--number"><?php the_sub_field( 'artistes' ); ?></span>
-                        <span class="timeline__single--text">artistes lors de cette édition</span>
+        <div class="timeline__chiffres">
+            <?php $i = 0;?>
+            <?php if( have_rows('chiffres') ):
+                while ( have_rows('chiffres') ) : the_row();?>
+                    <div data-edition="<?php the_sub_field( 'edition' )?>" class="timeline__infos ">
+                        <div class="timeline__single">
+                            <img src="<?php echo get_template_directory_uri() . '/build/assets/images/palette.svg';?>" alt="" class="timeline__single--image" />
+                            <span class="timeline__single--number"><?php the_sub_field( 'artistes' ); ?></span>
+                            <span class="timeline__single--text">artistes lors de cette édition</span>
+                        </div>
+                        <div class="timeline__single">
+                            <img src="<?php echo get_template_directory_uri() . '/build/assets/images/artist.svg';?>" alt="" class="timeline__single--image" />
+                            <span class="timeline__single--number"><?php the_sub_field( 'visiteurs' ); ?></span>
+                            <span class="timeline__single--text">visiteurs ont parcouru le quartier</span>
+                        </div>
+                        <div class="timeline__single">
+                            <img src="<?php echo get_template_directory_uri() . '/build/assets/images/painting.svg';?>" alt="" class="timeline__single--image" />
+                            <span class="timeline__single--number"><?php the_sub_field( 'oeuvres' ); ?></span>
+                            <span class="timeline__single--text">œuvres ont été exposées</span>
+                        </div>
                     </div>
-                    <div class="timeline__single">
-                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/artist.svg';?>" alt="" class="timeline__single--image" />
-                        <span class="timeline__single--number"><?php the_sub_field( 'visiteurs' ); ?></span>
-                        <span class="timeline__single--text">visiteurs ont parcouru le quartier</span>
-                    </div>
-                    <div class="timeline__single">
-                        <img src="<?php echo get_template_directory_uri() . '/build/assets/images/painting.svg';?>" alt="" class="timeline__single--image" />
-                        <span class="timeline__single--number"><?php the_sub_field( 'oeuvres' ); ?></span>
-                        <span class="timeline__single--text">œuvres ont été exposées</span>
-                    </div>
-                </div>
-                <?php $i++;?>
-            <?php endwhile; ?>
-        <?php endif; ?>
+                    <?php $i++;?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </section>
 

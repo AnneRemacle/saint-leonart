@@ -6,27 +6,16 @@ get_header();?>
 
 <section class="section">
     <h2 class="section__title"><?php the_title(); ?></h2>
-    <div class="section__intro"><?php the_content(); ?></div>
+    <div class="section__text"><?php the_content(); ?></div>
 
-    <div class="map" id="gmap">
-        <?php $posts = new WP_Query( [ 'post_type' => 'lieu' ] ); ?>
-		<?php if ( $posts -> have_posts() ):
-			while ( $posts -> have_posts() ):
-				$posts -> the_post(); ?>
-                <?php $location = get_field('adresse');?>
-            		<?php the_field('adresse'); ?>
-            		<span class="marker" id="marker" data-url="<?php the_title();?>" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
-                        <?php the_title(); ?>
-            		</span>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
-    <div id="places">
-        <?php $posts = new WP_Query( [ 'post_type' => 'lieu' ] ); ?>
+
+    <div class="places">
+        <?php $posts = new WP_Query( [ 'post_type' => 'lieu', 'meta_key' => 'numero', 'orderby' => 'meta_value_num', 'order' => 'ASC' ] ); ?>
         <?php if ( $posts -> have_posts() ):
             while ( $posts -> have_posts() ):
-                $posts -> the_post(); ?>
-                <a href="<?php the_permalink(); ?>"  class="card parking" id="<?php echo $post->post_name; ?>">
+               $posts -> the_post(); ?>
+
+                <a href="<?php the_permalink(); ?>"  class="card" id="<?php echo $post->post_name; ?>">
                     <div class="card__subtitle">
                         <svg width="45px" height="50px" class="card__title--shape lieu">
                             <path d="M0 0 L45 26 L45 50 L0 24 Z" />
@@ -79,41 +68,41 @@ get_header();?>
     </div>
 </section>
 
-<section class="section">
+<section class="section large">
+    <?php $image = get_field( 'photo_acces' ); ?>
+
     <h2 class="section__title"><?php the_field( 'titre_acces' ); ?></h2>
-    <div class="section__intro"><?php the_field( 'texte_acces' ); ?></div>
+    <div class="section-illustrated">
+        <div class="section-illustrated__text section__text"><?php the_field( 'texte_acces' ); ?></div>
+        <figure class="section-illustrated__figure">
+            <img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'] ?>" class="">
+        </figure>
+    </div>
 </section>
 
 <section class="section-light">
-    <h2 class="section__title"><?php the_field( 'titre_parking' ); ?></h2>
-    <div class="section__text"><?php the_field( 'texte_parking' ); ?></div>
+    <div class="section">
+        <h2 class="section__title"><?php the_field( 'titre_parking' ); ?></h2>
+        <div class="section-illustrated">
+            <div class="section-illustrated__text section__text"><?php the_field( 'texte_parking' ); ?></div>
+            <figure class="section-illustrated__figure">
+                <img src="<?php echo get_template_directory_uri() . '/build/assets/images/map-parking.png';?>" alt="Carte de Liège des alentours des parkings">
+            </figure>
+        </div>
 
-    <div class="map" id="gmap">
-
-        <?php if( have_rows('parkings') ):
-            while ( have_rows('parkings') ) : the_row(); ?>
-                <?php $location = get_sub_field('adresse_parking'); ?>
-            		<?php the_sub_field('adresse_parking'); ?>
-            		<span class="marker" id="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
-            		</span>
-            <?php endwhile; ?>
-        <?php endif; ?>
+        <div class="places">
+            <?php if( have_rows('parkings') ):
+                while ( have_rows('parkings') ) : the_row(); ?>
+                    <div class="card parking">
+                        <p class="card__subtitle"><?php the_sub_field( 'nom_parking' ); ?></p>
+                        <?php $location = get_sub_field('adresse_parking'); ?>
+                        <p><?php echo $location[ 'address' ]; ?></p>
+                        <p><?php the_sub_field( 'fermeture_parking' ); ?></p>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
     </div>
-
-    <div id="places">
-        <?php if( have_rows('parkings') ):
-            while ( have_rows('parkings') ) : the_row(); ?>
-                <div class="card parking">
-                    <p class="card__subtitle"><?php the_sub_field( 'nom_parking' ); ?></p>
-                    <?php $location = get_sub_field('adresse_parking'); ?>
-                    <p><?php echo $location[ 'address' ]; ?></p>
-                    <p><?php the_sub_field( 'fermeture_parking' ); ?></p>
-                </div>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
-
-
 </section>
 
 <?php get_footer();

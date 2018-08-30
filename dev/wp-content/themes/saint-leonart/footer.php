@@ -14,29 +14,31 @@
         </div>
         <div class="footer__section">
             <p class="footer__section--title">Informations</p>
-            <div class="footer__menu">
+            <nav class="footer__menu">
+                <h3 class="sro"></h3>
                 <?php foreach (b_get_menu_items('footer') as $navItem): ?>
                     <a href="<?php echo $navItem -> url ?> " class="footer__menu--link">
                         <?php echo $navItem -> label ?>
                     </a>
                 <?php endforeach; ?>
                 <?php wp_reset_query(); ?>
-            </div>
+            </nav>
 
         </div>
         <div class="footer__section">
             <p class="footer__section--title">Suivez-nous</p>
-            <ul class="footer-socials__list">
-                <li class="footer-socials__list--facebook">
+            <nav class="footer-socials__list">
+                <h3 class="sro">Navigation du footer pour les réseaux sociaux</h3>
+                <div class="footer-socials__list--facebook">
                     <a href="<?php the_field( 'facebook', 'options');?> ">Facebook</a>
-                </li>
-                <li class="footer-socials__list--twitter">
+                </div>
+                <div class="footer-socials__list--twitter">
                     <a href="<?php the_field( 'twitter', 'options');?> ">Twitter</a>
-                </li>
-                <li class="footer-socials__list--instagram">
+                </div>
+                <div class="footer-socials__list--instagram">
                     <a href="<?php the_field( 'instagram', 'options');?> ">Instagram</a>
-                </li>
-            </ul>
+                </div>
+            </nav>
         </div>
         <div class="footer__section">
             <p class="footer__section--title">Nos partenaires</p>

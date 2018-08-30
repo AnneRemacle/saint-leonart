@@ -45,11 +45,14 @@ get_header();?>
 </section>
 
 <section class="section-light where">
-    <h2 class="section__title">Où voir ses œuvres?</h2>
-    <div class="section__text">
-        <?php the_field( 'lieu' ); ?>
-    </div>
-    <a href="/accueil/programme/#expositions" class="cta">En savoir plus sur ce lieu</a>
+    <section class="section large">
+        <h2 class="section__title">Où voir ses œuvres?</h2>
+        <div class="section__text">
+            <?php the_field( 'lieu' ); ?>
+        </div>
+        <a href="/accueil/programme/#expositions" class="cta">En savoir plus sur ce lieu</a>
+    </section>
+
 </section>
 
 <section class="section work">
