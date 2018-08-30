@@ -1098,6 +1098,7 @@ p, div {
   margin-bottom: 2.5em;
   text-decoration: none;
   color: #222;
+  cursor: pointer;
 }
 
 .card__figure {
@@ -1115,11 +1116,12 @@ p, div {
 .card__title {
   position: relative;
   margin-bottom: .5em;
+  height: 2em;
 }
 
 .card__title--shape {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: -10px;
   left: -8px;
 }
@@ -1128,6 +1130,11 @@ p, div {
   font-family: "Oswald", "arial", "sans-serif";
   font-size: 2.058em;
   z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .card__subtitle {
