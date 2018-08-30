@@ -36,11 +36,12 @@ get_header();?>
                     </article>
                 <?php endwhile; ?>
             <?php endif; ?>
-
-            <a href="/actualites" class="cta">Revoir toutes les actualités</a>
     </section>
 </section>
 
+<div class="section-light">
+    <div class="section"><a href="/programme-complet" class="cta">Voir le programme</a></div>
+</div>
 
 
 

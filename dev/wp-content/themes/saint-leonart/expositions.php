@@ -43,10 +43,14 @@ get_header();?>
             <?php endwhile; ?>
         <?php endif; ?>
         <?php wp_reset_query(); ?>
-
-        <a href="/tous les artistes" class="cta">Revoir le artistes</a>
     </section>
 </section>
+
+<div class="section-light">
+    <div class="section">
+        <a href="/tous les artistes" class="cta">Revoir les artistes</a>
+    </div>
+</div>
 
 
 

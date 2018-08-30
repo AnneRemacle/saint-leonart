@@ -221,6 +221,7 @@ html {
   top: 1em;
   right: 6.25%;
   z-index: 3;
+  cursor: pointer;
 }
 
 .header__close {
@@ -1095,12 +1096,11 @@ p, div {
 .card__title {
   position: relative;
   margin-bottom: .5em;
-  height: 2em;
 }
 
 .card__title--shape {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   top: -10px;
   left: -8px;
 }
@@ -1109,7 +1109,6 @@ p, div {
   font-family: "Oswald", "arial", "sans-serif";
   font-size: 2.058em;
   z-index: 2;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -1161,9 +1160,6 @@ p, div {
   .card__figure {
     height: 11em;
   }
-  .card__title {
-    height: 4em;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1187,9 +1183,6 @@ p, div {
 @media screen and (min-width: 1440px) {
   .card {
     width: 22%;
-  }
-  .card__title {
-    height: 4em;
   }
   .card__figure {
     height: 12.81em;
@@ -3019,83 +3012,51 @@ p, div {
  * coded by Anne
  * started at 21/10/2017
  */
-#mc_embed_signup {
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 {
   clear: left;
   font-family: "Asap", "arial", "sans-serif";
+  padding: 0;
 }
 
-#mc_embed_signup form {
-  padding: 0 !important;
-}
-
-#mc_embed_signup .indicates-required {
-  float: right;
-}
-
-#mc_embed_signup .mc-field-group {
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields {
   width: 100%;
 }
 
-#mc_embed_signup input.email {
-  border-radius: 10px;
-  border: 1px solid #FED178;
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields label {
+  display: block;
+  margin-bottom: .5em;
 }
 
-#mc_embed_signup #mc-embedded-subscribe {
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields input.email {
+  border-radius: 10px;
+  border: 1px solid #FED178;
+  width: 100%;
+  height: 2.5em;
+  padding: 1em;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+#mc4wp-form-1.mc4wp-form.mc4wp-form-365 > .mc4wp-form-fields input.submit {
   display: block;
   width: 50%;
   margin: 0 auto;
   border-radius: 0px;
   background-color: #D83C2B;
-}
-
-#mce-success-response {
-  width: 100%;
-}
-
-#mc_embed_signup div#mce-responses {
-  float: left;
-  top: -1.4em;
-  padding: 0em .5em 0em .5em;
-  overflow: hidden;
-  width: 100% !important;
-  margin: 0 !important;
-  clear: both;
-}
-
-#mc_embed_signup #mce-error-response {
-  display: none;
-  width: 100%;
-}
-
-#mc_embed_signup #mce-success-response {
-  color: white !important;
-  padding: .5em 0 !important;
-}
-
-#mc_embed_signup div.response {
-  padding: 0 !important;
-  font-weight: normal;
-  z-index: 1;
-  width: 100%;
-  top: 0;
-  font-size: .9em;
-  margin: 0 !important;
-  padding: .5em 0;
-}
-
-#mc_embed_signup div.response a {
+  border: none;
   color: white;
+  font-size: 1.2em;
+  padding: .7em;
 }
 
 @media screen and (min-width: 525px) {
-  #mc_embed_signup {
+  #mc4wp-form-1 {
     font-size: 1em;
   }
-  #mc_embed_signup input.email {
+  #mc4wp-form-1 input.email {
     height: 3.5em;
   }
-  #mc_embed_signup #mc-embedded-subscribe {
+  #mc4wp-form-1 #mc-embedded-subscribe {
     padding: .7em 1em;
     height: auto;
   }
