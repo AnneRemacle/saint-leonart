@@ -70,3 +70,12 @@
           }
       }
   }
+
+  @media screen and (min-width:1224px) {
+      .expositions {
+
+          &-item {
+              width: 25%;
+          }
+      }
+  }

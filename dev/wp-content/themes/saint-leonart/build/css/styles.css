@@ -3383,3 +3383,9 @@ p, div {
     width: 30%;
   }
 }
+
+@media screen and (min-width: 1224px) {
+  .expositions-item {
+    width: 25%;
+  }
+}
