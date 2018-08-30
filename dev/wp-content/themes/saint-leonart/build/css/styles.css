@@ -521,15 +521,15 @@ html {
 
 .hero__figure {
   width: 100%;
-  max-height: 16.56em;
+  height: 16.56em;
   overflow: hidden;
   background: black;
 }
 
 .hero__image {
-  width: 130%;
   opacity: 0.8;
   position: relative;
+  height: 100%;
 }
 
 .hero__text {
