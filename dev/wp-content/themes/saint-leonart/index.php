@@ -62,7 +62,7 @@ get_header();?>
                 <?php endwhile; endif; ?>
             <?php wp_reset_query(); ?>
         </div>
-        <a href="/accueil/programme/#artistes" class="cta">Voir tous les artistes</a>
+        <a href="/tous-les-artistes" class="cta">Voir tous les artistes</a>
     </section>
 </div>
 
