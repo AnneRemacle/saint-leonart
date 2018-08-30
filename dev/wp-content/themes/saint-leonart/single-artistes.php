@@ -12,59 +12,60 @@ get_header();?>
         <span><?php the_title(); ?></span>
     </h2>
     <p class="artiste__domaine"><?php the_field( 'domaine' ); ?></p>
-    <figure class="artiste__portrait">
-        <?php $image = get_field( 'portrait' ); ?>
-        <img src="<?php echo $image[ 'url' ] ?>" alt=" Portrait de <?php the_title(); ?>" class="artiste__image" />
-    </figure>
-    <div class="section__text">
-        <?php the_field( 'presentation' ); ?>
+    <div class="artiste-intro">
+        <figure class="artiste__portrait">
+            <?php $image = get_field( 'portrait' ); ?>
+            <img src="<?php echo $image[ 'url' ] ?>" alt=" Portrait de <?php the_title(); ?>" class="artiste__image" />
+        </figure>
+        <div class="section__text">
+            <?php the_field( 'presentation' ); ?>
+            <ul class="coordonnees">
+                <?php if( get_field( 'email' ) != null): ?>
+                    <li class="coordonnees__item email">
+                        <a href="mailto:<?php the_field( 'email' ); ?>"><?php the_field( 'email' ); ?></a>
+                    </li>
+                <?php endif; ?>
+                <?php if( get_field( 'telephone' ) != null): ?>
+                    <li class="coordonnees__item telephone">
+                        <a href="tel:<?php the_field( 'telephone' ); ?>"><?php the_field( 'telephone' ); ?></a>
+                    </li>
+                <?php endif; ?>
+                <?php if( get_field( 'site' ) != null): ?>
+                    <li class="coordonnees__item site">
+                        <a href="<?php the_field( 'site' ); ?>"><?php the_field( 'site' ); ?></a>
+                    </li>
+                <?php endif; ?>
+                <?php if( get_field( 'facebook' ) != null): ?>
+                    <li class="coordonnees__item facebook">
+                        <a href="<?php the_field( 'facebook' ); ?>"><?php the_title(); ?></a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
     </div>
-
-    <ul class="coordonnees">
-        <?php if( get_field( 'email' ) != null): ?>
-            <li class="coordonnees__item email">
-                <a href="mailto:<?php the_field( 'email' ); ?>"><?php the_field( 'email' ); ?></a>
-            </li>
-        <?php endif; ?>
-        <?php if( get_field( 'telephone' ) != null): ?>
-            <li class="coordonnees__item telephone">
-                <a href="tel:<?php the_field( 'telephone' ); ?>"><?php the_field( 'telephone' ); ?></a>
-            </li>
-        <?php endif; ?>
-        <?php if( get_field( 'site' ) != null): ?>
-            <li class="coordonnees__item site">
-                <a href="<?php the_field( 'site' ); ?>"><?php the_field( 'site' ); ?></a>
-            </li>
-        <?php endif; ?>
-        <?php if( get_field( 'facebook' ) != null): ?>
-            <li class="coordonnees__item facebook">
-                <a href="<?php the_field( 'facebook' ); ?>"><?php the_title(); ?></a>
-            </li>
-        <?php endif; ?>
-    </ul>
 </section>
 
 <section class="section-light where">
     <section class="section large">
         <h2 class="section__title">Où voir ses œuvres?</h2>
-        <div class="section__text">
-            <?php the_field( 'lieu' ); ?>
-        </div>
-        <a href="/accueil/programme/#expositions" class="cta">En savoir plus sur ce lieu</a>
+        <?php $lieu = get_field( 'lieu' );?>
+        <a href="/lieu/<?php echo $lieu->post_name ?>" class="cta"><?php echo $lieu->post_title ?></a>
     </section>
 
 </section>
 
 <section class="section work">
     <h2 class="section__title">Son travail</h2>
-    <?php if( have_rows('oeuvres') ):
-        while ( have_rows('oeuvres') ) : the_row();?>
-        <figure class="artiste__work">
-            <?php $image = get_sub_field( 'oeuvre' ); ?>
-            <img src="<?php echo $image['url'] ?>" alt="Oeuvre de <?php the_title(); ?>" class="artiste__oeuvre">
-        </figure>
-        <?php endwhile; ?>
-    <?php endif; ?>
+    <div class="work-container">
+        <?php if( have_rows('oeuvres') ):
+            while ( have_rows('oeuvres') ) : the_row();?>
+            <figure class="artiste__work">
+                <?php $image = get_sub_field( 'oeuvre' ); ?>
+                <img src="<?php echo $image['url'] ?>" alt="Oeuvre de <?php the_title(); ?>" class="artiste__oeuvre">
+            </figure>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
 </section>
 
 <?php get_footer();

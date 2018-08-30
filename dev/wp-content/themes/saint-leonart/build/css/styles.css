@@ -794,9 +794,6 @@ html {
     width: 80%;
     margin: 0 auto;
   }
-  .section.work {
-    width: 55%;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -810,9 +807,6 @@ html {
   .section-light.form .wpcf7-form {
     width: 70%;
     margin: 0 auto;
-  }
-  .section.work {
-    width: 40%;
   }
 }
 
@@ -854,9 +848,6 @@ html {
     width: 50%;
     margin: 0 auto;
   }
-  .section.work {
-    width: 60%;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -870,9 +861,6 @@ html {
   .section-image__content {
     width: 60%;
     left: 20%;
-  }
-  .section.work {
-    width: 50%;
   }
   .section.large {
     width: 80%;
@@ -937,9 +925,6 @@ html {
     left: 30%;
     top: 3em;
   }
-  .section.work {
-    width: 40%;
-  }
   .section.large {
     width: 60%;
   }
@@ -977,9 +962,6 @@ html {
     left: 35%;
     top: 3em;
   }
-  .section.work {
-    width: 35%;
-  }
   .section.chiffres {
     width: 60%;
   }
@@ -1003,9 +985,6 @@ html {
     max-width: 25%;
     left: 37.5%;
     top: 3em;
-  }
-  .section.work {
-    width: 30%;
   }
 }
 
@@ -1037,9 +1016,6 @@ html {
   }
   .section.actus {
     max-width: 40%;
-  }
-  .section.work {
-    max-width: 23%;
   }
 }
 
@@ -1440,6 +1416,7 @@ p, div {
   padding: 1em 0;
   transition: background .3s ease;
   width: 100%;
+  cursor: pointer;
 }
 
 .cta:hover, .cta:focus {
@@ -2391,7 +2368,7 @@ p, div {
   height: auto;
 }
 
-.artistes-container {
+.artistes-container, .artiste-intro {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -2401,167 +2378,88 @@ p, div {
   align-items: center;
 }
 
+.work-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-container .artiste__work {
+  width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+  .artiste__portrait {
+    height: auto;
+  }
+}
+
 @media screen and (min-width: 625px) {
   .artistes-container {
     flex-direction: row;
     align-items: flex-start;
   }
+  .artiste__work {
+    height: 25em;
+  }
 }
 
-@media screen and (min-width: 868px) {
-  .artiste__name {
-    width: 70%;
-    margin: 0 auto .6em;
-  }
-  .artiste__domaine {
-    width: 70%;
-    margin: 0 auto .6em;
-  }
+@media screen and (min-width: 768px) {
   .artiste__portrait {
     width: 70%;
-    margin: 0 auto 1em;
+    margin: 0 auto;
+  }
+  .work-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .work-container .artiste__work {
+    width: 50%;
+    height: 16em;
   }
 }
 
 @media screen and (min-width: 981px) {
-  .artiste__work {
-    display: inline-block;
-    width: 32%;
-    height: 11em;
+  .artiste-intro {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
-}
-
-@media screen and (min-width: 1024px) {
-  .artiste__name {
-    width: 60%;
-    margin: 0 auto .6em;
-  }
-  .artiste__domaine {
-    width: 60%;
-    margin: 0 auto .6em;
+  .artiste-intro > .section__text {
+    width: 50%;
   }
   .artiste__portrait {
-    width: 60%;
-    margin: 0 auto 1em;
+    width: 45%;
+    margin: 0;
+  }
+  .work-container .artiste__work {
+    width: 33%;
+    height: 14em;
   }
 }
 
 @media screen and (min-width: 1224px) {
-  .artiste__name {
-    width: 40%;
-    margin: 0 auto .6em;
-  }
-  .artiste__domaine {
-    width: 40%;
-    margin: 0 auto .6em;
-  }
-  .artiste__portrait {
-    width: 40%;
-    display: inline-block;
-    margin: 0 auto 1em;
-    vertical-align: middle;
-    margin-right: 5%;
-    margin-left: 2.5%;
-  }
-  .artiste > .section__text {
-    display: inline-block;
-    padding: 0;
-    width: 50%;
-    vertical-align: middle;
+  .work-container .artiste__work {
+    height: 17em;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .artiste__name {
-    width: 40%;
-    margin: 0 auto .6em;
-  }
-  .artiste__domaine {
-    width: 40%;
-    margin: 0 auto .6em;
-  }
-  .artiste__portrait {
-    width: 30%;
-    display: inline-block;
-    margin: 0 auto 1em;
-    vertical-align: middle;
-    margin-right: 5%;
-    margin-left: 7.5%;
-  }
-}
-
-@media screen and (min-width: 1640px) {
-  .artiste__name {
-    width: 30%;
-    margin: 0 auto .6em;
-  }
-  .artiste__domaine {
-    width: 30%;
-    margin: 0 auto .6em;
-  }
-  .artiste__portrait {
-    width: 25%;
-    display: inline-block;
-    margin: 0 auto 1em;
-    vertical-align: middle;
-    margin-right: 5%;
-    margin-left: 15.5%;
-  }
-  .artiste > .section__text {
-    display: inline-block;
-    padding: 0;
-    width: 40%;
-    vertical-align: middle;
+  .work-container .artiste__work {
+    height: 18em;
   }
 }
 
 @media screen and (min-width: 2000px) {
-  .artiste__name {
-    width: 30%;
-    margin: 0 auto .6em;
-  }
-  .artiste__domaine {
-    width: 30%;
-    margin: 0 auto .6em;
-  }
-  .artiste__portrait {
-    width: 20%;
-    display: inline-block;
-    margin: 0 auto 1em;
-    vertical-align: middle;
-    margin-right: 5%;
-    margin-left: 20%;
-  }
-  .artiste > .section__text {
-    display: inline-block;
-    padding: 0;
-    width: 35%;
-    vertical-align: middle;
+  .work-container .artiste__work {
+    height: 20em;
   }
 }
 
 @media screen and (min-width: 2560px) {
-  .artiste__name {
-    width: 30%;
-    margin: 0 auto .6em;
-  }
-  .artiste__domaine {
-    width: 30%;
-    margin: 0 auto .6em;
-  }
-  .artiste__portrait {
-    max-width: 15%;
-    display: inline-block;
-    margin: 0 auto 1em;
-    vertical-align: middle;
-    margin-right: 5%;
-    margin-left: 25%;
-  }
-  .artiste > .section__text {
-    display: inline-block;
-    padding: 0;
-    max-width: 30%;
-    vertical-align: middle;
+  .work-container .artiste__work {
+    height: 21em;
   }
 }
 
