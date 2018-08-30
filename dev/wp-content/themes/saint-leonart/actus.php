@@ -36,6 +36,8 @@ get_header();?>
                     </article>
                 <?php endwhile; ?>
             <?php endif; ?>
+
+            <a href="/actualites" class="cta">Revoir toutes les actualités</a>
     </section>
 </section>
 

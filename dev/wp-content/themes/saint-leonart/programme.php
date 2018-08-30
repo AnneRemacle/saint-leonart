@@ -48,5 +48,6 @@ get_header();?>
         <?php endif; ?>
         <?php wp_reset_query(); ?>
     </div>
+    <a href="/tous-les-artistes" class="cta">Découvrir les artistes</a>
 </section>
 <?php get_footer();

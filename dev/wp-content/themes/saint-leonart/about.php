@@ -87,6 +87,8 @@ get_header();?>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
+
+        <a href="/tous-les-artistes" class="cta">Voir les artistes</a>
     </div>
 
 </section>

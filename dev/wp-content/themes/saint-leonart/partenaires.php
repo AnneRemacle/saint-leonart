@@ -26,6 +26,7 @@ get_header();?>
             <?php endwhile; ?>
         <?php endif; ?>
     </ul>
+    <a href="programme-complet" class="cta">Revoir le programme</a>
 </section>
 
 <?php get_footer();

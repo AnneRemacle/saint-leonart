@@ -38,7 +38,7 @@ get_header();?>
 
 <section class="section-light form">
     <div class="section">
-        <a href="/accueil/programme" class="cta">Revoir le programme</a>
+        <a href="/programme-complet" class="cta">Revoir le programme</a>
     </div>
 </section>
 
